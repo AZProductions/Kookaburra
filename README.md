@@ -1,5 +1,7 @@
 # Kookaburra
-![alt text](https://img.shields.io/badge/Build-passing-green)
+###### ***Cross-Platform, Object-Oriented Programming language.***
+ 
+![Build Passing](https://img.shields.io/badge/Build-passing-green)
 ![GitHub issues](https://img.shields.io/github/issues/azproductions/kookaburra)
 ![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)
-![alt text](https://img.shields.io/badge/.NET%20Core-3.1-yellow)
+![.NET Core Version](https://img.shields.io/badge/.NET%20Core-3.1-yellow)
