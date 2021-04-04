@@ -7,7 +7,12 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)
 ![.NET Core Version](https://img.shields.io/badge/.NET%20Core-3.1-yellow)
 
+## Description
+....
 
+## Prerequisites
+- Using the Installer or stand-alone ***.exe*** file, nothing is needed. 
+- If you use the unpacked version of kookaburra ***.Net 3.1*** is needed.
 #### Supported Kookaburra Shell versions
 ###### These versions are supported by the new security standards.
 | Version | Supported          |
