@@ -8,7 +8,9 @@
 ![.NET Core Version](https://img.shields.io/badge/.NET%20Core-3.1-yellow)
 
 ## Description
-....
+Kookaburra is a free, cross-platform programming language. The syntax is easy to master and efficient. 
+ 
+###### ***Remember, KookaburraShell is still in Pre-Release. Features and other things may vary in the final release.***
 
 ## Prerequisites
 - Using the Installer or stand-alone ***.exe*** file, nothing is needed. 
