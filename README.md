@@ -18,7 +18,7 @@ Kookaburra is a free, cross-platform programming language. The syntax is easy to
 
 ## Installation
 1. Head over to the ["**Releases**"](https://github.com/AZProductions/Kookaburra/releases)
-2. Select the desired version of kookaburra *(If you can't deside, we recomend you to pick the latest version)*
+2. Select the desired version of kookaburra *(If you can't decide, we recomend you to pick the latest version)*
 3. Select what you want to install.
 * KookaburraShell_x_xxx.exe
 * * Stand-alone executable with all necessary prerequisites included.
