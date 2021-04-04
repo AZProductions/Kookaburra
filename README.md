@@ -15,6 +15,15 @@ Kookaburra is a free, cross-platform programming language. The syntax is easy to
 ## Prerequisites
 - Using the Installer or stand-alone ***.exe*** file, nothing is needed. 
 - If you use the unpacked version of kookaburra ***.Net 3.1*** is needed.
+
+## Installation
+1. Head over to the ["**Releases**"](https://github.com/AZProductions/Kookaburra/releases)
+2. Select the desired version of kookaburra *(If you can't deside, we recomend you to pick the latest version)*
+3. Select what you want to install.
+* KookaburraShell_x_xxx.exe
+* * Stand-alone executable with all necessary prerequisites included.
+* KookaburraInstaller.msi
+* * Windows installer, installs necessary prerequisites and creates directory's in "**Program Files(x86)**"
 #### Supported Kookaburra Shell versions
 ###### These versions are supported by the new security standards.
 | Version | Supported          |
