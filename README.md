@@ -25,9 +25,11 @@ Kookaburra is a free, cross-platform programming language. The syntax is easy to
 * KookaburraInstaller.msi
 * * Windows installer, installs necessary prerequisites and creates directory's in "**Program Files(x86)**"
 
+## Instructions
+Open Kookaburra by double clicking the icon on the **Desktop** or **Start menu**.
  
-#### Supported Kookaburra Shell versions
-###### These versions are supported by the new security standards.
+### Supported Kookaburra Shell versions
+##### These versions are supported by the new **security standards**.
 | Version | Supported          |
 | ------- | ------------------ |
 | < 0.3   | ✖️                 |
