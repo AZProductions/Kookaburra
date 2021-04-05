@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/AZProductions/Kookaburra/main/.github/icons/bitmap50x50.png) Kookaburra
+![Logo](https://raw.githubusercontent.com/AZProductions/Kookaburra/main/.github/icons/bitmap50x50.png) **KookaburraShell**
 =======
 ###### ***Cross-Platform, Object-Oriented Programming language.***
 ----
