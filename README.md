@@ -8,13 +8,13 @@
 ![.NET Core Version](https://img.shields.io/badge/.NET%20Core-3.1-yellow)
 
 ## Description
-Kookaburra is a free, cross-platform programming language. The syntax is easy to master and efficient. 
+Kookaburra is a free, cross-platform programming language. The syntax is efficient and easy to master.
  
-###### ***Remember, KookaburraShell is still in Pre-Release. Features and other things may vary in the final release.***
+###### ***Remember, KookaburraShell is still in Pre-Release. Features may vary in the final release.***
 
 ## Prerequisites
 - Using the Installer or stand-alone ***.exe*** file, nothing is needed. 
-- If you use the unpacked version of kookaburra ***.Net 3.1*** is needed.
+- If you use the unpacked version of Kookaburra ***.Net 3.1*** is needed.
 
 ## Installation
 1. Head over to the ["**Releases**"](https://github.com/AZProductions/Kookaburra/releases)
@@ -23,13 +23,13 @@ Kookaburra is a free, cross-platform programming language. The syntax is easy to
 * **KookaburraShell_x_xxx.exe**
 * * Stand-alone executable with all necessary prerequisites included.
 * **KookaburraInstaller.msi**
-* * Windows installer, installs necessary prerequisites and creates directory's in "**Program Files(x86)**"
+* * Windows installer, installs necessary prerequisites and creates a directory in "**Program Files(x86)**"
 
 ## Instructions
 Open Kookaburra by double clicking the icon on the **Desktop** or **Start menu**.
  
 ## Security
-We at AZ Software take security very seriously, thats why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
+We at AZ Software take security very seriously, that's why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
 
 ### Supported Kookaburra Shell versions
 ##### These versions are supported by the new **security standards**.
