@@ -1,0 +1,8 @@
+site_name: Kookaburra Docs
+nav:
+    - Home: index.md
+    - Commands: commands.md
+    - About: about.md
+theme:
+    name: readthedocs
+    nav_style: dark
