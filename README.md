@@ -32,7 +32,11 @@ Open Kookaburra by double clicking the icon on the **Desktop** or **Start menu**
 In kookaburra you can choose between using the terminal and scripting with **'.kookaburra'** files.
 In this guide we wil only cover the topic of programming you own applications.
 
-1. Create and open a folder with nothing inside.
+1. Create a file with a "**.kookaburra**" extension. Example "***helloworld.kookaburra***".
+2. Open the file with a code/text editor, and start coding!
+3. Slect "**Open with**" and select ***kookaburrashell.exe*** in file explorer.
+4. Double click the file and Kookaburra wil open up.
+### [**Read the full tutorial here.**](https://github.com/404)
 
 ## Security
 We at AZ Software take security very seriously, that's why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
