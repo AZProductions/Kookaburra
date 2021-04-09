@@ -37,6 +37,7 @@ In this guide we wil only cover the topic of programming you own applications.
 2. Open the file with a code/text editor, and start coding!
 3. Slect "**Open with**" and select ***kookaburrashell.exe*** in file explorer.
 4. Double click the file and Kookaburra wil open up.
+![Setting up "Open with"](https://media.giphy.com/media/LVGzbtygblYO4zPzqo/giphy.gif)
 ### [**Read the full tutorial here.**](https://github.com/404)
 
 ## Security
