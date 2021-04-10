@@ -1,0 +1,2 @@
+print "test file"
+app.read()
