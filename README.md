@@ -46,13 +46,11 @@ In this guide we wil only cover the topic of programming you own applications.
 ### [**Read the full tutorial here.**](https://github.com/404)
 
 ## Security
+### **When downloading Kookaburra**
 We at AZ Software take security very seriously, that's why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
 
-### Supported Kookaburra Shell versions
-##### These versions are supported by the new **security standards**.
-| Version | Supported          |
-| ------- | ------------------ |
-| < 0.3   | ✖️                 |
-| 0.4.0   | ✅                 |
-| 0.4.5   | ✖️                 |
-| > 0.5   | ✅                 |
+### **Opening user-created *.kookaburra* or *.kbproject* files**
+We recommend you to scan the donwnloaded file with an Antivirus before opening or executing the file.
+You can also open the file in a **code/text editor** and read exactly what the file does.
+
+##### ***AZ Software is not responsible for any harm to your device(s).***
