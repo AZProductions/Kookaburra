@@ -80,4 +80,6 @@ We at AZ Software take security very seriously, that's why on every release page
 We recommend you to scan the donwnloaded file with an Antivirus before opening or executing the file.
 You can also open the file in a **code/text editor** and read exactly what the file does.
 
+
+![graph](https://raw.githubusercontent.com/AZProductions/Kookaburra/main/.github/icons/graph.png) 
 ##### ***AZ Software is not responsible for any harm to your device(s).***
