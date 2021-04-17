@@ -48,7 +48,7 @@ In this guide we wil only cover the topic of programming you own applications.
 ## Examples
 ### File writer
 ```
-#app.debug-off
+# 'app.debug-off' - remove debug text.
 import FileIO
 print @"Location:"
 string location = app.readline()
