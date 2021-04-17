@@ -45,6 +45,16 @@ In this guide we wil only cover the topic of programming you own applications.
 4. Double click the file and Kookaburra wil open up.
 ### [**Read the full tutorial here.**](https://github.com/404)
 
+## Commands
+### CLI commands
+- cp
+- cd
+- mv
+- rm
+- mkdir
+- mkfile
+- help
+
 ## Security
 ### **When downloading Kookaburra**
 We at AZ Software take security very seriously, that's why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
