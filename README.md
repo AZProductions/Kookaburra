@@ -45,6 +45,23 @@ In this guide we wil only cover the topic of programming you own applications.
 4. Double click the file and Kookaburra wil open up.
 ### [**Read the full tutorial here.**](https://github.com/404)
 
+## Examples
+### File writer
+```
+#app.debug-off
+import FileIO
+print @"Location:"
+string location = app.readline()
+print "-------------"
+print @"value:"
+string value = app.readline()
+string result = "D:\Projects\Kookaburra\test\test3.kookaburra"
+new filewriter(location, value)
+print @"finished, value = "
+print @value
+print @"."
+app.read() 
+```
 ## Commands
 ### CLI commands
 - cp
