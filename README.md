@@ -55,7 +55,6 @@ string location = app.readline()
 print "-------------"
 print @"value:"
 string value = app.readline()
-string result = "D:\Projects\Kookaburra\test\test3.kookaburra"
 new filewriter(location, value)
 print @"finished, value = "
 print @value
