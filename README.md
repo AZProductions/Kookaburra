@@ -72,6 +72,7 @@ app.read()
 - mkdir
 - mkfile
 - help
+- [read the full list here](github.com/404)
 
 ## Security
 ### **When downloading Kookaburra**
