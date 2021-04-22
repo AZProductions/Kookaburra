@@ -1,2 +1,2 @@
 *.cs linguist-language=C#
-*.kbproject linguist-language=kbproject
+*.html linguist-language=html
