@@ -1,2 +1,2 @@
 *.cs linguist-language=C#
-*.html linguist-language=html
+*.js linguist-language=JavaScript
