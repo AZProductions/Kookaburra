@@ -1,6 +1,6 @@
 ![Logo](https://raw.githubusercontent.com/AZProductions/Kookaburra/main/.github/icons/cover_art.png) **Kookaburra**
 =======
-###### ***Cross-Platform, Object-Oriented Programming language.***
+###### ***Cross-platform, Object-oriented Programming language.***
 ----
 ![Build Passing](https://img.shields.io/badge/Build-Passing-Green)
 [![GitHub issues](https://img.shields.io/github/issues/azproductions/kookaburra)](https://github.com/AZProductions/Kookaburra/issues)
