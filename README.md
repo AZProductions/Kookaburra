@@ -4,8 +4,8 @@
 ----
 ![Build Passing](https://img.shields.io/badge/Build-Passing-Green)
 [![GitHub issues](https://img.shields.io/github/issues/azproductions/kookaburra)](https://github.com/AZProductions/Kookaburra/issues)
-![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)
-![.NET Core Version](https://img.shields.io/badge/.NET%20Core-3.1-yellow)
+[![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)](https://github.com/AZProductions/Kookaburra/releases)
+[![.NET Core Version](https://img.shields.io/badge/.NET%20Core-3.1-yellow)](https://dotnet.microsoft.com/download/dotnet/3.1)
 
 ## Description
 Kookaburra is a free, cross-platform programming language. The syntax is efficient and easy to master.
