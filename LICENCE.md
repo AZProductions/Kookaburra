@@ -1,2 +1,6 @@
-# Am I allowed to use the code in this repository and modify?
-Yes, but always link back to this repository. Example: ```This code is provided by [Kookaburra](github.com/azproductions/kookaburra)```
+**2020-2021 AZ Software (prior AZ Productions)**
+
+***This repository is part of Kookaburra(Shell).*** 
+
+**Kookaburra can not be copied and/or distributed without the express
+ permission of the owners of this repository.**
