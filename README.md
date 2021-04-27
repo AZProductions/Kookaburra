@@ -72,6 +72,11 @@ app.read()
 - mkdir
 - mkfile
 - help
+- whoami
+- ls
+- dir
+- drives
+- ipconfig
 - [read the full list here](github.com/404)
 
 ## Security
