@@ -5,6 +5,7 @@
 [![Latest release](https://img.shields.io/github/v/release/azproductions/kookaburra?include_prereleases)](https://github.com/AZProductions/Kookaburra/releases)
 [![GitHub issues](https://img.shields.io/github/issues/azproductions/kookaburra)](https://github.com/AZProductions/Kookaburra/issues)
 [![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)](https://github.com/AZProductions/Kookaburra/releases)
+[![Packages](https://img.shields.io/badge/Packages-3-blue)](https://github.com/AZProductions/Kookaburra/tree/main/packages)
 [![.NET Core Version](https://img.shields.io/badge/.NET%20Core-3.1-yellow)](https://dotnet.microsoft.com/download/dotnet/3.1)
 
 ## Description
