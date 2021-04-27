@@ -77,6 +77,9 @@ app.read()
 - dir
 - drives
 - ipconfig
+- download
+- send (localtcp)
+- receive (localtcp)
 - [read the full list here](github.com/404)
 
 ## Security
