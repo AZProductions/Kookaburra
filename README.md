@@ -64,6 +64,23 @@ print @value
 print @"."
 app.read() 
 ```
+### All Colors in Kookaburra
+```
+app.debug-off
+print "- Colors in Kookaburra - "
+app.color = blue
+print "Blue"
+app.color = red
+print "Red"
+app.color = green
+print "Green"
+app.color = yellow
+print "Yellow"
+app.color = white
+print "white"
+app.read()
+```
+
 ## Commands
 ### CLI commands
 - cp
