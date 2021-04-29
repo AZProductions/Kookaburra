@@ -46,6 +46,10 @@ And run it by typing
 ```
 KookaburraShell
 ```
+Run Kookaburra and open a .kookaburra file with
+```
+KookaburraShell /filelocation/example.kookaburra
+```
 
 ## Instructions
 Open Kookaburra by double clicking the icon on the **Desktop** or **Start menu**.
