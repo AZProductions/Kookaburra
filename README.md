@@ -21,8 +21,6 @@ Kookaburra is a free, cross-platform programming language. The syntax is efficie
 ### [Official Linux support!](https://www.reddit.com/r/Kookaburra/comments/mqolk1/official_linux_support/)
 [After a lot of testing, we finally released Kookaburra for Linux.](https://www.reddit.com/r/Kookaburra/comments/mqolk1/official_linux_support/)
 
-### Mac x64 support?
-
 ## Installation
 ### For Windows:
 1. Head over to the ["**Releases**"](https://github.com/AZProductions/Kookaburra/releases)
@@ -30,9 +28,10 @@ Kookaburra is a free, cross-platform programming language. The syntax is efficie
 3. Select what you want to install.
 **KookaburraShell_x_xxx.exe**
  * Stand-alone executable with all necessary prerequisites included.
-## Instructions
 Open Kookaburra by double clicking the icon of the executable.
+
 -----
+
 ### For Linux
 Use this command to download it with [**wget**](http://www.gnu.org/software/wget/)
 ```
