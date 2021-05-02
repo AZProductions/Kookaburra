@@ -102,6 +102,7 @@ app.read()
 - cd
 - mv
 - rm
+- edit
 - mkdir
 - mkfile
 - help
@@ -109,6 +110,7 @@ app.read()
 - ls
 - dir
 - drives
+- browse/explore/explorer
 - ipconfig
 - download
 - send (localtcp)
