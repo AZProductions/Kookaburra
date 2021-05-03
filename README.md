@@ -35,11 +35,11 @@ Open Kookaburra by double clicking the icon of the executable.
 ### For Linux
 Use this command to download it with [**wget**](http://www.gnu.org/software/wget/)
 ```
-wget -O /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/download/Pre4Alpha-0.5.0/KookaburraShell_pre4_linux_0.5.0
+wget -O /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/download/Pre5Alpha-0.5.0/KookaburraShell_pre4_linux_0.5.0
 ```
 Or by using [**curl**](https://curl.se/)
 ```
-curl -o /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/download/Pre4Alpha-0.5.0/KookaburraShell_pre4_linux_0.5.0
+curl -o /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/download/Pre5Alpha-0.5.0/KookaburraShell_pre4_linux_0.5.0
 ```
 And run it by typing
 ```
