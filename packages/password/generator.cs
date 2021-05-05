@@ -13,7 +13,8 @@ namespace GeneratePasswords
             while (true)
             {
                 //link to the code: https://codereview.stackexchange.com/a/5994
-                int length = 90;
+                //We do not own this code!
+                int length = 12;
                 Random random = new Random();
                 string characters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
                 StringBuilder result = new StringBuilder(length);
