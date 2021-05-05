@@ -115,6 +115,7 @@ app.read()
 - download
 - send (localtcp)
 - receive (localtcp)
+- password
 - [read the full list here](github.com/404)
 
 ## Security
