@@ -18,8 +18,7 @@ Kookaburra is a free, cross-platform programming language. The syntax is efficie
 - If you use the unpacked version of Kookaburra ***.Net 3.1*** is automaticly installed.
 
 ## Announcements
-### [Official Linux support!](https://www.reddit.com/r/Kookaburra/comments/mqolk1/official_linux_support/)
-[After a lot of testing, we finally released Kookaburra for Linux.](https://www.reddit.com/r/Kookaburra/comments/mqolk1/official_linux_support/)
+### ***Plan on updating to .NET 5***
 
 ## Installation
 ### For Windows:
