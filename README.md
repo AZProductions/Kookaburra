@@ -17,10 +17,10 @@ Kookaburra is a free, cross-platform programming language. The syntax is efficie
 - Using the Installer or stand-alone ***.exe*** file, nothing is needed. 
 - If you use the unpacked version of Kookaburra ***.Net 3.1*** is automaticly installed.
 
-## Announcements
+## 📣 Announcements
 ### ***Plan on updating to .NET 5***
 
-## Installation
+## 💿 Installation
 ### For Windows:
 1. Head over to the ['**Releases**'](https://github.com/AZProductions/Kookaburra/releases)
 2. Open the 'Assets' drop-down from the desired version of kookaburra *(If you can't decide, we recommend you to pick the [latest version](https://github.com/AZProductions/Kookaburra/releases/latest))*
@@ -49,7 +49,7 @@ Run Kookaburra and open a .kookaburra file with
 KookaburraShell /filelocation/example.kookaburra
 ```
 
-## Get started
+## ⏱ Get started
 In kookaburra you can choose between using the terminal and scripting with **'.kookaburra'** files.
 In this guide we wil only cover the topic of programming you own applications.
 
@@ -62,7 +62,7 @@ In this guide we wil only cover the topic of programming you own applications.
 4. Double click the file and Kookaburra wil open up.
 ### [**Watch the full tutorial here.**](https://www.youtube.com/watch?v=ou1rCcN5wEQ)
 
-## Examples
+## 📐Examples
 ### File writer
 ```
 # 'app.debug-off' - remove debug text.
