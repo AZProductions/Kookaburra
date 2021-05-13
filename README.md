@@ -96,8 +96,7 @@ app.read()
 ```
 
 ## 📒 Commands
-### Scripting Commands
-
+|
 
 ### CLI commands
 - cp
@@ -119,7 +118,7 @@ app.read()
 - receive (localtcp)
 - password
 - [read the full list here](github.com/404)
-- 
+
 ## Security
 ### **When downloading Kookaburra**
 We at AZ Software take security very seriously, that's why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
