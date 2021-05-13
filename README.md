@@ -68,7 +68,7 @@ In this guide we wil only cover the topic of programming you own applications.
 # 'app.debug-off' - remove debug text.
 import FileIO
 print @"Location:"
-string location = app.readline()
+string location = app.read()
 print "-------------"
 print @"value:"
 string value = app.readline()
