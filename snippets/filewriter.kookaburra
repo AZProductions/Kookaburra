@@ -1,7 +1,7 @@
 #app.debug-off
 import FileIO
 print @"Location:"
-string location = app.readline()
+string location = app.read()
 print "-------------"
 print @"value:"
 string value = app.readline()
