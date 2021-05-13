@@ -62,39 +62,6 @@ In this guide we wil only cover the topic of programming you own applications.
 4. Double click the file and Kookaburra wil open up.
 ### [**Watch the full tutorial here.**](https://www.youtube.com/watch?v=ou1rCcN5wEQ)
 
-## 📐 Examples
-### File writer
-```
-# 'app.debug-off' - remove debug text.
-import FileIO
-print @"Location:"
-string location = app.read()
-print "-------------"
-print @"value:"
-string value = app.readline()
-new filewriter(location, value)
-print @"finished, value = "
-print @value
-print @"."
-app.read() 
-```
-### All Colors in Kookaburra
-```
-app.debug-off
-print "- Colors in Kookaburra - "
-app.color = blue
-print "Blue"
-app.color = red
-print "Red"
-app.color = green
-print "Green"
-app.color = yellow
-print "Yellow"
-app.color = white
-print "white"
-app.read()
-```
-
 # Syntax
 ***This syntax is supported in the versions 0.5.0 and newer.*** 
 
@@ -230,6 +197,40 @@ new filewriter(location, value)
 - receive (localtcp)
 - password
 - [read the full list here](github.com/404)
+
+## 📐 Examples
+### File writer
+```
+# 'app.debug-off' - remove debug text.
+import FileIO
+print @"Location:"
+string location = app.read()
+print "-------------"
+print @"value:"
+string value = app.readline()
+new filewriter(location, value)
+print @"finished, value = "
+print @value
+print @"."
+app.read() 
+```
+### All Colors in Kookaburra
+```
+app.debug-off
+print "- Colors in Kookaburra - "
+app.color = blue
+print "Blue"
+app.color = red
+print "Red"
+app.color = green
+print "Green"
+app.color = yellow
+print "Yellow"
+app.color = white
+print "white"
+app.read()
+```
+
 
 ## Security
 ### **When downloading Kookaburra**
