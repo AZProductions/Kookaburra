@@ -102,9 +102,9 @@ In this guide we wil only cover the topic of programming you own applications.
 ### **Description**
 ### Pauses the program for a specific time.
 ### **Usage**
-### After ```wait```, type the amount of milliseconds to halt the program. 
+### After ```wait```, specify the time of milliseconds to pause the program. 
 ### **Examples**
-```wait 3000"``` - ***Waits 4 seconds.***
+```wait 4000``` - ***Waits 4 seconds.***
 
 ```wait 10000``` - ***Waits 10 seconds.***
 
@@ -115,16 +115,16 @@ In this guide we wil only cover the topic of programming you own applications.
 ### **Usage**
 ### ```app.title = string``` 
 ### **Examples**
-```app.title = "hello"``` - ***Sets the window title to 'hello'.***
+```app.title = "hello"``` - ***Sets the window title to the text 'hello'.***
 
-```app.title = example``` - ***Sets the window title to the value of 'example'.***
+```app.title = example``` - ***Sets the window title to the present value of the string called example.***
 
 ----
 ## **app.color**
 ### **Description**
 ### Changes the foreground color of the console.
 ### **Usage**
-### ```app.color = 'color'```  
+### ```app.color = color```  
 ### **Examples**
 ```
 app.color = blue
@@ -142,7 +142,7 @@ print "white"
 ----
 ## **app.read()**
 ### **Description**
-### Pauses the program until the user presses the 'enter' key. |
+### Pauses the program until the user presses the 'enter' key.
 ### **Usage**
 ### ```app.read()``` ***or*** ```string example = app.read()```
 
@@ -171,9 +171,9 @@ new filewriter(location, value)
 ### Starts executable or file.
 ### **Usage**
 ### After ```start```, type the location of the file. 
-#### *This command is the only command that disobeys the rules about formatting a string.*
+#### *This is the only function that disobeys the rules about formatting a string.*
 ### **Examples**
-```start c:/file.exe"```
+```start c:/file.exe```
 
 ----
 
