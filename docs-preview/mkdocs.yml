@@ -1,8 +1,66 @@
-site_name: Kookaburra Docs
+site_name: Kookaburra
+site_url: https://azproductions.github.io/Kookaburra/
+#site_author: Name
+site_description: >-
+  Cross-Platform, Object-Oriented Programming language.
+
 nav:
-    - Home: index.md
-    - Commands: commands.md
-    - About: about.md
+  - Home: index.md
+  - Getting started:
+    - Installation: getting-started.md
+    - Create you first program: start-coding.md
+    #- Publishing your site: publishing-your-site.md
+    #- Customization: customization.md
+    #- Troubleshooting: troubleshooting.md
+    #- Data privacy: data-privacy.md
+    - License: license.md
+  - Syntax: syntax.md
+
 theme:
-    name: readthedocs
-    nav_style: dark
+  logo: assets\favicon.png
+  icon:
+    repo: fontawesome/brands/github-square
+  features:
+      - navigation.tabs
+      - navigation.tabs.sticky
+      - navigation.sections
+      - navigation.expand
+      - navigation.indexes
+      - navigation.top
+      - toc.integrate
+  font:
+    text: Roboto
+  favicon: assets\favicon50.png
+  palette:
+    - scheme: default
+      primary: blue
+      toggle:
+        icon: material/lightbulb
+        name: Switch to dark mode
+    - scheme: slate
+      primary: dark blue
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
+  name: material
+
+markdown_extensions:
+  - meta
+  - attr_list
+
+repo_name: AZProductions/Kookaburra
+repo_url: https://github.com/AZProductions/Kookaburra
+edit_uri: ""
+
+markdown_extensions:
+  - meta
+  - admonition
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/AZProductions/
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/AZProductions
+    #- icon: fontawesome/brands/instagram
+    #  link: https://instagram.com/az_produciton
