@@ -11,14 +11,14 @@
       
       
       
-        <link rel="canonical" href="https://azproductions.github.io/Kookaburra/start-coding/">
+        <link rel="canonical" href="https://azproductions.github.io/Kookaburra/hello-world/">
       
       <link rel="icon" href="../assets/favicon50.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.4">
     
     
       
-        <title>Create you first program - Kookaburra</title>
+        <title>Hello world program - Kookaburra</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#hello-world" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Create you first program
+              Hello world program
             
           </span>
         </div>
@@ -338,6 +338,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../start-coding/" class="md-nav__link">
+        Create you first program
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -346,78 +358,13 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Create you first program
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Create you first program
-      </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    
-  </a>
-  
-    <nav class="md-nav" aria-label="">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#watch-the-full-tutorial-here" class="md-nav__link">
-    Watch the full tutorial here.
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../hello-world/" class="md-nav__link">
         Hello world program
       </a>
+      
     </li>
   
 
@@ -471,26 +418,33 @@
               
                 
                 
-                  <h1>Create you first program</h1>
-                
-                <p>In kookaburra you can choose between using the terminal and scripting with <strong>'.kookaburra'</strong> files.
-In this guide we wil only cover the topic of programming you own applications.</p>
-<ol>
-<li>Create a file with a "<strong>.kookaburra</strong>" extension. Example "<strong><em>helloworld.kookaburra</em></strong>".</li>
-</ol>
-<h2 id="_1"><img alt="Creating folder and file," src="https://media.giphy.com/media/h8FwBMfUXUiRcwM3CZ/giphy.gif" /></h2>
-<ol>
-<li>Open the file with a code/text editor, and start coding!</li>
-</ol>
-<h2 id="_2"><img alt="Creating folder and file," src="https://media.giphy.com/media/QLLavb6TzdhgDnv74d/giphy.gif" /></h2>
-<ol>
-<li>Slect "<strong>Open with</strong>" and select <strong><em>kookaburrashell.exe</em></strong> in file explorer.</li>
-</ol>
-<h2 id="_3"><img alt="Setting up &quot;Open with&quot;" src="https://media.giphy.com/media/LVGzbtygblYO4zPzqo/giphy.gif" /></h2>
-<ol>
-<li>Double click the file and Kookaburra wil open up.</li>
-</ol>
-<h5 id="watch-the-full-tutorial-here"><a href="https://www.youtube.com/watch?v=ou1rCcN5wEQ"><strong>Watch the full tutorial here.</strong></a></h5>
+                <h1 id="hello-world">Hello World!</h1>
+<div class="admonition info inline end">
+<p class="admonition-title">Output<p><code>welcome to my first program! 
+You pressed enter!</code></p>
+</p>
+</div>
+<p>Lets start by creating a simple program.</p>
+<pre><code>app.debug-off
+# setting the foreground color to blue.
+app.color = blue
+# changing the title.
+app.title = &quot;My first program&quot;
+# printing welcome message.
+print &quot;welcome to my first program!&quot;
+# freezing the program until the user presses enter.
+app.read()
+print &quot;You pressed enter!&quot;
+wait 2000
+</code></pre>
+<p>We can use Figlets to display the message.</p>
+<pre><code>figlet &quot;Hello World!&quot;
+app.read()
+</code></pre>
+<div class="admonition info">
+<p class="admonition-title">Output<p>Hello World but it takes the entire window.</p>
+</p>
+</div>
                 
               
               
@@ -513,7 +467,7 @@ In this guide we wil only cover the topic of programming you own applications.</
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../getting-started/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../start-coding/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -522,19 +476,19 @@ In this guide we wil only cover the topic of programming you own applications.</
               <span class="md-footer__direction">
                 Previous
               </span>
-              Installation
+              Create you first program
             </div>
           </div>
         </a>
       
       
-        <a href="../hello-world/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../download/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Hello world program
+              Download
             </div>
           </div>
           <div class="md-footer__button md-icon">

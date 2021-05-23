@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://azproductions.github.io/Kookaburra/</loc>
-     <lastmod>2021-05-16</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://azproductions.github.io/Kookaburra/getting-started/</loc>
-     <lastmod>2021-05-16</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://azproductions.github.io/Kookaburra/start-coding/</loc>
-     <lastmod>2021-05-16</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://azproductions.github.io/Kookaburra/license/</loc>
-     <lastmod>2021-05-16</lastmod>
+     <loc>https://azproductions.github.io/Kookaburra/hello-world/</loc>
+     <lastmod>2021-05-23</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://azproductions.github.io/Kookaburra/download/</loc>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://azproductions.github.io/Kookaburra/syntax/</loc>
-     <lastmod>2021-05-16</lastmod>
+     <lastmod>2021-05-23</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
