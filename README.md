@@ -42,11 +42,11 @@ curl -o /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/do
 ```
 And run it by typing
 ```
-KookaburraShell
+./KookaburraShell
 ```
 Run Kookaburra and open a .kookaburra file with
 ```
-KookaburraShell /filelocation/example.kookaburra
+./KookaburraShell /filelocation/example.kookaburra
 ```
 
 ## ⏱ Get started
