@@ -14,10 +14,9 @@ Kookaburra is a free, cross-platform programming language. The syntax is efficie
 
 ## Prerequisites
 - Using the Installer or stand-alone ***.exe*** file, nothing is needed. 
-- If you use the unpacked version of Kookaburra ***.Net 3.1*** is automaticly installed.
 
 ## 📣 Announcements
-### ***Plan on updating to .NET 5***
+### ***New website in the workings!***
 
 ## 💿 Installation
 ### For Windows:
