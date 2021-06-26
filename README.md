@@ -16,6 +16,7 @@ Kookaburra is a free, cross-platform programming language. The syntax is efficie
 - Using the Installer or stand-alone ***.exe*** file, nothing is needed. 
 
 ## 📣 Announcements
+### [Publishing Kookaburra into an exe file - Blog](https://github.com/AZProductions/Kookaburra/blob/main/blogs/Publishing_Kookaburra.md)
 ### [Improving Kookaburra's performance - Blog](https://github.com/AZProductions/Kookaburra/blob/main/blogs/0.6.0_Improvments.md)
 ### [New website](https://azproductions.github.io/Kookaburra/)
 
