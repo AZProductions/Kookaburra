@@ -5,4 +5,4 @@ We do not track any data, everything is stored locally on your computer.
 
 If users make harmful .kookaburra files, AZ Software isn’t responsible for the damage done.
 
-We provide users with a tool, and discourage using it for malicious purposes.
+We provide users a tool, and discourage using it for malicious purposes.
