@@ -18,16 +18,16 @@ Kookaburra is a free, cross-platform programming language. The syntax is efficie
 ## 📣 Announcements
 ### [Publishing Kookaburra into an exe file - Blog](https://github.com/AZProductions/Kookaburra/blob/main/blogs/Publishing_Kookaburra.md)
 ### [Improving Kookaburra's performance - Blog](https://github.com/AZProductions/Kookaburra/blob/main/blogs/0.6.0_Improvments.md)
-### **Very close to publishing Kookaburra to the Windows Store!**
+### **Kookaburra is on the Windows Store!**
 
 ## 💿 Installation
 ### For Windows:
-1. Head over to the ['**Releases**'](https://github.com/AZProductions/Kookaburra/releases)
-2. Open the 'Assets' drop-down from the desired version of kookaburra *(If you can't decide, we recommend you to pick the [latest version](https://github.com/AZProductions/Kookaburra/releases/latest))*
-3. Download the **KookaburraShell_x_xxx.exe** file.
- * Stand-alone executable with all necessary prerequisites included.
-
-Open Kookaburra by double clicking the icon of the executable.
+ - [Using Microsoft Store.](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
+ - Github Releases:
+   1. Head over to the ['**Releases**'](https://github.com/AZProductions/Kookaburra/releases)
+   2. Open the 'Assets' drop-down from the desired version of kookaburra *(If you can't decide, we recommend you to pick the [latest version](https://github.com/AZProductions/Kookaburra/releases/latest))*
+   3. Download the **KookaburraShell_x_xxx.exe** file.
+   4. Open Kookaburra by double clicking the icon of the executable.
 
 -----
 
