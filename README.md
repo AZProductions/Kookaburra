@@ -6,7 +6,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/azproductions/kookaburra)](https://github.com/AZProductions/Kookaburra/issues)
 [![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)](https://github.com/AZProductions/Kookaburra/releases)
 [![.NET Core Version](https://img.shields.io/badge/.NET%20Core-5-yellow)](https://dotnet.microsoft.com/download/dotnet/5.0)
-<a href='//www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='English badge' style="text-align: left;" center width="96" height="35"/></a>
+<a href='//www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='English badge' style="vertical-align:middle" center width="96" height="35"/></a>
 
 ## Description
 Kookaburra is a free, cross-platform programming language. The syntax is efficient and easy to master.
