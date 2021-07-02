@@ -1,0 +1,18 @@
+<style>
+  .md-nav--primary .md-nav__link[for=__toc] ~ .md-nav {
+    display: none;
+  }
+</style>
+
+# Improving Kookaburra's performance.
+-----
+##### **In this blog, we're going to talk about the new improvments in Kookaburra.**
+###### ***24 June 2021 - Blog 1 - Kookaburra 0.6.0***
+-----
+
+In Celebration of 100 downloads, we managed to speed up the performance quite a bit. Here's a graph. We achieved this by re-factoring a lot of code, which took a long time. The idea to re-factor Kookaburra started at the beginning of version **0.5.0**. Luckily we achieved the goal, and successfully managed to speed things up. [Get your copy of Kookaburra **0.6.0**.](https://github.com/AZProductions/Kookaburra/releases/latest) At the time of writing we're still in ***Pre-2***, but we're going to release it very soon. **Happy coding!**
+
+----
+<img src="https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/graph.png" class="center">
+
+----

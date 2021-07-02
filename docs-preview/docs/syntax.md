@@ -1,3 +1,9 @@
+<style>
+  .md-nav--primary .md-nav__link[for=__toc] ~ .md-nav {
+    display: none;
+  }
+</style>
+
 ***This syntax is supported in the versions 0.5.0 and newer.*** 
 
 ## **Print**

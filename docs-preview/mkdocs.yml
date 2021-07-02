@@ -2,19 +2,16 @@ site_name: Kookaburra
 site_url: https://azproductions.github.io/Kookaburra/
 #site_author: Name
 site_description: >-
-  Cross-Platform, Object-Oriented Programming language.
+  Kookaburra is a simple programming language. With Kookaburra you can choose between the powerful CLI (command-line-interface), or start scripting with its intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely free to use, with local files and no data collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.
 
 nav:
   - Home: index.md
-  - Getting started:
-    - Installation: getting-started.md
-    - Create you first program: start-coding.md
-    #- Publishing your site: publishing-your-site.md
-    #- Customization: customization.md
-    #- Troubleshooting: troubleshooting.md
-    #- Data privacy: data-privacy.md
-    - License: license.md
-  - Syntax: syntax.md
+  - Getting started: tutorials/getting started.md
+  - Downloads: https://github.com/AZProductions/Kookaburra/releases/
+  - Blogs:
+    - Improving Kookaburra's performance: blogs/Improving Kookaburra's performance.md
+    - Publishing Kookaburra into an exe file: blogs/Publishing Kookaburra into an exe file.md
+    - Kookaburra on the Microsoft Store: blogs/Kookaburra on the Microsoft Store.md
 
 theme:
   logo: assets\favicon.png
@@ -28,6 +25,7 @@ theme:
       - navigation.indexes
       - navigation.top
       - toc.integrate
+      - content.tabs.link
   font:
     text: Roboto
   favicon: assets\favicon50.png
@@ -44,10 +42,6 @@ theme:
         name: Switch to light mode
   name: material
 
-markdown_extensions:
-  - meta
-  - attr_list
-
 repo_name: AZProductions/Kookaburra
 repo_url: https://github.com/AZProductions/Kookaburra
 edit_uri: ""
@@ -55,6 +49,10 @@ edit_uri: ""
 markdown_extensions:
   - meta
   - admonition
+  - attr_list
+  - pymdownx.emoji
+  - pymdownx.tabbed
+  - pymdownx.superfences
 
 extra:
   social:
@@ -62,5 +60,3 @@ extra:
       link: https://github.com/AZProductions/
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/AZProductions
-    #- icon: fontawesome/brands/instagram
-    #  link: https://instagram.com/az_produciton
