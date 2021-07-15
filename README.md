@@ -19,9 +19,6 @@
  
 ###### ***Remember, KookaburraShell is still in Pre-Release. Features may vary in the final release.***
 
-## Prerequisites
-- Using the Installer or stand-alone ***.exe*** file, nothing is needed. 
-
 ## 📣 Announcements
 ### [Publishing Kookaburra into an exe file - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/Publishing_Kookaburra.md)
 ### [Improving Kookaburra's performance - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/0.6.0_Improvments.md)
@@ -76,25 +73,25 @@ In this guide we wil only cover the topic of programming you own applications.
 [Availible on the website.](https://azproductions.github.io/Kookaburra/syntax/)
 
 ## 📒 CLI Commands
-- cp
-- cd
-- mv
-- rm
-- edit
-- mkdir
-- mkfile
-- help
-- whoami
-- ls
-- dir
-- drives
-- browse/explore/explorer
-- ipconfig
-- download
-- send (localtcp)
-- receive (localtcp)
-- password
-- [read the full list here](github.com/404)
+| Command | description                      |
+| ---- | -----------|
+|	```cp``` | Copy files from one place to another.	|
+|	```rm``` | Delete files.	                        |
+|	```rmdir``` | Delete folders. 	                  |
+|	```mkdir``` | Make folders. 	                    |
+|	```mkfile``` | Make files. 	|
+|	```cd``` | Change to a directory or file. 	|
+|	```cd ..``` | Go back a directory. 	|
+|	```ls``` or ```dir``` | Go back a directory. 	|
+|	```claer``` or ```cls``` | Go back a directory. 	|
+|	```whoami``` | Shows the pc name and username. 	|
+|	```drives``` | List all drives in your computer. 	|
+|	```browse``` | Opens file-explorer in the current directory. You can also use ```explore``` or ```explorer```. 	|
+|	```ipconfig``` | Show all internet settings from your computer. 	|
+|	```download``` | Download files from an internet server. 	|
+|	```password``` | Generate passwords. 	|
+|	```tree``` | Renders a detailed list of all the files and folders in a directory. 	|
+
 
 ## 📐 Examples
 ### File writer
