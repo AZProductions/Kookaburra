@@ -36,16 +36,17 @@ Kookaburra is a free, cross-platform programming language. The syntax is efficie
    3. Download the **KookaburraShell_x_xxx.exe** file.
    4. Open Kookaburra by double clicking the icon of the executable.
 
+#### [**Youtube Tutorial**](https://www.youtube.com/watch?v=Dr1xe4JFh78)
 -----
 
 ### For Linux
 Use this command to download it with [**wget**](http://www.gnu.org/software/wget/)
 ```bash
-wget -O /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/download/0.5.0/KookaburraShell_linux_0.5.0
+wget  https://github.com/AZProductions/Kookaburra/releases/download/0.6.8/KookaburraShell_linux_0.6.8
 ```
 Or by using [**curl**](https://curl.se/)
 ```bash
-curl -o /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/download/0.5.0/KookaburraShell_linux_0.5.0
+curl https://github.com/AZProductions/Kookaburra/releases/download/0.6.8/KookaburraShell_linux_0.6.8
 ```
 And run it by typing
 ```
@@ -55,6 +56,8 @@ Run Kookaburra and open a .kookaburra file with
 ```
 ./KookaburraShell /filelocation/example.kookaburra
 ```
+#### [**Youtube Tutorial**](https://www.youtube.com/watch?v=cvjH8pmiKDk)
+
 
 ## ⏱ Get started
 In kookaburra you can choose between using the terminal and scripting with **'.kookaburra'** files.
@@ -135,7 +138,4 @@ We at AZ Software take security very seriously, that's why on every release page
 We recommend you to scan the donwnloaded file with an Antivirus before opening or executing the file.
 You can also open the file in a **code/text editor** and read exactly what the file does.
 
-## About Kookaburra
-
-![graph](https://raw.githubusercontent.com/AZProductions/Kookaburra/main/.github/icons/graph.png) 
 ##### ***AZ Software is not responsible for any harm to your device(s).***
