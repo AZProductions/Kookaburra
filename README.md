@@ -15,7 +15,7 @@
 ----
 
 ## Description
-Kookaburra is a free, cross-platform programming language. The syntax is efficient and easy to master.
+Kookaburra is a simple programming language. With Kookaburra you can choose between the powerful CLI (command-line-interface), or start scripting with its intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely free to use, with local files and no data collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.
  
 ###### ***Remember, KookaburraShell is still in Pre-Release. Features may vary in the final release.***
 
