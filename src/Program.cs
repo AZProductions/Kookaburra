@@ -91,7 +91,7 @@ namespace KookaburraShell
                         .Color(Color.Green));
 
                     Console.WriteLine(Environment.NewLine);
-                    
+
                     var rule1 = new Rule("[white bold]All CLI  Commands[/]");
                     AnsiConsole.Render(rule1);
 
@@ -862,7 +862,7 @@ namespace KookaburraShell
                     }
                     else if (loc.EndsWith(".kookaburra"))
                     {
-                        
+
                     }
                     else
                     {
@@ -998,7 +998,7 @@ namespace KookaburraShell
                     int rand = random.Next(1, 10);
 
                     //New tips coming soon..
-                    switch (rand) 
+                    switch (rand)
                     {
                         case 1:
                             table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file.[/]");
@@ -1031,7 +1031,7 @@ namespace KookaburraShell
                             table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
                             break;
                     }
-                    
+
                     table.Border(TableBorder.Heavy);
                     AnsiConsole.Render(table);
                 }
