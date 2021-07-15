@@ -1,0 +1,12 @@
+﻿namespace KookaburraShell
+{
+    class Isettingsconf
+    {
+        public static string Currentdir { get; set; }
+        // true = file false = dir
+        public static bool Filedir { get; set; }
+        public static bool Networkkey { get; set; }
+        public static bool Quietmode { get; set; }
+        public static string Envloc { get; set; }
+    }
+}
