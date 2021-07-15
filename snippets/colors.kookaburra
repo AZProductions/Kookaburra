@@ -1,13 +1,13 @@
 app.debug-off
 print "- Colors in Kookaburra - "
-app.color = blue
+app.color = Blue
 print "Blue"
-app.color = red
+app.color = Red
 print "Red"
-app.color = green
+app.color = Green
 print "Green"
-app.color = yellow
+app.color = Yellow
 print "Yellow"
-app.color = white
+app.color = White
 print "white"
 app.read()
