@@ -9,5 +9,5 @@ print "Green"
 app.color = Yellow
 print "Yellow"
 app.color = White
-print "white"
+print "White"
 app.read()
