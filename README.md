@@ -83,7 +83,7 @@ In this guide we wil only cover the topic of programming you own applications.
 |	```cd``` | Change to a directory or file. 	|
 |	```cd ..``` | Go back a directory. 	|
 |	```ls``` or ```dir``` | Go back a directory. 	|
-|	```clear``` or ```cls``` | Go back a directory. 	|
+|	```clear``` or ```cls``` | Clears the console window. 	|
 |	```whoami``` | Shows the pc name and username. 	|
 |	```drives``` | List all drives in your computer. 	|
 |	```browse``` | Opens file-explorer in the current directory. You can also use ```explore``` or ```explorer```. 	|
