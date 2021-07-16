@@ -24,9 +24,6 @@
 ### [The new releasing system - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/Kookaburra_releasing_strategy.md)
 ### [**Kookaburra is on the Windows Store!** - ***Link***](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
 
-## ➡ Next release
-### **6.9.X LTR**
-
 ## 💿 Installation
 ### For Windows:
  - [Using Microsoft Store.](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
