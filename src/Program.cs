@@ -1,4 +1,4 @@
-﻿using Spectre.Console;
+using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -1875,6 +1875,32 @@ namespace KookaburraShell
                                         bc.Label("[" + Console.ForegroundColor + "]" + Format(result2) + "[/]");
                                         bc.CenterLabel();
                                         script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("new Rule("))
+                                    {
+                                        string result = s.Replace("new Rule(", "");
+                                        result = result.Replace(")", "");
+                                        if (string.IsNullOrWhiteSpace(result))
+                                        {
+                                            var rule = new Rule("[" + Console.ForegroundColor + "][/]");
+                                            AnsiConsole.Render(rule);
+                                        }
+                                        else
+                                        {
+                                            var rule = new Rule("[" + Console.ForegroundColor + "]" + Format(result) + "[/]");
+                                            AnsiConsole.Render(rule);
+                                        }
+                                        script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("new Calendar(")) 
+                                    {
+                                        string result = s.Replace("new Calendar(", "");
+                                        result = result.Replace(")", "");
+                                        string[] valuearray = result.Split(", ");
+                                        var calendar = new Calendar(int.Parse(valuearray[0]), int.Parse(valuearray[1]));
+                                        calendar.HeaderStyle(Style.Parse(Console.ForegroundColor.ToString()));
+                                        AnsiConsole.Render(calendar);
+
                                     }
                                     else if (s.StartsWith("Barchart.Add(") && s.EndsWith(")"))
                                     {
