@@ -1,0 +1,14 @@
+app.debug-off
+app.color = white
+new Barchart("Test Message")
+app.color = Green
+Barchart.Add("test1", 20)
+app.color = red
+Barchart.Add("test2", 24)
+app.color = blue
+Barchart.Add("test3", 45)
+Barchart.Display()
+app.read()
+app.clear
+Barchart.Display()
+app.read()
