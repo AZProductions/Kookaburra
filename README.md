@@ -24,6 +24,9 @@
 ### [Improving Kookaburra's performance - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/0.6.0_Improvments.md)
 ### [**Kookaburra is on the Windows Store!** - ***Link***](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
 
+## ➡ Next release
+### **6.9.X LTR**
+
 ## 💿 Installation
 ### For Windows:
  - [Using Microsoft Store.](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
