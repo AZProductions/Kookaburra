@@ -21,7 +21,7 @@
 
 ## 📣 Announcements
 ### [Publishing Kookaburra into an exe file - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/Publishing_Kookaburra.md)
-### [Improving Kookaburra's performance - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/0.6.0_Improvments.md)
+### [The new releasing system - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/Kookaburra_releasing_strategy.md)
 ### [**Kookaburra is on the Windows Store!** - ***Link***](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
 
 ## ➡ Next release
