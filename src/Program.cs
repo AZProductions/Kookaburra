@@ -101,6 +101,7 @@ namespace KookaburraShell
                     table.AddColumn("Command");
                     table.AddColumn(new TableColumn("Description").Centered());
                     table.AddRow("cp", "[green]Copy files from one place to another.[/]");
+                    table.AddRow("clear [blue]or[/] cls", "[green]Copy files from one place to another.[/]");
                     table.AddRow("rm", "[green]Delete files.[/]");
                     table.AddRow("rmdir", "[green]Delete folders.[/]");
                     table.AddRow("mkdir", "[green]Make folders.[/]");
@@ -1585,6 +1586,7 @@ namespace KookaburraShell
                     var Intname = new[] { "" };
                     List<string> Stringname = new List<string>();
                     List<string> Stringvalue = new List<string>();
+                    BarChart bc = new BarChart();
                     string debugoff = File.ReadLines(file.ToString()).First();
                     if (debugoff == "app.debug-off") { } else { Debuger(); }
                     Isettingsconf.Quietmode = true;
@@ -1862,6 +1864,29 @@ namespace KookaburraShell
                                         string result = s.Replace("rm ", "");
                                         File.Delete(Format(result));
                                         script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("new Barchart"))
+                                    {
+                                        string result1 = s.Replace("new Barchart", "");
+                                        string result2 = result1.Replace(")", "");
+                                        result2 = result2.Replace("(", "");
+
+                                        bc.Width = 100;
+                                        bc.Label("[" + Console.ForegroundColor + "]" + Format(result2) + "[/]");
+                                        bc.CenterLabel();
+                                        script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("Barchart.Add(") && s.EndsWith(")"))
+                                    {
+                                        string result = s.Replace("Barchart.Add(", "");
+                                        result = result.Replace(")", "");
+                                        string[] valuearray = result.Split(", ");
+                                        bc.AddItem("[" + Console.ForegroundColor + "]" + Format(valuearray[0]) + "[/]" /*+ Format(valuearray[0])*/, Double.Parse(valuearray[1]), Console.ForegroundColor);
+                                        script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("Barchart.Display(") && s.EndsWith(")"))
+                                    {
+                                        AnsiConsole.Render(bc);
                                     }
                                     else if (s.StartsWith("zip "))
                                     {
