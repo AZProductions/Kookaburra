@@ -12,7 +12,7 @@
 <a href='https://github.com/AZProductions/Kookaburra/releases'><img src='https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/badge.png' alt='Github link badge' style="vertical-align:middle" center width="96" height="35"/></a>
 <a href='https://github.com/404.html'><img src='https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/badge2.png' alt='Mirror link badge' style="vertical-align:middle" center width="96" height="35"/></a>
 
--
+----
 
 ## Description
 **Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely **free** to use, with local files and no data/telemetry collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.
