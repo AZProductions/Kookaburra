@@ -1,0 +1,9 @@
+app.debug-off
+app.clear
+new Grid()
+app.color = red
+Grid.AddColumn("This is a grid!")
+app.color = blue
+Grid.AddColumn("I'm a column")
+Grid.AddRow("You can add", "multiple rows!")
+Grid.Display()
