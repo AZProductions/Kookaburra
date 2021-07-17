@@ -1587,6 +1587,8 @@ namespace KookaburraShell
                     List<string> Stringname = new List<string>();
                     List<string> Stringvalue = new List<string>();
                     BarChart bc = new BarChart();
+                    Table tb = new Table();
+                    bool GridSelect = false;
                     string debugoff = File.ReadLines(file.ToString()).First();
                     if (debugoff == "app.debug-off") { } else { Debuger(); }
                     Isettingsconf.Quietmode = true;
@@ -1865,6 +1867,36 @@ namespace KookaburraShell
                                         File.Delete(Format(result));
                                         script_var.Ifcount = 1;
                                     }
+                                    else if (s.StartsWith("Grid.AddColumn(")) 
+                                    {
+                                        if (GridSelect)
+                                        {
+                                            string result1 = s.Replace("Grid.AddColumn", "");
+                                            string result2 = result1.Replace(")", "");
+                                            result2 = result2.Replace("(", "");
+                                            tb.AddColumn("[" + Console.ForegroundColor + "]" + Format(result2) + "[/]");
+                                        }
+                                    }
+                                    else if (s.StartsWith("Grid.AddRow("))
+                                    {
+                                        if (GridSelect)
+                                        {
+                                            string result1 = s.Replace("Grid.AddRow", "");
+                                            string result2 = result1.Replace(")", "");
+                                            result2 = result2.Replace("(", "");
+                                            string[] valuearray = result2.Split(", ");
+                                            tb.AddRow("[" + Console.ForegroundColor + "]" + Format(valuearray[0]) + "[/]", "[" + Console.ForegroundColor + "]" + Format(valuearray[1]) + "[/]");
+                                        }
+                                    }
+                                    else if (s.StartsWith("Grid.Display("))
+                                    {
+                                        if (GridSelect)
+                                            AnsiConsole.Render(tb);
+                                    }
+                                    else if (s.StartsWith("new Grid("))
+                                    {
+                                        GridSelect = true;
+                                    }
                                     else if (s.StartsWith("new Barchart"))
                                     {
                                         string result1 = s.Replace("new Barchart", "");
@@ -1892,7 +1924,7 @@ namespace KookaburraShell
                                         }
                                         script_var.Ifcount = 1;
                                     }
-                                    else if (s.StartsWith("new Calendar(")) 
+                                    else if (s.StartsWith("new Calendar("))
                                     {
                                         string result = s.Replace("new Calendar(", "");
                                         result = result.Replace(")", "");
