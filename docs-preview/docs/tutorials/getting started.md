@@ -38,3 +38,6 @@ Run Kookaburra and open a .kookaburra file with
 ```
 ./KookaburraShell /filelocation/example
 ```
+------
+
+# [Once your finished with installing continue to part 2.](creating your first program.md)

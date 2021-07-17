@@ -20,10 +20,3 @@
 ----
 ## **About Kookaburra**
 Kookaburra is a simple programming language. With Kookaburra you can choose between the powerful CLI (command-line-interface), or start scripting with its intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely free to use, with local files and no data collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.
-
-## **Security**
-### **When downloading Kookaburra**
-We at AZ Software take security very seriously, that's why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
-
-### **Opening user-created kookaburra or kbproject files**
-We recommend you to scan the donwnloaded file with an Antivirus before opening or executing the file. You can also open the file in a code/text editor and read exactly what the file does.
