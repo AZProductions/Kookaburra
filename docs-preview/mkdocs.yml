@@ -12,6 +12,7 @@ nav:
     - Improving Kookaburra's performance: blogs/Improving Kookaburra's performance.md
     - Publishing Kookaburra into an exe file: blogs/Publishing Kookaburra into an exe file.md
     - Kookaburra on the Microsoft Store: blogs/Kookaburra on the Microsoft Store.md
+    - Kookaburra releasing strategy: blogs/Kookaburra releasing strategy.md
 
 theme:
   logo: assets\favicon.png
