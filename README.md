@@ -91,6 +91,7 @@ In this guide we wil only cover the topic of programming you own applications.
 |	```download``` | Download files from an internet server. 	|
 |	```password``` | Generate passwords. 	|
 |	```tree``` | Renders a detailed list of all the files and folders in a directory. 	|
+|	```winreset``` | Resets the window height and width. (Windows only) 	|
 
 
 ## 📐 Examples
