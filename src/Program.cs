@@ -1,4 +1,4 @@
-using Spectre.Console;
+﻿using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -83,6 +83,8 @@ namespace KookaburraShell
                 if (input == "help")
                 {
                     validcommandfound = true;
+                    Console.Clear();
+                    Console.CursorVisible = false;
                     Console.WriteLine(Environment.NewLine);
 
                     AnsiConsole.Render(
@@ -92,6 +94,12 @@ namespace KookaburraShell
 
                     Console.WriteLine(Environment.NewLine);
 
+                    var rule3 = new Rule("[white bold]Quick info[/]");
+                    AnsiConsole.Render(rule3);  
+                    string Message = "Press 'enter' to leave the help dialog, and scroll to read the information";
+                    Console.SetCursorPosition((Console.WindowWidth - Message.Length) / 2, Console.CursorTop);
+                    Console.WriteLine(Message);
+                    
                     var rule1 = new Rule("[white bold]All CLI  Commands[/]");
                     AnsiConsole.Render(rule1);
 
@@ -101,7 +109,8 @@ namespace KookaburraShell
                     table.AddColumn("Command");
                     table.AddColumn(new TableColumn("Description").Centered());
                     table.AddRow("cp", "[green]Copy files from one place to another.[/]");
-                    table.AddRow("clear [blue]or[/] cls", "[green]Copy files from one place to another.[/]");
+                    table.AddRow("clear [blue]or[/] cls", "[green]Clears the screen.[/]");
+                    table.AddRow("winreset", "[green]Resets the window height and width. (Windows only)[/]");
                     table.AddRow("rm", "[green]Delete files.[/]");
                     table.AddRow("rmdir", "[green]Delete folders.[/]");
                     table.AddRow("mkdir", "[green]Make folders.[/]");
@@ -123,8 +132,13 @@ namespace KookaburraShell
                     DateTime start = new DateTime(2021, 3, 14);
                     DateTime end = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
                     var diffMonths = (end.Month + end.Year * 12) - (start.Month + start.Year * 12);
-                    Console.WriteLine(Environment.NewLine);
                     Console.WriteLine("Our mission is to Write The Future. We create simple, but yet powerfull tools and software. Security is the most important factor when creating such tools. We at AZ Software spent " + diffMonths + " months creating Kookaburra. It is a hard task keeping it up and running, we appreciate feedback. Thank you. - AZSoftware");
+                    Console.WriteLine(Environment.NewLine);
+                    Thread.Sleep(10);
+                    Console.SetCursorPosition(10, 1);
+                    Console.ReadKey();
+                    Console.Clear();
+                    Console.CursorVisible = true;
                 }
 
                 if (input == "clear" || input == "cls")
@@ -151,6 +165,16 @@ namespace KookaburraShell
                         Console.WriteLine(Environment.NewLine);
                         AnsiConsole.Markup("When using Kookaburra, AZ Software isn't responsible for any harm or damage done by the end-user. We do not track any data, everything is stored locally on your computer. If users make harmful .kookaburra files, AZ Software isn’t responsible for the damage done. We provide users a tool, and discourage using it for malicious purposes.");
                         Console.WriteLine(Environment.NewLine);
+                    }
+                }
+
+                if (input == "winreset") 
+                {
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    {
+                        validcommandfound = true;
+                        Console.WindowWidth = Isettingsconf.SavedWidth;
+                        Console.WindowHeight = Isettingsconf.SavedHeight;
                     }
                 }
 
@@ -1574,6 +1598,12 @@ namespace KookaburraShell
                         //Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Failed to Read custom_commands.txt");
                     }
                 }
+
+                if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                {
+                    Isettingsconf.SavedHeight = Console.WindowHeight;
+                    Isettingsconf.SavedWidth = Console.WindowWidth;
+                }
             }
 
             void fileoutput()
@@ -1814,6 +1844,13 @@ namespace KookaburraShell
                                     else if (s.StartsWith("app.color = "))
                                     {
                                         Appcolor(s);
+                                        script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("app.background = "))
+                                    {
+                                        string color = s.Replace("app.background = ", "");
+                                        color = char.ToUpper(color[0]) + color.Substring(1);
+                                        Console.BackgroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), color);
                                         script_var.Ifcount = 1;
                                     }
                                     else if (s == "sound.beep()")
@@ -2475,21 +2512,6 @@ namespace KookaburraShell
                                 throw;
                             }
                         }
-                    }
-                    else if (file.Extension == ".kbproject")
-                    {
-                        Console.Clear();
-                        try
-                        {
-                            string zipPath = file.ToString();
-                            DirectoryInfo pd = Directory.GetParent(zipPath);
-                            string res = pd.Parent.FullName;
-                            string name = Path.GetFileName(zipPath).Replace(".kbproject", "");
-                            string fullname = res + @"\" + name;
-                            ZipFile.ExtractToDirectory(zipPath, fullname);
-                            Console.Clear();
-                        }
-                        catch { Console.WriteLine("error"); }
                     }
                 }
             }

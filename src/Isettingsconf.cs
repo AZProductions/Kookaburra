@@ -8,5 +8,7 @@
         public static bool Networkkey { get; set; }
         public static bool Quietmode { get; set; }
         public static string Envloc { get; set; }
+        public static int SavedHeight { get; set; }
+        public static int SavedWidth { get; set; }
     }
 }
