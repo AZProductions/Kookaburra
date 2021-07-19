@@ -1,4 +1,4 @@
-# Kookaburra's releasing strategy.
+# Kookaburra linking template.
 -----
 ##### **In this blog, we're conveniently providing a linking template for Kookaburra.**
 ###### ***16 July 2021 - Blog 5 - Kookaburra 0.7.2***
