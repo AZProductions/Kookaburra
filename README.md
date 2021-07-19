@@ -48,27 +48,17 @@ curl https://github.com/AZProductions/Kookaburra/releases/download/0.6.8/Kookabu
 ```
 And run it by typing
 ```
-./KookaburraShell
+./KookaburraShell_linux_0.6.8
 ```
 Run Kookaburra and open a .kookaburra file with
 ```
-./KookaburraShell /filelocation/example.kookaburra
+./KookaburraShell_linux_0.6.8 /filelocation/example.kookaburra
 ```
 #### [**Youtube Tutorial**](https://www.youtube.com/watch?v=cvjH8pmiKDk)
 
 
-## ⏱ Get started
-In kookaburra you can choose between using the terminal and scripting with **'.kookaburra'** files.
-In this guide we wil only cover the topic of programming you own applications.
-
-1. Create a file with a "**.kookaburra**" extension. Example "***helloworld.kookaburra***".
-## ![Creating folder and file,](https://media.giphy.com/media/h8FwBMfUXUiRcwM3CZ/giphy.gif)
-2. Open the file with a code/text editor, and start coding!
-## ![Creating folder and file,](https://media.giphy.com/media/QLLavb6TzdhgDnv74d/giphy.gif)
-3. Slect "**Open with**" and select ***kookaburrashell.exe*** in file explorer.
-## ![Setting up "Open with"](https://media.giphy.com/media/LVGzbtygblYO4zPzqo/giphy.gif)
-4. Double click the file and Kookaburra wil open up.
-### [**Watch the full tutorial here.**](https://www.youtube.com/watch?v=ou1rCcN5wEQ)
+## [⏱ Get started](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/)
+We strongly recommend you to read the [**first tutorial**](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/) before starting. In the CLI you can type the command ```help``` to list all the possible commands with explanation. You can also [***watch the full tutorial***](https://www.youtube.com/watch?v=ou1rCcN5wEQ), but since its outdated and not supported in the newer versions of Kookaburra we discourage it.
 
 ## [👩‍💻 Syntax](https://azproductions.github.io/Kookaburra/syntax/)
 [Availible on the website.](https://azproductions.github.io/Kookaburra/syntax/)
@@ -133,7 +123,7 @@ app.read()
 ### **When downloading Kookaburra**
 We at AZ Software take security very seriously, that's why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
 
-### **Opening user-created *.kookaburra* or *.kbproject* files**
+### **Opening user-created *.kookaburra* files**
 We recommend you to scan the donwnloaded file with an Antivirus before opening or executing the file.
 You can also open the file in a **code/text editor** and read exactly what the file does.
 
