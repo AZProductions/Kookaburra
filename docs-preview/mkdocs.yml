@@ -14,6 +14,10 @@ nav:
     - Improving Kookaburra's performance: blogs/Improving Kookaburra's performance.md
     - Kookaburra on the Microsoft Store: blogs/Kookaburra on the Microsoft Store.md
     - The new releasing strategy: blogs/Kookaburra releasing strategy.md
+  - Resources:
+    - Error list: resources/error-list.md
+    - Shortcuts: resources/shortcuts.md
+
 
 theme:
   logo: assets\favicon.png
