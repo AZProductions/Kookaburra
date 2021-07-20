@@ -5,10 +5,6 @@ VisualStudioVersion = 16.0.30907.101
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KookaburraShell", "KookaburraShell.csproj", "{D6C60686-E7EC-4207-B185-A7D21B0B1137}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "KookaburraInstaller", "..\KookaburraInstaller\KookaburraInstaller.vdproj", "{75AD27E0-1CEF-45E3-BE47-B92D74B70F98}"
-EndProject
-Project("{C7167F0D-BC9F-4E6E-AFE1-012C56B48DB5}") = "KookaburraUWP", "..\KookaburraUWP\KookaburraUWP.wapproj", "{4B32FF28-E0A6-4AAC-A736-E35C655C87BA}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
