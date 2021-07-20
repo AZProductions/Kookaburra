@@ -43,14 +43,17 @@ namespace KookaburraShell
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("to read the Terms of Service.");
             Console.WriteLine("");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("Type ");
-            Console.ForegroundColor = ConsoleColor.Blue;
-            Console.Write("'Help' ");
-            Console.ForegroundColor = ConsoleColor.White;
-            Console.Write("to see all available commands.");
-            Console.WriteLine("");
-            Console.WriteLine("");
+            if (!File.Exists(Isettingsconf.Envloc + @"\FR.txt"))
+            {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("Type ");
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write("'Help' ");
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.Write("to see all available commands.");
+                Console.WriteLine("");
+                Console.WriteLine("");
+            }
             //Checkforupdates();
             Console.ForegroundColor = ConsoleColor.Black;
             bool run = true;
@@ -1515,7 +1518,14 @@ namespace KookaburraShell
                     }
                 }
 
-                string path = Isettingsconf.Envloc + @"\custom_commands.txt";
+                string path3 = Isettingsconf.Envloc + @"\FR.txt";
+                if (!File.Exists(path3))
+                {
+                    File.Create(path3);
+                }
+
+
+                    string path = Isettingsconf.Envloc + @"\custom_commands.txt";
                 if (!File.Exists(path))
                 {
                     try
