@@ -5,7 +5,7 @@
 [![Latest release](https://img.shields.io/github/v/release/azproductions/kookaburra?include_prereleases)](https://github.com/AZProductions/Kookaburra/releases)
 [![GitHub issues](https://img.shields.io/github/issues/azproductions/kookaburra)](https://github.com/AZProductions/Kookaburra/issues)
 [![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)](https://github.com/AZProductions/Kookaburra/releases)
-[![.NET Core Version](https://img.shields.io/badge/.NET%20Core-5-blue)](https://dotnet.microsoft.com/download/dotnet/5.0)
+[![.NET](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/azproductions/kookaburra/badge)](https://www.codefactor.io/repository/github/azproductions/kookaburra)
 
 <a href='//www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='MS-Store link badge' style="vertical-align:middle" center width="96" height="35"/></a>
