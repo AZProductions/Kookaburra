@@ -16,12 +16,10 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 5.0.x
-    - name: CD to /src
-      run: cd src
+        dotnet-version: 5.0.X
     - name: Restore dependencies
       run: dotnet restore
     - name: Build
-      run: dotnet build --no-restore KookaburraShell.csproj
+      run: dotnet build --no-restore src/KookaburraShell.csproj
     - name: Test
-      run: dotnet test --no-build --verbosity normal KookaburraShell.csproj
+      run: dotnet test --no-build --verbosity normal src/KookaburraShell.csproj
