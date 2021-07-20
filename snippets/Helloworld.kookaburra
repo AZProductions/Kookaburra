@@ -8,4 +8,4 @@ print "welcome to my first program!"
 # freezing the program until the user presses enter.
 app.read()
 print "You pressed enter!"
-wait 2000
+wait 2
