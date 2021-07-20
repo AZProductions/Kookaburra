@@ -1,4 +1,4 @@
-﻿using Spectre.Console;
+using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -1353,22 +1353,6 @@ namespace KookaburraShell
                         }
                     }
 
-                    /*void AddNode(string valueArray) 
-                    {
-
-                        string[] valueArray2 = Directory.GetDirectories(valueArray);
-
-                        foreach (string subdirectory in valueArray2)
-                        {
-                            var node = root.AddNode("[yellow]" + subdirectory + "[/]");
-                            string[] subdirectoryEntries2 = Directory.GetDirectories(subdirectory);
-                            foreach (string subdirectory2 in subdirectoryEntries2)
-                            {
-                                *//*AddNode(subdirectory2);*//*
-                            }
-                        }
-                    }*/
-
                     AnsiConsole.Render(root);
                 }
 
@@ -1408,6 +1392,63 @@ namespace KookaburraShell
                             AnsiConsole.MarkupLine("[rapidblink yellow bold]Command 'zip'[/]");
                             AnsiConsole.MarkupLine("[yellow strikethrough]Command 'unzip'[/]");
                             Console.WriteLine("");
+                        }
+                        else if (input == "-env")
+                        {
+                            if (Directory.Exists(Isettingsconf.Envloc))
+                                Isettingsconf.Currentdir = Isettingsconf.Envloc;
+                        }
+                        else if (input == "-dt")
+                        {
+                            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Desktop)))
+                                Isettingsconf.Currentdir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+                        }
+                        else if (input == "-st")
+                        {
+                            if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup)))
+                                Isettingsconf.Currentdir = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
+                        }
+                        else if (input == "-r")
+                        {
+                            if (Directory.Exists(Directory.GetDirectoryRoot(Isettingsconf.Currentdir)))
+                                Isettingsconf.Currentdir = Directory.GetDirectoryRoot(Isettingsconf.Currentdir);
+                        }
+                        else if (input.StartsWith("-")) 
+                        {
+                            string Replace = input.Replace("-", "");
+                            if (Replace.Length == 3)
+                            {
+                                //Assumes that its a drive label.
+                                if (Directory.Exists(Replace))
+                                {
+                                    Isettingsconf.Currentdir = Replace;
+                                }
+                                else
+                                {
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Command '{0}' not found.", input);
+                                    Console.WriteLine("");
+                                }
+                            }
+                            else
+                            {
+                                try 
+                                {
+                                    //Reverts back to original if the location doesn't exist.
+                                    string Temp = Isettingsconf.Currentdir;
+                                    string ReplaceFinal = char.ToUpper(Replace[0]) + Replace.Substring(1);
+                                    Isettingsconf.Currentdir = Environment.GetFolderPath((Environment.SpecialFolder)Enum.Parse(typeof(Environment.SpecialFolder), ReplaceFinal));
+                                    //If the directory doesn't exist revert back to 'Temp'.
+                                    if (!Directory.Exists(Isettingsconf.Currentdir))
+                                        Isettingsconf.Currentdir = Temp;
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Command '{0}' not found.", input);
+                                    Console.WriteLine("");
+                                }
+                            }
                         }
                         else
                         {
