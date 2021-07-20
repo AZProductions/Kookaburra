@@ -85,39 +85,7 @@ We strongly recommend you to read the [**first tutorial**](https://azproductions
 |	```winreset``` | Resets the window height and width. (Windows only) 	|
 
 
-## 📐 Examples
-### File writer
-```
-# 'app.debug-off' - remove debug text.
-import FileIO
-print @"Location:"
-string location = app.read()
-print "-------------"
-print @"value:"
-string value = app.readline()
-new filewriter(location, value)
-print @"finished, value = "
-print @value
-print @"."
-app.read() 
-```
-### All Colors in Kookaburra
-```
-app.debug-off
-print "- Colors in Kookaburra - "
-app.color = blue
-print "Blue"
-app.color = red
-print "Red"
-app.color = green
-print "Green"
-app.color = yellow
-print "Yellow"
-app.color = white
-print "white"
-app.read()
-```
-
+## [📐 Samples](https://github.com/AZProductions/Kookaburra/tree/main/snippets)
 
 ## Security
 ### **When downloading Kookaburra**
