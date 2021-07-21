@@ -3,7 +3,6 @@
 ###### ***Cross-platform, Object-oriented Programming language.***
 ----
 [![Latest release](https://img.shields.io/github/v/release/azproductions/kookaburra?include_prereleases)](https://github.com/AZProductions/Kookaburra/releases)
-[![GitHub issues](https://img.shields.io/github/issues/azproductions/kookaburra)](https://github.com/AZProductions/Kookaburra/issues)
 [![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)](https://github.com/AZProductions/Kookaburra/releases)
 [![.NET Tests](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml)
 [![CodeQL](https://github.com/AZProductions/Kookaburra/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AZProductions/Kookaburra/actions/workflows/codeql-analysis.yml)
