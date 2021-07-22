@@ -27,6 +27,13 @@
 ### [The new releasing system - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/Kookaburra_releasing_strategy.md)
 ### [**Kookaburra is on the Windows Store!** - ***Link***](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
 
+## Supported opperating systems.
+OS                                    | Version                 | Architectures   |
+--------------------------------------|-------------------------|-----------------|
+Windows 7 | 7 SP1(**\***), 8.1      | x64, x86 |
+Windows 10 | Version 1607+           | x64, x86, Arm64 |
+Windows Server      | 2012+                | x64, x86 |
+
 ## 💿 Installation
 ### For Windows:
  - [Using Microsoft Store.](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
