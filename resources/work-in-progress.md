@@ -6,6 +6,9 @@ The following text is a work-in-progress. The text is not finalized.
 #### [- Getting the basics right](#2-getting-the-basics-right)
 #### [- Customizing Kookaburra](#3-customizing-kookaburra)
 ### [**Chapter 2: Kookaburra scripting**](#2-kookaburra-scripting)
+#### [- Functions and values](#1-functions-and-values)
+#### [- Binding](#2-binding)
+#### [- Grids, Barcharts and Rules.](#3-grids-barcharts-and-rules)
 ### [**Chapter 3: Distributing Kookaburra scripts**]()
 ### [**Chapter 4: Customizing Kookaburra**]()
 ----
@@ -93,9 +96,29 @@ One of the most usefull features in Kookaburra is binding, which allowes you to 
 print "Hello {environment.username}!"
 # You use '{}' these brackets when doing Element binding.
 ```
-With String binding you can put parts of strings in strings.
+With String binding you can put parts of strings in strings. String binding uses the **'<>'** instead of **'()'**.
 ```
 string test = "Hello"
 print "<string.test> michael!"
 #prints 'Hello micheal!'
+```
+
+## **3.** Grids, Barcharts and Rules.
+The newest additions to Kookaburra are Grids, Barcharts and Rules. Let's start with Rules. Rules are basicly spacers to sepperate items in the CLI. Creating a new Rule is simple, just type: ```new Rule()```. You can add text in the rule, which supports the *Kookaburra Format System*. ```new Rule("Hello {environment.username}!")``` Barcharts are just as easy, start off by creating it with ```new Barchart("Test Message")```. Then Add Rows with ```Barchart.Add("test2", 24)``` The first value is a string, and the second is the value you give it.
+
+```
+app.debug-off
+app.color = white
+new Barchart("Test Message")
+app.color = Green
+Barchart.Add("test1", 20)
+app.color = red
+Barchart.Add("test2", 24)
+app.color = blue
+Barchart.Add("test3", 45)
+Barchart.Display()
+app.read()
+app.clear
+Barchart.Display()
+app.read()
 ```
