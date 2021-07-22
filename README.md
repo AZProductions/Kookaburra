@@ -7,7 +7,7 @@
 [![.NET Tests](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml)
 [![CodeQL](https://github.com/AZProductions/Kookaburra/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AZProductions/Kookaburra/actions/workflows/codeql-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/azproductions/kookaburra/badge)](https://www.codefactor.io/repository/github/azproductions/kookaburra)
-![12k lines of code](https://img.shields.io/badge/total%20lines-12k-blue)  <!---This badge can be replaced with https://img.shields.io/tokei/lines/github/azproductions/kookaburra to get the live data. Since its requesting it from an API, we decided to make it static and change it regularly.-->
+![12k lines of code](https://img.shields.io/badge/total%20lines-13k-blue)  <!---This badge can be replaced with https://img.shields.io/tokei/lines/github/azproductions/kookaburra to get the live data. Since its requesting it from an API, we decided to make it static and change it regularly.-->
 ![Docs](https://img.shields.io/badge/Docs-13%25-orange)
 
 <a href='//www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='MS-Store link badge' style="vertical-align:middle" center width="96" height="35"/></a>
