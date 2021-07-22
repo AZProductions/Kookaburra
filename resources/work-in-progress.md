@@ -1,14 +1,13 @@
 The following text is a work-in-progress. The text is not finalized.
 ----
-
-## Table of contents
-## [**Chapter 1: Getting started**](#1-getting-started)
-### [- Download Kookaburra](#1-download-kookaburra)
-### [- Getting the basics right](#2-getting-the-basics-right)
-### [- Customizing Kookaburra](#3-customizing-kookaburra)
-## [**Chapter 2: Kookaburra scripting**]()
-## [**Chapter 3: -**]()
-## [**Chapter 4: Customizing Kookaburra**]()
+# Table of contents
+### [**Chapter 1: Getting started**](#1-getting-started)
+#### [- Download Kookaburra](#1-download-kookaburra)
+#### [- Getting the basics right](#2-getting-the-basics-right)
+#### [- Customizing Kookaburra](#3-customizing-kookaburra)
+### [**Chapter 2: Kookaburra scripting**](#2-kookaburra-scripting)
+### [**Chapter 3: Distributing Kookaburra scripts**]()
+### [**Chapter 4: Customizing Kookaburra**]()
 ----
 
 # **1. Getting Started**
@@ -41,3 +40,62 @@ You can add custom commands by editing the **'custom_commands.txt'** file, which
 You can also change the default text editer with the **'text_editer.txt'** file. Simply open it up and change it to ```c:\program files\windows nt\accessories\wordpad.exe|%arg%``` if you want to edit it in Wordpad. If you want to change it back to Notepad, replace the text in the file with ```notepad.exe|%arg%```. By default on Linux it uses Nano, you can of course change it to vim or any other text/code editor. Kookaburra currently doesn't support custom start-up messages, but it will come in the upcoming **0.7.4 pre-4** release. Kookaburra's code is open-source so you can make your own 'custom version' of Kookaburra.
 
 ----
+
+# **2. Kookaburra scripting**
+In chapter one we created our first Kookaburra program, in this chapter its all about scripting. Lets start! **@@@@**
+
+## **1.** Functions and values.
+Kookaburra scripts are read line per line, it doesn't have events. Here is a list of all the functions and values currently in Kookaburra. Keep in mind that its a fast evolving language, the syntax may change so make sure to download the newest version of this book.
+
+### **Print, Figlets and Colors**
+The most used function in Kookaburra is ```print```. Its used to print text on the CLI. By default it make a new line every time you print, you can add an ```@``` in front of the string to print it not as a new line. 
+Example:
+```
+print "hello"
+#prints the text 'hello'as a new line.
+
+new Rule()
+#creates a rule. (a spacer between the two examples.) Read about rules in 'Grids Barcharts and more.'
+
+print @"he"
+print @"llo"
+#prints the text 'hello', becouse of the '@' it doesn't print as a new line.
+```
+
+Kookaburra supports the basic Windows Colors. It uses the colors when printing text on the screen, but also when rendering **Barcharts, Grids and Rules**. Just add these after ```app.color = ```
+
+```
+Black
+Blue
+Cyan
+DarkBlue
+DarkCyan
+DarkGray
+DarkGreen
+DarkMagenta
+DarkRed
+DarkYellow
+Gray
+Green
+Magenta
+Red
+White
+Yellow
+```
+Maybe in the near future it support the longer list of colors from the [**Spectre.Console** library](https://spectreconsole.net/appendix/colors). We are definetly looking out for a solution, it's a game breaking change from 16 to 256 colors.
+
+### **Titles, windows sizes and debug messages**
+You can customize Kookaburra scripts, by changing the title and window size. Changing the windows size is only supported in Windows. Unfortunately you can't change the window icon at runtime, you can create a shortcut on windows with a custom icon. Just open the propeties tab in the shortcut, the icon will also be applied in the running window. In this instance it's Kookaburra. You can start changing the title by typing ```app.title = "this is the title"```, it supports strings and of course binding.
+
+## **2.** Binding
+One of the most usefull features in Kookaburra is binding, which allowes you to display realtime/user dependent text into string. All the functions that support the *Kookaburra Format System*, support binding. There two types of binding, **Element binding** and **String Binding**. Element binding is used for live text, which is user/pc depentent. For example, you can print 'Hello AZ!'. AZ is the username of the computer that can vary between computers. Here's an example: 
+```
+print "Hello {environment.username}!"
+# You use '{}' these brackets when doing Element binding.
+```
+With String binding you can put parts of strings in strings.
+```
+string test = "Hello"
+print "<string.test> michael!"
+#prints 'Hello micheal!'
+```
