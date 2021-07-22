@@ -27,23 +27,37 @@
 ### [The new releasing system - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/blogs/Kookaburra_releasing_strategy.md)
 ### [**Kookaburra is on the Windows Store!** - ***Link***](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
 
-## Supported opperating systems.
-OS                                    | Version                 | Architectures   |
---------------------------------------|-------------------------|-----------------|
-Windows 7 | 7 SP1(**\***), 8.1      | x64, x86 |
-Windows 10 | Version 1607+           | x64, x86, Arm64 |
-Windows Server      | 2012+                | x64, x86 |
-Alpine Linux                | 3.11+                 | x64, Arm64        |	
-CentOS                      | 7+                    | x64               |	
-Debian                      | 9+                    | x64, Arm32, Arm64 |	
-Fedora                      | 33+                   | x64               |	
-Linux Mint              | 18+                   | x64               |
-openSUSE                  | 15+                   | x64               |
-Red Hat Enterprise Linux      | 7+                    | x64               |	
-SUSE Enterprise Linux (SLES)  | 12 SP2+               | x64               |
-Ubuntu                      | 21.04, 20.04, 18.04, 16.04  | x64, Arm32, Arm64 |
+----
 
+## FAQ
+<details>
+ <summary>Which operating systems does Kookaburra support?</summary>
 
+ 
+   OS                                    | Version                 | Architectures   |
+   --------------------------------------|-------------------------|-----------------|
+   Windows 7 | 7 SP1(**\***), 8.1      | x64, x86 |
+   Windows 10 | Version 1607+           | x64, x86, Arm64 |
+   Windows Server      | 2012+                | x64, x86 |
+   Alpine Linux                | 3.11+                 | x64, Arm64        |	
+   CentOS                      | 7+                    | x64               |	
+   Debian                      | 9+                    | x64, Arm32, Arm64 |	
+   Fedora                      | 33+                   | x64               |	
+   Linux Mint              | 18+                   | x64               |
+   openSUSE                  | 15+                   | x64               |
+   Red Hat Enterprise Linux      | 7+                    | x64               |	
+   SUSE Enterprise Linux (SLES)  | 12 SP2+               | x64               |
+   Ubuntu                      | 21.04, 20.04, 18.04, 16.04  | x64, Arm32, Arm64 |
+</details>
+
+<details>
+ <summary>What is Kookaburra?</summary>
+ 
+ **Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its intuitive syntax. The syntax is simple and efficient. Kookaburra is completely **free** to use, with local files and no data/telemetry collection.
+ 
+</details>
+
+----
 
 ## 💿 Installation
 ### For Windows:
