@@ -1,4 +1,4 @@
-﻿namespace KookaburraShell
+namespace KookaburraShell
 {
     class Isettingsconf
     {
@@ -10,5 +10,6 @@
         public static string Envloc { get; set; }
         public static int SavedHeight { get; set; }
         public static int SavedWidth { get; set; }
+        public static bool EasterEgg1 { get; set; }
     }
 }
