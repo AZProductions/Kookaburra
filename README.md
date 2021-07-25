@@ -31,6 +31,13 @@
 
 ## FAQ
 <details>
+ <summary>What is Kookaburra?</summary>
+ 
+ **Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its intuitive syntax. The syntax is simple and efficient. Kookaburra is completely **free** to use, with local files and no data/telemetry collection.
+ 
+</details>
+
+<details>
  <summary>Which operating systems does Kookaburra support?</summary>
 
  
@@ -50,11 +57,12 @@
    Ubuntu                      | 21.04, 20.04, 18.04, 16.04  | x64, Arm32, Arm64 |
 </details>
 
+
+
 <details>
- <summary>What is Kookaburra?</summary>
+  <summary>Why would you downloads Kookaburra?</summary>
  
- **Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its intuitive syntax. The syntax is simple and efficient. Kookaburra is completely **free** to use, with local files and no data/telemetry collection.
- 
+ Kookaburra is a simple programming language, so just give it a try. It's compleatly free and open-source. It also doesn't change values in the registery in Windows. It simply creates a folder in the **AppData Roaming** folder. You can have a look in the folder by pressing <kbd>win</kbd> + <kbd>R</kbd> and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the folder open.
 </details>
 
 ----
@@ -95,7 +103,7 @@ Run Kookaburra and open a .kookaburra file with
 We strongly recommend you to read the [**first tutorial**](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/) before starting. In the CLI you can type the command ```help``` to list all the possible commands with explanation. You can also [***watch the full tutorial***](https://www.youtube.com/watch?v=ou1rCcN5wEQ), but since its outdated and not supported in the newer versions of Kookaburra we discourage it.
 
 ## [👩‍💻 Syntax](https://azproductions.github.io/Kookaburra/syntax/)
-[Availible on the website.](https://azproductions.github.io/Kookaburra/syntax/)
+[Available on the website.](https://azproductions.github.io/Kookaburra/syntax/)
 
 ## 📒 CLI Commands
 | Command | description                      |
