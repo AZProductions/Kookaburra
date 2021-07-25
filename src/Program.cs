@@ -22,7 +22,7 @@ namespace KookaburraShell
             Console.TreatControlCAsInput = false;
             Isettingsconf.Currentdir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             Isettingsconf.Envloc = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Kookaburra\";
-            script_var.Intcount = 0;
+            script_var.Intcount = 0; //resets the intcount to 0 to prevent chrashes
             Isettingsconf.Quietmode = false;
             fileoutput();
             Checkenvironment();
