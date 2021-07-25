@@ -67,10 +67,17 @@ namespace KookaburraShell
                 bool validcommandfound = false;
                 if (Isettingsconf.Currentdir == "")
                 {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("Kookaburra");
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.Write(">");
+                    if (Isettingsconf.EasterEgg1 == true) 
+                    {
+                        AnsiConsole.Markup("[orange1]K[/][yellow1]o[/][greenyellow]o[/][lime]k[/][aqua]a[/][turquoise2]b[/][blue]u[/][hotpink_1]r[/][deeppink2]r[/][red]a[/][blue]@[/][white]>[/]");
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write("Kookaburra");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write(">");
+                    }
                 }
                 else
                 {
@@ -1416,7 +1423,8 @@ namespace KookaburraShell
                             if (Directory.Exists(Directory.GetDirectoryRoot(Isettingsconf.Currentdir)))
                                 Isettingsconf.Currentdir = Directory.GetDirectoryRoot(Isettingsconf.Currentdir);
                         }
-                        else if (input.StartsWith("-")) 
+                        else if (input == "-c") { Isettingsconf.Currentdir = ""; }
+                        else if (input.StartsWith("-"))
                         {
                             string Replace = input.Replace("-", "");
                             if (Replace.Length == 3)
@@ -1435,7 +1443,7 @@ namespace KookaburraShell
                             }
                             else
                             {
-                                try 
+                                try
                                 {
                                     //Reverts back to original if the location doesn't exist.
                                     string Temp = Isettingsconf.Currentdir;
@@ -2572,6 +2580,13 @@ namespace KookaburraShell
                 check_environment.Is64x = Environment.Is64BitProcess;
                 check_environment.Username = Environment.UserName;
                 check_environment.OSversion = Environment.OSVersion.ToString();
+                DateTime d1 = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
+                DateTime d2 = new DateTime(DateTime.Now.Year, 6, DateTime.Now.Day);
+                if (d1 == d2)
+                { 
+                    Isettingsconf.EasterEgg1 = true;
+                }
+                else { Isettingsconf.EasterEgg1 = false; }
             }
 
             void Debuger()
