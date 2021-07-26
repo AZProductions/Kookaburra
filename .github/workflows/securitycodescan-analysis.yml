@@ -17,21 +17,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: nuget/setup-nuget@v1.0.5
-      - uses: microsoft/setup-msbuild@v1.0.2
-      
+      - uses: microsoft/setup-msbuild@v1.0.2      
       - name: Set up projects for analysis
-        uses: security-code-scan/security-code-scan-add-action@main
-        
+        uses: security-code-scan/security-code-scan-add-action@main     
       - name: Restore dependencies
         working-directory: ./src
         run: dotnet restore
-
       - name: Build
         working-directory: ./src
         run: dotnet build --no-restore
-
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@main
-
       - name: Upload sarif
         uses: github/codeql-action/upload-sarif@v1
