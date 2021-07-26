@@ -20,7 +20,7 @@ namespace KookaburraShell
         static void Main(string[] args)
         {
             Console.TreatControlCAsInput = false;
-            Isettingsconf.Currentdir = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            Isettingsconf.Currentdir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             Isettingsconf.Envloc = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Kookaburra\";
             script_var.Intcount = 0;
             Isettingsconf.Quietmode = false;
@@ -1036,34 +1036,34 @@ namespace KookaburraShell
                     switch (rand)
                     {
                         case 1:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file.[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file.[/]");
                             break;
                         case 2:
                             table.AddRow("[green bold]Deleting KookaburraShell.exe and the folder {0} will completely delete Kookaburra.[/]", Isettingsconf.Envloc);
                             break;
                         case 3:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                         case 4:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                         case 5:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                         case 6:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                         case 7:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                         case 8:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                         case 9:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                         case 10:
-                            table.AddRow("[green bold]You can customzie the startup location by edeting the startup_loc.txt file[/]");
+                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                     }
 
@@ -1337,33 +1337,38 @@ namespace KookaburraShell
                     //AddNode(basedir);
                     //bool firsttime
 
-                    string[] FilePath = Directory.GetFiles(basedir);
-                    string[] SubPath = Directory.GetDirectories(basedir);
-
-                    foreach (string SubDir in SubPath)
+                    try
                     {
-                        var node = root.AddNode("[yellow]" + SubDir + "[/]");
-                        string[] fp = Directory.GetFiles(SubDir);
-                        foreach (string sub in fp) node.AddNode("[blue]" + sub + "[/]");
-                        string[] SubPath2 = Directory.GetDirectories(SubDir);
-                        foreach (string SubDir2 in SubPath2)
+
+                        string[] FilePath = Directory.GetFiles(basedir);
+                        string[] SubPath = Directory.GetDirectories(basedir);
+
+                        foreach (string SubDir in SubPath)
                         {
-                            var node1 = node.AddNode("[yellow]" + SubDir2 + "[/]");
-                            string[] fp1 = Directory.GetFiles(SubDir2);
-                            foreach (string sub2 in fp1) node1.AddNode("[blue]" + sub2 + "[/]");
-                            string[] SubPath3 = Directory.GetDirectories(SubDir2);
-                            foreach (string SubDir3 in SubPath3)
+                            var node = root.AddNode("[yellow]" + SubDir + "[/]");
+                            string[] fp = Directory.GetFiles(SubDir);
+                            foreach (string sub in fp) node.AddNode("[blue]" + sub + "[/]");
+                            string[] SubPath2 = Directory.GetDirectories(SubDir);
+                            foreach (string SubDir2 in SubPath2)
                             {
-                                //node.AddNode(subdirectory2);
-                                var node2 = node.AddNode("[yellow]" + SubDir3 + "[/]");
-                                string[] fp2 = Directory.GetFiles(SubDir3);
-                                foreach (string sub2 in fp2) node1.AddNode("[blue]" + sub2 + "[/]");
-                                //string[] SubPath3 = Directory.GetDirectories(SubDir2);
+                                var node1 = node.AddNode("[yellow]" + SubDir2 + "[/]");
+                                string[] fp1 = Directory.GetFiles(SubDir2);
+                                foreach (string sub2 in fp1) node1.AddNode("[blue]" + sub2 + "[/]");
+                                string[] SubPath3 = Directory.GetDirectories(SubDir2);
+                                foreach (string SubDir3 in SubPath3)
+                                {
+                                    //node.AddNode(subdirectory2);
+                                    var node2 = node.AddNode("[yellow]" + SubDir3 + "[/]");
+                                    string[] fp2 = Directory.GetFiles(SubDir3);
+                                    foreach (string sub2 in fp2) node1.AddNode("[blue]" + sub2 + "[/]");
+                                    //string[] SubPath3 = Directory.GetDirectories(SubDir2);
+                                }
                             }
                         }
-                    }
 
-                    AnsiConsole.Render(root);
+                        AnsiConsole.Render(root);
+                    }
+                    catch(Exception e){ Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine(e.ToString());  }
                 }
 
 
@@ -1382,6 +1387,15 @@ namespace KookaburraShell
                             Console.WriteLine("");
                             Console.ForegroundColor = ConsoleColor.White;
                             AnsiConsole.MarkupLine("[rapidblink yellow bold]Command 'about'[/]");
+                            Console.WriteLine("");
+                        }
+                        if (input == "delete" || input == "del" || input == "remove")
+                        {
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Command '{0}' not found. Here are similar commands.", input);
+                            Console.WriteLine("");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            AnsiConsole.MarkupLine("[rapidblink yellow bold]Command 'rm'[/]");
                             Console.WriteLine("");
                         }
                         else if (input == "elp" || input == "hlp" || input == "hep" || input == "hepl" || input == "hhelp" || input == "heelp" || input == "hellp" || input == "helpp")
@@ -1424,6 +1438,39 @@ namespace KookaburraShell
                                 Isettingsconf.Currentdir = Directory.GetDirectoryRoot(Isettingsconf.Currentdir);
                         }
                         else if (input == "-c") { Isettingsconf.Currentdir = ""; }
+                        else if (input == "-o") 
+                        {
+                            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                            {
+                                validcommandfound = true;
+                                if (Isettingsconf.Currentdir.Contains(":"))
+                                {
+                                    try
+                                    {
+                                        System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                                        {
+                                            FileName = Isettingsconf.Currentdir,
+                                            UseShellExecute = true,
+                                            Verb = "open"
+                                        });
+                                    }
+                                    catch
+                                    {
+                                        //Console.WriteLine("error");
+                                    }
+                                }
+                                else
+                                {
+                                    //open explorer
+                                    System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo()
+                                    {
+                                        FileName = "explorer.exe",
+                                        UseShellExecute = true,
+                                        Verb = "open"
+                                    });
+                                }
+                            }
+                        }
                         else if (input.StartsWith("-"))
                         {
                             string Replace = input.Replace("-", "");
@@ -1540,13 +1587,13 @@ namespace KookaburraShell
                     {
                         using (StreamWriter sw = File.CreateText(path))
                         {
-                            sw.WriteLine("# KookaburraShell - Custom Commands 1.5");
+                            sw.WriteLine("# KookaburraShell - Custom Commands 2.0");
                             sw.WriteLine("#");
                             sw.WriteLine("# example:");
                             sw.WriteLine("# testcommand=C:/exampledir/test.exe");
-                            sw.WriteLine("#     name        file location");
                             sw.WriteLine("#");
-                            sw.WriteLine("# Fill your custom commands after this line. (Max 10 lines)");
+                            sw.WriteLine("#");
+                            sw.WriteLine("# Lines with '#' infront of them are comments. You can remove them. (Max 10 lines)");
                         }
                     }
                     catch
@@ -1942,6 +1989,13 @@ namespace KookaburraShell
                                     else if (s.StartsWith("app.debug-off"))
                                     {
                                         //script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("app.foreground"))
+                                    {
+                                        string color = s.Replace("app.foreground = ", "");
+                                        color = char.ToUpper(color[0]) + color.Substring(1);
+                                        Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), color);
+                                        script_var.Ifcount = 1;
                                     }
                                     else if (s.StartsWith("cp "))
                                     {
