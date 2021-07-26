@@ -1,5 +1,3 @@
-The following text is a work-in-progress. The text is not finalized.
-----
 # Table of contents
 ### [**Chapter 1: Getting started**](#1-getting-started)
 #### [- Download Kookaburra](#1-download-kookaburra)
@@ -9,7 +7,8 @@ The following text is a work-in-progress. The text is not finalized.
 #### [- Functions and values](#1-functions-and-values)
 #### [- Binding](#2-binding)
 #### [- Grids, Barcharts and Rules.](#3-grids-barcharts-and-rules)
-### [**Chapter 3: Distributing Kookaburra scripts**]()
+#### [ - Extended importing features.](#4-extended-importing-features)
+### [**Chapter 3: Distributing Kookaburra scripts**](#3-distributing-Kookaburra-scripts)
 ### [**Chapter 4: Customizing Kookaburra**]()
 ----
 
@@ -45,7 +44,7 @@ You can also change the default text editer with the **'text_editer.txt'** file.
 ----
 
 # **2. Kookaburra scripting**
-In chapter one we created our first Kookaburra program, in this chapter its all about scripting. Lets start! **@@@@**
+In chapter one we created our first Kookaburra program, in this chapter its all about scripting. Lets start! 
 
 ## **1.** Functions and values.
 Kookaburra scripts are read line per line, it doesn't have events. Here is a list of all the functions and values currently in Kookaburra. Keep in mind that its a fast evolving language, the syntax may change so make sure to download the newest version of this book.
@@ -122,3 +121,46 @@ app.clear
 Barchart.Display()
 app.read()
 ```
+
+Grids are also just as easy to implement. Start by typing ```new Grid()``` to create it. Then add columns and rows by using **AddColumn** and **AddRow** functions. Here's an example:
+```
+app.debug-off
+app.clear
+new Grid()
+app.color = red
+Grid.AddColumn("This is a grid!")
+app.color = blue
+Grid.AddColumn("I'm a column")
+Grid.AddRow("You can add", "multiple rows!")
+Grid.Display()
+```
+The last little feature we've added is the calendar. Type ```new Calendar(2021, 7)``` to see a little calendar. It currently doens't have a purpose. Perhaps in the future we an add calendar items.
+
+## **4.** Extended importing features.
+With Kookaburra you can also import libraries pre-made by **AZ Software** and **contributors**. Currently we have short list of supported libraries. You can create files using ```import FileIO```. Type ```new filewriter(location, value)```. The import is neccicary. The second usefull library is ```import net```. Net is currently almost useless. We've only implemented local ip to [Element binding](#2-binding). Example: ```print "your local ip is: {Net.IP}!"```.
+
+----
+
+# **3. Distributing Kookaburra scripts**
+**This is an advanced chapter, not suitable for beginners.**  
+
+To convert source code into machine code, there 2 types. An **Interpreter** translates just one statement of the program at a time into machine code. An **Compiler** scans the entire program and translates the whole of it into machine code at once. Kookaburra is an Interpreter. To distribute it, you need to have both **Kookaburrashell** and the **.kookaburra** file. This is a hassle when deploying your program. To prevent this, we can bundle the files into a single exe file. [We've made a short blog](https://azproductions.github.io/Kookaburra/blogs/Publishing%20Kookaburra%20into%20an%20exe%20file/) about it. 
+
+To work around the issue of publishing Kookaburra, we can bundle both the file and the **Kookaburra** framework. When running the program, it will extract both Kookaburra and the file into a folder. Which is included in the **exe**, and run Kookaburra with the script. In this tutorial we are going to use [**Visual Studio 2019**](https://visualstudio.microsoft.com/vs/) and [**.Net 5**](https://dotnet.microsoft.com/download/dotnet/5.0). Start off by creating a new Console Application. Then add the KookaburraShell.exe and script in resources. Remember to set ***Copy to output directory*** to **Copy Always**. Then copy-paste the following code.
+
+``` c#
+string path = System.Reflection.Assembly.GetExecutingAssembly().Location.Replace("TestApp.dll", "");
+try
+{
+    Directory.CreateDirectory(path + "TestApp/");
+    File.Copy(@"Resources\KookaburraShell.exe", path + "TestApp/src.exe");
+    File.Copy(@"Resources\TestApp.kookaburra", path + "TestApp/TestApp.kookaburra");
+}
+catch { }
+ProcessStartInfo startInfo = new ProcessStartInfo();
+startInfo.FileName = path + "TestApp/src.exe";
+startInfo.Arguments = path + "TestApp/TestApp.kookaburra";
+Process.Start(startInfo);
+```
+
+You can replace **TestApp** with the name of your program. Using this method you can manipulate Kookaburra and add Icons and more. Publish the app by clicking Publish in the ***Solution Explorer***. Now you can distribute your favourite program to whoever you want.
