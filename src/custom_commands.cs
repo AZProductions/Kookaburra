@@ -2,6 +2,7 @@
 {
     class custom_commands
     {
+//old system
         public static string name1 { get; set; }
         public static string loc1 { get; set; }
         public static string name2 { get; set; }
