@@ -1,1 +1,0 @@
-https://github.com/AZProductions/Kookaburra/releases/download/0.5.0/KookaburraShell_win-x64_0.5.0.exe
