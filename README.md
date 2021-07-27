@@ -146,6 +146,7 @@ We strongly recommend you to read the [**first tutorial**](https://azproductions
 |	```-system```	|	The System directory.	|
 |	```-templates```	|	The directory that serves as a common repository for document templates.	|
 |	```-windows```	|	The Windows directory or SYSROOT. This corresponds to the %windir% or %SYSTEMROOT% environment variables.	|
+|       ```-c``` | Clears location. |
 ###### ***Most of the Shortcuts in this list are from the [Microsoft docs](https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=net-5.0#fields).**
 
 
