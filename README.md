@@ -173,6 +173,11 @@ We strongly recommend you to read the [**first tutorial**](https://azproductions
 
 
 ## [📐 Samples](https://github.com/AZProductions/Kookaburra/tree/main/snippets)
+- [Hello World!](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Helloworld.kookaburra)
+- [Barcharts](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Barcharts.kookaburra)
+- [All Colors](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Colors.kookaburra)
+- [Filewriter](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Filewriter.kookaburra)
+- [Grids](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Grids.Kookaburra)
 
 ## 🔐 Security
 ### **When downloading Kookaburra**
