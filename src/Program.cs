@@ -67,7 +67,7 @@ namespace KookaburraShell
                 bool validcommandfound = false;
                 if (Isettingsconf.Currentdir == "")
                 {
-                    if (Isettingsconf.EasterEgg1 == true) 
+                    if (Isettingsconf.EasterEgg1 == true)
                     {
                         AnsiConsole.Markup("[orange1]K[/][yellow1]o[/][greenyellow]o[/][lime]k[/][aqua]a[/][turquoise2]b[/][blue]u[/][hotpink_1]r[/][deeppink2]r[/][red]a[/][blue]@[/][white]>[/]");
                     }
@@ -105,11 +105,11 @@ namespace KookaburraShell
                     Console.WriteLine(Environment.NewLine);
 
                     var rule3 = new Rule("[white bold]Quick info[/]");
-                    AnsiConsole.Render(rule3);  
+                    AnsiConsole.Render(rule3);
                     string Message = "Press 'enter' to leave the help dialog, and scroll to read the information";
                     Console.SetCursorPosition((Console.WindowWidth - Message.Length) / 2, Console.CursorTop);
                     Console.WriteLine(Message);
-                    
+
                     var rule1 = new Rule("[white bold]All CLI  Commands[/]");
                     AnsiConsole.Render(rule1);
 
@@ -178,7 +178,7 @@ namespace KookaburraShell
                     }
                 }
 
-                if (input == "winreset") 
+                if (input == "winreset")
                 {
                     if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     {
@@ -968,35 +968,6 @@ namespace KookaburraShell
                 if (input.StartsWith("download "))
                 {
                     validcommandfound = true;
-                    /*AnsiConsole.Progress()
-                    .Start(ctx =>
-                    {
-                        // Define tasks
-                        var task1 = ctx.AddTask("[green]Downloading file.[/]");
-                        var task2 = ctx.AddTask("[yellow]Server Ping: [/]");
-                        var task3 = ctx.AddTask("[yellow]Status: Active[/]");
-
-                        string loc1 = input.Replace("download ", "");
-                        string[] loc2 = loc1.Split('"');
-                        string internetloc = loc2[1];
-                        string localloc = loc2[3];
-                        WebClient webClient = new WebClient();
-                        Console.WriteLine(localloc + "|" + internetloc);
-                        webClient.DownloadFileAsync(new System.Uri(internetloc), localloc);
-                        webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(Progress);
-                        
-
-                        void Progress(object sender, DownloadProgressChangedEventArgs e)
-                        {
-                            // Displays the operation identifier, and the transfer progress.
-                            //task1.Value = e.ProgressPercentage;
-                            Console.WriteLine("{0}    downloaded {1} of {2} bytes. {3} % complete...",
-                                (string)e.UserState,
-                                e.BytesReceived,
-                                e.TotalBytesToReceive,
-                                e.ProgressPercentage);
-                        }
-                    });*/
                     try
                     {
                         string loc1 = input.Replace("download ", "");
@@ -1005,14 +976,10 @@ namespace KookaburraShell
                         string localloc = loc2[3];
                         try
                         {
-                            //var pb = new ProgressBar(PbStyle.DoubleLine, 24);
-                            //pb.Refresh(0, "connecting to server to download 1 file asychronously.");
                             Thread.Sleep(1249);
                             WebClient webClient = new WebClient();
                             webClient.DownloadFile(internetloc, localloc);
-                            //pb.Refresh(22, "finalizing.");
                             Thread.Sleep(1432);
-                            //pb.Refresh(24, "Done!");
                             Console.WriteLine("");
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine("File successfully downloaded!");
@@ -1368,7 +1335,7 @@ namespace KookaburraShell
 
                         AnsiConsole.Render(root);
                     }
-                    catch(Exception e){ Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine(e.ToString());  }
+                    catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine(e.ToString()); }
                 }
 
 
@@ -1438,7 +1405,7 @@ namespace KookaburraShell
                                 Isettingsconf.Currentdir = Directory.GetDirectoryRoot(Isettingsconf.Currentdir);
                         }
                         else if (input == "-c") { Isettingsconf.Currentdir = ""; }
-                        else if (input == "-o") 
+                        else if (input == "-o")
                         {
                             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                             {
@@ -1580,7 +1547,7 @@ namespace KookaburraShell
                 }
 
 
-                    string path = Isettingsconf.Envloc + @"\custom_commands.txt";
+                string path = Isettingsconf.Envloc + @"\custom_commands.txt";
                 if (!File.Exists(path))
                 {
                     try
@@ -2017,7 +1984,7 @@ namespace KookaburraShell
                                         File.Delete(Format(result));
                                         script_var.Ifcount = 1;
                                     }
-                                    else if (s.StartsWith("Grid.AddColumn(")) 
+                                    else if (s.StartsWith("Grid.AddColumn("))
                                     {
                                         if (GridSelect)
                                         {
@@ -2637,7 +2604,7 @@ namespace KookaburraShell
                 DateTime d1 = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
                 DateTime d2 = new DateTime(DateTime.Now.Year, 6, DateTime.Now.Day);
                 if (d1 == d2)
-                { 
+                {
                     Isettingsconf.EasterEgg1 = true;
                 }
                 else { Isettingsconf.EasterEgg1 = false; }
