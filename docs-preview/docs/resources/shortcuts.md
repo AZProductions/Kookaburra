@@ -17,3 +17,4 @@
 |	```-system```	|	The System directory.	|
 |	```-templates```	|	The directory that serves as a common repository for document templates.	|
 |	```-windows```	|	The Windows directory or SYSROOT. This corresponds to the %windir% or %SYSTEMROOT% environment variables.	|
+|       ```-c``` | Clears location. |
