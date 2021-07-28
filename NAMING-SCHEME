@@ -1,4 +1,8 @@
 Code Cleanup: CC-*Number
 Example: CC-4
 
-Code Update: Version_pre-X
+Code Update: X.X.X_pre-X_X
+Example: 0.7.3_pre-3_2
+
+Markdown Update/Fix: M-U/F_X
+Example: M-U/F_21
