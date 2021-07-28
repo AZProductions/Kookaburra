@@ -189,6 +189,10 @@ Some browsers like Edge will stop you from opening the file. These popups are ju
 
 You can also get the SHA-256 from the file and compare it in the Releases tab in github. There's an [online tool](https://md5file.com/calculator) where you can upload the file and get the SHA-256.
 
+## Copyright and License
+
+This repository is licensed under a [proprietary licence](https://github.com/AZProductions/Kookaburra/blob/main/LICENCE).
+
 ----
 
 ##### ***AZ Software is not responsible for any harm to your device(s).***
