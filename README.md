@@ -29,6 +29,13 @@
 
 ----
 
+## Features
+- Intuitive commands.
+- Feature rich interpreter.
+- Powerful CLI.
+- Cross-Platform environment adaptation.
+- [And more..](https://kookaburrashell.github.io/l)
+
 ## FAQ
 <details>
  <summary>What is Kookaburra?</summary>
@@ -64,6 +71,21 @@
  
  Kookaburra is a simple programming language, so just give it a try. It's compleatly free and open-source. It also doesn't change values in the registery in Windows. It simply creates a folder in the **AppData Roaming** folder. You can have a look in the folder by pressing <kbd>win</kbd> + <kbd>R</kbd> and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the folder open.
 </details>
+
+<details>
+ <summary>Will Kookaburra ever support Mac-OS?</summary>
+ 
+ We currently see no demand in Mac-OS, unless it's worth the time in testing Kookaburra. You can always make your own build of Kookaburra that supports Mac-OS. Some features need modifications to work.
+ 
+</details>
+
+<details>
+ <summary>Does Kookaburra support custom commands?</summary>
+ 
+ **Yes**, it does. Open the Kookaburra config directory, and edit the ```custom_commands.txt``` file. You can add a new line with ```paint=mspaint```. When typing the command **paint**, it will open *Microsoft Paint*. [Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complate%20guide%20of%20Kookaburra.md)
+ 
+</details>
+
 
 ----
 
