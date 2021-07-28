@@ -69,7 +69,7 @@
 <details>
   <summary>Why would you downloads Kookaburra?</summary>
  
- Kookaburra is a simple programming language, so just give it a try. It's compleatly free and open-source. It also doesn't change values in the registery in Windows. It simply creates a folder in the **AppData Roaming** folder. You can have a look in the folder by pressing <kbd>win</kbd> + <kbd>R</kbd> and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the folder open.
+ Kookaburra is a simple programming language, perhaps give it a try 😂. It's completely free and open-source. It also doesn't change values in the registery in Windows. It simply creates a folder in the **AppData Roaming** folder. You can have a look in the folder by pressing <kbd>win</kbd> + <kbd>R</kbd> and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the folder open.
 </details>
 
 <details>
@@ -180,11 +180,15 @@ We strongly recommend you to read the [**first tutorial**](https://azproductions
 - [Grids](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Grids.Kookaburra)
 
 ## 🔐 Security
-### **When downloading Kookaburra**
-We at AZ Software take security very seriously, that's why on every release page we always show the checksum. You can use online tools to check if the SHA-256 match up.
+When downloading Kookaburra, you can chose between getting it from the Microsoft Store or downloading it via GitHub. On Linux you can download it via GitHub using [***Curl***](https://curl.se/) or [***Wget***](http://www.gnu.org/software/wget/). In this book we exclusively use Windows examples, but you should be able to follow along as a Linux user. So open your favourite browser and head over to 'https://www.github.com/AZProductions/Kookaburra/releases' or 'https://www.github.com/AZProductions/Kookaburra/releases/latest' to download the latest stable build. Click on the little dropdown icon and download the most suitable version for your computer. 
 
-### **Opening user-created *.kookaburra* files**
-We recommend you to scan the donwnloaded file with an Antivirus before opening or executing the file.
-You can also open the file in a **code/text editor** and read exactly what the file does.
+**If you don't know which version you should download, newer computers support x64. If you have an older computer or don't know if the computer is x64 based, just pick the x86 version.**
+
+Some browsers like Edge will stop you from opening the file. These popups are just warnings to tell the user to not download random files off the internet. The official Kookaburra files are safe to use. Just select **keep** and open the file. Windows *SmartScreen* will popup, and again, this is a false positive. Click on *Read more*, and select run. Kookaburra should start up. If you're not so keen with these popups, we recommend you to download it in the [**Microsoft Store**](https://www.microsoft.com/en-us/p/kookaburra/9pcq0dhdtzpm). *You can also manually build the code using **.Net**, it takes longer but then you can verify that the binaries haven't been tampered with. We won't be covering that in this book.*
+[Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complate%20guide%20of%20Kookaburra.md)
+
+You can also get the SHA-256 from the file and compare it in the Releases tab in github. There's an [online tool](https://md5file.com/calculator) where you can upload the file and get the SHA-256.
+
+----
 
 ##### ***AZ Software is not responsible for any harm to your device(s).***
