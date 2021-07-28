@@ -82,7 +82,7 @@
 <details>
  <summary>Does Kookaburra support custom commands?</summary>
  
- **Yes**, it does. Open the Kookaburra config directory, and edit the ```custom_commands.txt``` file. You can add a new line with ```paint=mspaint```. When typing the command **paint**, it will open *Microsoft Paint*. [Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complate%20guide%20of%20Kookaburra.md)
+ **Yes**, it does. Open the Kookaburra config directory, and edit the ```custom_commands.txt``` file. You can add a new line with ```paint=mspaint```. When typing the command **paint**, it will open *Microsoft Paint*. [Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complete%20guide%20of%20Kookaburra.md)
  
 </details>
 
