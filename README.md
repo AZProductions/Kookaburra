@@ -19,7 +19,7 @@
 ## 📚 Description
 **Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely **free** to use, with local files and no data/telemetry collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.
  
-###### ***Remember, KookaburraShell is still in Pre-Release. Features may vary in the final release.***
+###### **Remember, KookaburraShell is still in Pre-Release. Features may vary in the final release.**
 
 ## 📣 Announcements
 ### [Kookaburra linking template - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/Linking_templates.md)
