@@ -1,4 +1,4 @@
-using Spectre.Console;
+﻿using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -43,7 +43,13 @@ namespace KookaburraShell
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("to read the Terms of Service.");
             Console.WriteLine("");
-            if (!File.Exists(Isettingsconf.Envloc + @"\FR.txt"))
+            try
+            {
+                string[] vs = File.ReadAllLines(Isettingsconf.Envloc + @"\conf.txt");
+                foreach (string Lines in vs) { if (Lines == "FR=true") { Isettingsconf.FR = true; } }
+            }
+            catch { Isettingsconf.FR = true; /*Revert to default, shows FR.*/ }
+            if (Isettingsconf.FR)
             {
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Type ");
@@ -67,7 +73,7 @@ namespace KookaburraShell
                 bool validcommandfound = false;
                 if (Isettingsconf.Currentdir == "")
                 {
-                    if (Isettingsconf.EasterEgg1 == true)
+                    if (Isettingsconf.ShowRainbow == true)
                     {
                         AnsiConsole.Markup("[orange1]K[/][yellow1]o[/][greenyellow]o[/][lime]k[/][aqua]a[/][turquoise2]b[/][blue]u[/][hotpink_1]r[/][deeppink2]r[/][red]a[/][blue]@[/][white]>[/]");
                     }
@@ -1489,17 +1495,113 @@ namespace KookaburraShell
             void packagecheck()
             {
                 bool Errormsg = false;
-                // Build Counter
-                /* try
-                 {
-                     string lines = System.IO.File.ReadAllText(@"D:\Projects\Kookaburra\builds.txt");
-                     int result = Int16.Parse(lines);
-                     result++;
-                     File.WriteAllText(@"D:\Projects\Kookaburra\builds.txt", result.ToString());
-                 }
-                 catch { }*/
                 if (Directory.Exists(Isettingsconf.Envloc)) { }
                 else { try { Directory.CreateDirectory(Isettingsconf.Envloc); } catch { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Restart with admin priviliges."); } }
+
+                string path4 = Isettingsconf.Envloc + @"\conf.txt";
+                if (!File.Exists(path4))
+                {
+                    try
+                    {
+                        using (StreamWriter sw = File.CreateText(path4))
+                        {
+                            sw.WriteLine("# KookaburraShell - Conf.txt");
+                            sw.WriteLine("show_startup=true");
+                            sw.WriteLine("startup_location=default");
+                            //sw.WriteLine("startup_message=null");
+                            sw.WriteLine("FR=true");
+                        }
+                    }
+                    catch
+                    {
+                        if (!Errormsg)
+                        {
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write("[");
+                            Console.ForegroundColor = ConsoleColor.Blue;
+                            Console.Write("Note");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.Write("] ");
+                            Console.ForegroundColor = ConsoleColor.Yellow;
+                            Console.Write("To finish setting up Kookaburra, Please restart it as administrator.");
+                            Console.ForegroundColor = ConsoleColor.White;
+                            Console.ForegroundColor = ConsoleColor.Red;
+                            Console.WriteLine("Failed to Create/Write text_editor.txt");
+                            // make white-space between input and info
+                            Console.WriteLine("");
+                            Errormsg = true;
+                        }
+                    }
+                } //Todo, add conf.txt
+
+                try
+                {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    string[] vs = File.ReadAllLines(path4);
+                    foreach (string Lines in vs)
+                    {
+                        if (Lines.StartsWith("#")) { }
+                        else if (Lines.StartsWith("show_startup="))
+                        {
+                            string result = Lines.Replace("show_startup=", "");
+                            if (result == "true") {/*TODO*/ }
+                            else if (result == "false") {/*TODO*/}
+                            else
+                            {
+                                Console.WriteLine("error");
+                            }
+                        }
+                        else if (Lines.StartsWith("startup_location="))
+                        {
+                            string result = Lines.Replace("startup_location=", "");
+                            if (File.Exists(result))
+                            {
+                                Isettingsconf.Envloc = result;
+                            }
+                            else if (result == "default") { }
+                            else
+                            {
+                                Console.WriteLine("error");
+                            }
+                        }
+                        else if (Lines.StartsWith("FR="))
+                        {
+                            string result = Lines.Replace("FR=", "");
+                            if (result == "true")
+                            {
+                                string text = File.ReadAllText(path4);
+                                text = text.Replace("FR=true", "FR=false");
+                                File.WriteAllText(path4, text);
+                                Isettingsconf.FR = true;
+                            }
+                            else
+                            {
+                                Isettingsconf.FR = false;
+                            }
+                        }
+                        else { Console.WriteLine("error"); }
+                    }
+                }
+                catch
+                {
+                    if (!Errormsg)
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("[");
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write("Note");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write("] ");
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("To finish setting up Kookaburra, Please restart it as administrator.");
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Failed to Create/Write text_editor.txt");
+                        // make white-space between input and info
+                        Console.WriteLine("");
+                        Errormsg = true;
+                    }
+                }
 
                 string path2 = Isettingsconf.Envloc + @"\text_editor.txt";
                 if (!File.Exists(path2))
@@ -1538,12 +1640,6 @@ namespace KookaburraShell
                             Errormsg = true;
                         }
                     }
-                }
-
-                string path3 = Isettingsconf.Envloc + @"\FR.txt";
-                if (!File.Exists(path3))
-                {
-                    File.Create(path3);
                 }
 
 
@@ -2605,9 +2701,9 @@ namespace KookaburraShell
                 DateTime d2 = new DateTime(DateTime.Now.Year, 6, DateTime.Now.Day);
                 if (d1 == d2)
                 {
-                    Isettingsconf.EasterEgg1 = true;
+                    Isettingsconf.ShowRainbow = true;
                 }
-                else { Isettingsconf.EasterEgg1 = false; }
+                else { Isettingsconf.ShowRainbow = false; }
             }
 
             void Debuger()
