@@ -36,7 +36,7 @@
 - Cross-Platform environment adaptation.
 - [And more..](https://kookaburrashell.github.io/l)
 
-##  FAQ
+## 🙋 FAQ
 <details>
  <summary>What is Kookaburra?</summary>
  
