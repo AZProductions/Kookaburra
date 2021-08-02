@@ -2116,8 +2116,22 @@ namespace KookaburraShell
                                     else if (s == "app.breakpoint()") 
                                     {
                                         var table = new Table();
+                                        table.Border = TableBorder.Rounded;
                                         table.AddColumn("Breakpoint");
-                                        //Todo finish breakpoints...
+                                        table.AddRow("Status=running");
+                                        string Final = "Name=";
+                                        foreach (string Finalvalue in Stringname) 
+                                        {
+                                            Final = Final + Finalvalue + ",";
+                                        }
+                                        table.AddRow(Final.TrimEnd(','));
+
+                                        string Final2 = "Data=";
+                                        foreach (string Finalvalue2 in Stringvalue)
+                                        {
+                                            Final2 = Final2 + Finalvalue2 + ",";
+                                        }
+                                        table.AddRow(Final2.TrimEnd(','));
                                         AnsiConsole.Render(table);
                                     }
                                     else if (s.StartsWith("new Grid("))
