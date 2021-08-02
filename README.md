@@ -17,7 +17,7 @@
 ----
 
 ## 📚 Description
-**Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely **free** to use, with local files and no data/telemetry collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.
+**Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI** *(Command Line Interface)*, or start **coding** with its' intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely **free** to use, using only local files and no data/telemetry collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.
  
 ###### **Remember, KookaburraShell is still in Pre-Release. Features may vary in the final release.**
 
@@ -40,7 +40,7 @@
 <details>
  <summary>What is Kookaburra?</summary>
  
- **Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its intuitive syntax. The syntax is simple and efficient. Kookaburra is completely **free** to use, with local files and no data/telemetry collection.
+ **Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its' intuitive syntax. The syntax is simple and efficient. Kookaburra is completely **free** to use, using only local files and no data/telemetry collection.
  
 </details>
 
@@ -69,7 +69,9 @@
 <details>
   <summary>Why would you downloads Kookaburra?</summary>
  
- Kookaburra is a simple programming language, perhaps give it a try 😂. It's completely free and open-source. It also doesn't change values in the registery in Windows. It simply creates a folder in the **AppData Roaming** folder. You can have a look in the folder by pressing <kbd>win</kbd> + <kbd>R</kbd> and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the folder open.
+ Kookaburra is a simple programming language, designed for beginners but with sufficient complexity for more advanced coders. Kookaburra can be run on multiple platforms all using the same structure and syntax, thereby requiring a only single learning curve.
+ 
+ It's completely free and open-source. It leaves no footprint with all data stored in a single directory. It simply creates a folder in the **AppData Roaming** folder. You can have a look in the folder by pressing <kbd>win</kbd> + <kbd>R</kbd> and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the open folder.
 </details>
 
 <details>
@@ -82,7 +84,9 @@
 <details>
  <summary>Does Kookaburra support custom commands?</summary>
  
- **Yes**, it does. Open the Kookaburra config directory, and edit the ```custom_commands.txt``` file. You can add a new line with ```paint=mspaint```. When typing the command **paint**, it will open *Microsoft Paint*. [Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complete%20guide%20of%20Kookaburra.md)
+ **Yes**, it does. Open the Kookaburra config directory, and edit the ```custom_commands.txt``` file. Kookaburra is made in a dynamic workflow, any improvements and suggestions greatfully received. 
+ 
+ You can add a new line with ```paint=mspaint```. When typing the command **paint**, it will open *Microsoft Paint*. [Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complete%20guide%20of%20Kookaburra.md)
  
 </details>
 
@@ -94,9 +98,9 @@
  - [Using Microsoft Store.](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
  - Github Releases:
    1. Head over to the ['**Releases**'](https://github.com/AZProductions/Kookaburra/releases)
-   2. Open the 'Assets' drop-down from the desired version of kookaburra *(If you can't decide, we recommend you to pick the [latest version](https://github.com/AZProductions/Kookaburra/releases/latest))*
+   2. Open the 'Assets' drop-down from the desired version of kookaburra *(If you can't decide, we recommend you to select the [latest version](https://github.com/AZProductions/Kookaburra/releases/latest))*
    3. Download the **KookaburraShell_x_xxx.exe** file.
-   4. Open Kookaburra by double clicking the icon of the executable.
+   4. Open Kookaburra by double clicking the executable.
 
 #### [**Youtube Tutorial**](https://www.youtube.com/watch?v=Dr1xe4JFh78)
 -----
@@ -122,7 +126,7 @@ Run Kookaburra and open a .kookaburra file with
 
 
 ## [⏱ Get started](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/)
-We strongly recommend you to read the [**first tutorial**](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/) before starting. In the CLI you can type the command ```help``` to list all the possible commands with explanation. You can also [***watch the full tutorial***](https://www.youtube.com/watch?v=ou1rCcN5wEQ), but since its outdated and not supported in the newer versions of Kookaburra we discourage it.
+We strongly recommend that you read the [**first tutorial**](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/) before starting. In the CLI you can type the command ```help``` to list all the possible commands with explanation. You can also [***watch the full tutorial***](https://www.youtube.com/watch?v=ou1rCcN5wEQ), but since it is outdated and not supported in the newer versions of Kookaburra we discourage it.
 
 ## [👩‍💻 Syntax](https://azproductions.github.io/Kookaburra/syntax/)
 [Available on the website.](https://azproductions.github.io/Kookaburra/syntax/)
@@ -184,14 +188,14 @@ When downloading Kookaburra, you can chose between getting it from the Microsoft
 
 **If you don't know which version you should download, newer computers support x64. If you have an older computer or don't know if the computer is x64 based, just pick the x86 version.**
 
-Some browsers like Edge will stop you from opening the file. These popups are just warnings to tell the user to not download random files off the internet. The official Kookaburra files are safe to use. Just select **keep** and open the file. Windows *SmartScreen* will popup, and again, this is a false positive. Click on *Read more*, and select run. Kookaburra should start up. If you're not so keen with these popups, we recommend you to download it in the [**Microsoft Store**](https://www.microsoft.com/en-us/p/kookaburra/9pcq0dhdtzpm). *You can also manually build the code using **.Net**, it takes longer but then you can verify that the binaries haven't been tampered with.*
+Some browsers like Edge will stop you from opening the file. These pop ups are just warnings to tell the user to not download random files off the internet. The official Kookaburra files are safe to use. Feel free to use an antivirus program to check for your own piece of mind. Just select **keep** and open the file. Windows *SmartScreen* will pop up, and again, this is a false positive. Click on *Read more*, and select run. Kookaburra should start up. If you're not so keen with these pop ups, we recommend you to download it in the [**Microsoft Store**](https://www.microsoft.com/en-us/p/kookaburra/9pcq0dhdtzpm). *You can also manually build the code using **.Net**, it takes longer but then you can verify that the binaries haven't been tampered with.*
 [Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complate%20guide%20of%20Kookaburra.md)
 
-You can also get the SHA-256 from the file and compare it in the Releases tab in github. There's an [online tool](https://md5file.com/calculator) where you can upload the file and get the SHA-256.
+You can also get the SHA-256 from the file and compare it with the reference in the Releases tab in github. There's an [online tool](https://md5file.com/calculator) where you can upload the file and get the SHA-256.
 
 ## Copyright and License
 
-This repository is licensed under a [proprietary licence](https://github.com/AZProductions/Kookaburra/blob/main/LICENCE).
+This repository is under a [proprietary licence](https://github.com/AZProductions/Kookaburra/blob/main/LICENCE).
 
 ----
 
