@@ -2,6 +2,10 @@
 .md-footer__inner {
     visibility: hidden;
     overflow: auto;
+    background: transparent;
+    scale: revert;
+    width: 0;
+    height: 0;
 }
 
 .md-nav--primary .md-nav__link[for=__toc] ~ .md-nav {
