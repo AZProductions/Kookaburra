@@ -1,4 +1,4 @@
-﻿using Spectre.Console;
+using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -39,7 +39,8 @@ namespace KookaburraShell
             Console.WriteLine("AZ Software is not responsible for any harm to your device(s).");
             Console.Write("Use the command ");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write("'tos' ");
+            Console.Write(" 'tos' ");
+            //AnsiConsole.Markup("'[Link=https://github.com/AZProductions/Kookaburra/blob/main/TOS.md]tos[/]' ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("to read the Terms of Service.");
             Console.WriteLine("");
@@ -87,20 +88,29 @@ namespace KookaburraShell
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.Blue;
-                    Console.Write("Kookaburra@");
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Write(Isettingsconf.Currentdir);
-                    Console.ForegroundColor = ConsoleColor.White;
-                    Console.Write(">");
+                    if (Isettingsconf.ShowRainbow == true)
+                    {
+                        AnsiConsole.Markup("[orange1]K[/][yellow1]o[/][greenyellow]o[/][lime]k[/][aqua]a[/][turquoise2]b[/][blue]u[/][hotpink_1]r[/][deeppink2]r[/][red]a[/][blue]@[/]");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(Isettingsconf.Currentdir);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write(">");
+                    }
+                    else
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                        Console.Write("Kookaburra@");
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(Isettingsconf.Currentdir);
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.Write(">");
+                    }
                 }
                 string input = Console.ReadLine().ToLower();
 
                 if (input == "help")
                 {
                     validcommandfound = true;
-                    Console.Clear();
-                    Console.CursorVisible = false;
                     Console.WriteLine(Environment.NewLine);
 
                     AnsiConsole.Render(
@@ -150,11 +160,7 @@ namespace KookaburraShell
                     var diffMonths = (end.Month + end.Year * 12) - (start.Month + start.Year * 12);
                     Console.WriteLine("Our mission is to Write The Future. We create simple, but yet powerfull tools and software. Security is the most important factor when creating such tools. We at AZ Software spent " + diffMonths + " months creating Kookaburra. It is a hard task keeping it up and running, we appreciate feedback. Thank you. - AZSoftware");
                     Console.WriteLine(Environment.NewLine);
-                    Thread.Sleep(10);
-                    Console.SetCursorPosition(10, 1);
-                    Console.ReadKey();
-                    Console.Clear();
-                    Console.CursorVisible = true;
+
                 }
 
                 if (input == "clear" || input == "cls")
@@ -194,16 +200,6 @@ namespace KookaburraShell
                     }
                 }
 
-                if (input == "about")
-                {
-                    validcommandfound = true;
-                    var psi = new ProcessStartInfo
-                    {
-                        FileName = "https://github.com/AZProductions/Kookaburra/blob/main/README.md#about-kookaburra",
-                        UseShellExecute = true
-                    };
-                    Process.Start(psi);
-                }
 
                 if (input == "exit" || input == "close")
                 {
@@ -1405,6 +1401,10 @@ namespace KookaburraShell
                             if (Directory.Exists(Environment.GetFolderPath(Environment.SpecialFolder.Startup)))
                                 Isettingsconf.Currentdir = Environment.GetFolderPath(Environment.SpecialFolder.Startup);
                         }
+                        else if (input == "-exe" && RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) 
+                        {
+                            Isettingsconf.Currentdir = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location); ;
+                        }
                         else if (input == "-r")
                         {
                             if (Directory.Exists(Directory.GetDirectoryRoot(Isettingsconf.Currentdir)))
@@ -1510,6 +1510,7 @@ namespace KookaburraShell
                             sw.WriteLine("startup_location=default");
                             //sw.WriteLine("startup_message=null");
                             sw.WriteLine("FR=true");
+                            sw.WriteLine("force_rainbow=false");
                         }
                     }
                     catch
@@ -1550,6 +1551,12 @@ namespace KookaburraShell
                             {
                                 Console.WriteLine("error");
                             }
+                        }
+                        else if (Lines.StartsWith("force_rainbow=")) 
+                        {
+                            string result = Lines.Replace("force_rainbow=", "");
+                            if (result == "true") { Isettingsconf.ShowRainbow = true; }
+                            else if (result == "false") { /*Default function*/ }
                         }
                         else if (Lines.StartsWith("startup_location="))
                         {
@@ -2106,6 +2113,13 @@ namespace KookaburraShell
                                         if (GridSelect)
                                             AnsiConsole.Render(tb);
                                     }
+                                    else if (s == "app.breakpoint()") 
+                                    {
+                                        var table = new Table();
+                                        table.AddColumn("Breakpoint");
+                                        //Todo finish breakpoints...
+                                        AnsiConsole.Render(table);
+                                    }
                                     else if (s.StartsWith("new Grid("))
                                     {
                                         GridSelect = true;
@@ -2450,51 +2464,14 @@ namespace KookaburraShell
                                     void Print(string input)
                                     {
                                         string rawdata = input.Replace("print ", "");
-                                        if (rawdata.StartsWith('"') && rawdata.EndsWith('"'))
+                                        if (rawdata.StartsWith('@'))
                                         {
-                                            string rawdata2 = rawdata.Trim('"');
-                                            Console.WriteLine(rawdata2);
-                                        }
-                                        else if (rawdata.StartsWith('@') && rawdata.EndsWith('"'))
-                                        {
-                                            string rawdata1 = rawdata.Replace("@", "");
-                                            string rawdata2 = rawdata1.Trim('"');
-                                            Console.Write(rawdata2);
-                                        }
-                                        else if (rawdata.StartsWith('@'))
-                                        {
-                                            string rawdata1 = rawdata.Replace("@", "");
-                                            int num = 0;
-                                            int num2 = 0;
-                                            foreach (string lines in Stringname)
-                                            {
-                                                num++;
-                                                if (lines == rawdata1)
-                                                {
-                                                    foreach (string lines2 in Stringvalue)
-                                                    {
-                                                        num2++;
-                                                        if (num == num2) { Console.Write(lines2); }
-                                                    }
-                                                }
-                                            }
+                                            string rawdata2 = rawdata.Remove(0, 1);
+                                            Console.Write(Format(rawdata2));
                                         }
                                         else
                                         {
-                                            int num = 0;
-                                            int num2 = 0;
-                                            foreach (string lines in Stringname)
-                                            {
-                                                num++;
-                                                if (lines == rawdata)
-                                                {
-                                                    foreach (string lines2 in Stringvalue)
-                                                    {
-                                                        num2++;
-                                                        if (num == num2) { Console.WriteLine(lines2); }
-                                                    }
-                                                }
-                                            }
+                                            Console.WriteLine(Format(rawdata));
                                         }
                                     }
                                     void Appsize(string input)
