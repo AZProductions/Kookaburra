@@ -6,6 +6,7 @@
 [![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)](https://github.com/AZProductions/Kookaburra/releases)
 [![.NET Tests](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml)
 [![CodeQL](https://github.com/AZProductions/Kookaburra/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AZProductions/Kookaburra/actions/workflows/codeql-analysis.yml)
+[![SecurityCodeScan](https://github.com/AZProductions/Kookaburra/actions/workflows/securitycodescan-analysis.yml/badge.svg)](https://github.com/AZProductions/Kookaburra/actions/workflows/securitycodescan-analysis.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/azproductions/kookaburra/badge)](https://www.codefactor.io/repository/github/azproductions/kookaburra)
 ![12k lines of code](https://img.shields.io/badge/total%20lines-14k-blue)  <!---This badge can be replaced with https://img.shields.io/tokei/lines/github/azproductions/kookaburra to get the live data. Since its requesting it from an API, we decided to make it static and change it regularly.-->
 ![Docs](https://img.shields.io/badge/Docs-26%25-orange)
