@@ -9,6 +9,8 @@
 #### [- Grids, Barcharts and Rules.](#3-grids-barcharts-and-rules)
 #### [ - Extended importing features.](#4-extended-importing-features)
 ### [**Chapter 3: Distributing Kookaburra scripts**](#3-distributing-Kookaburra-scripts)
+#### [- Idea](#1-idea)
+#### [ - Coding](#2-coding)
 ### [**Chapter 4: Customizing Kookaburra**]()
 ----
 
@@ -39,7 +41,7 @@ Save the file *(ctrl+s)*, and open it with Kookaburra by dragging the HelloWorld
 ## **3.** Customizing Kookaburra.
 You can add custom commands by editing the **'custom_commands.txt'** file, which is located in the *AppData* directory. Open the Kookaburra settings directory by pressing <kbd>win</kbd> + <kbd>R</kbd> *(Windows key + R)* and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the folder open. Double click on the **'custom_commands.txt'** file. Add a new line and copy-paste this the following ```paint=mspaint```. In the CLI type **'paint'**, and Microsoft Paint will open.
 
-You can also change the default text editer with the **'text_editer.txt'** file. Simply open it up and change it to ```c:\program files\windows nt\accessories\wordpad.exe|%arg%``` if you want to edit it in Wordpad. If you want to change it back to Notepad, replace the text in the file with ```notepad.exe|%arg%```. By default on Linux it uses Nano, you can of course change it to vim or any other text/code editor. Kookaburra currently doesn't support custom start-up messages, but it will come in the upcoming **0.7.4 pre-4** release. Kookaburra's code is open-source so you can make your own 'custom version' of Kookaburra.
+You can also change the default text editer with the **'text_editer.txt'** file. Simply open it up and change it to ```c:\program files\windows nt\accessories\wordpad.exe|%arg%``` if you want to edit it in Wordpad. If you want to change it back to Notepad, replace the text in the file with ```notepad.exe|%arg%```. By default on Linux it uses Nano, you can of course change it to vim or any other text/code editor. Kookaburra currently doesn't support custom start-up messages, but it will come in the upcoming release. Kookaburra's code is open-source so you can make your own 'custom version' of Kookaburra.
 
 ----
 
@@ -144,8 +146,10 @@ With Kookaburra you can also import libraries pre-made by **AZ Software** and **
 # **3. Distributing Kookaburra scripts**
 **This is an advanced chapter, not suitable for beginners.**  
 
+## **1.** Idea
 To convert source code into machine code, there 2 types. An **Interpreter** translates just one statement of the program at a time into machine code. An **Compiler** scans the entire program and translates the whole of it into machine code at once. Kookaburra is an Interpreter. To distribute it, you need to have both **Kookaburrashell** and the **.kookaburra** file. This is a hassle when deploying your program. To prevent this, we can bundle the files into a single exe file. [We've made a short blog](https://azproductions.github.io/Kookaburra/blogs/Publishing%20Kookaburra%20into%20an%20exe%20file/) about it. 
 
+## **2.** Coding
 To work around the issue of publishing Kookaburra, we can bundle both the file and the **Kookaburra** framework. When running the program, it will extract both Kookaburra and the file into a folder. Which is included in the **exe**, and run Kookaburra with the script. In this tutorial we are going to use [**Visual Studio 2019**](https://visualstudio.microsoft.com/vs/) and [**.Net 5**](https://dotnet.microsoft.com/download/dotnet/5.0). Start off by creating a new Console Application. Then add the KookaburraShell.exe and script in resources. Remember to set ***Copy to output directory*** to **Copy Always**. Then copy-paste the following code.
 
 ``` c#
