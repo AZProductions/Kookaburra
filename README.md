@@ -24,9 +24,9 @@
 ###### **Remember, KookaburraShell is still in Pre-Release. Features may vary in the final release.**
 
 ## 📣 Announcements
+### [Kookaburra's new design style - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/New_design_style.md)
 ### [Kookaburra linking template - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/Linking_templates.md)
 ### [Publishing Kookaburra into an exe file - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/Publishing_Kookaburra.md)
-### [The new releasing system - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/Kookaburra_releasing_strategy.md)
 ### [**Kookaburra is on the Windows Store!** - ***Link***](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
 
 ----
