@@ -1403,7 +1403,7 @@ namespace KookaburraShell
                         }
                         else if (input == "-exe" && RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) 
                         {
-                            Isettingsconf.Currentdir = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location); ;
+                            Isettingsconf.Currentdir = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
                         }
                         else if (input == "-r")
                         {
