@@ -9,6 +9,7 @@ nav:
   - Getting started: tutorials/getting started.md
   - Downloads: https://github.com/AZProductions/Kookaburra/releases/
   - Blogs:
+    - Kookaburra's new design style: blogs/Kookaburra's new design style.md
     - Publishing Kookaburra into an exe file: blogs/Publishing Kookaburra into an exe file.md
     - Kookaburra linking template: blogs/Kookaburra linking template.md
     - Improving Kookaburra's performance: blogs/Improving Kookaburra's performance.md
