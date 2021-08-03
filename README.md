@@ -36,6 +36,7 @@
 - Feature rich interpreter.
 - Powerful CLI.
 - Cross-Platform environment adaptation.
+- Support for 3rd party terminals.
 - [And more..](https://kookaburrashell.github.io/l)
 
 ## 🙋 FAQ
