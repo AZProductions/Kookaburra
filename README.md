@@ -117,12 +117,16 @@ Or by using [**curl**](https://curl.se/)
 ```bash
 curl https://github.com/AZProductions/Kookaburra/releases/download/0.6.8/KookaburraShell_linux_0.6.8
 ```
-And run it by typing
+Provide Kookaburra permissions by typing
+```bash
+chmod 777 ./KookaburraShell_linux_0.6.8
 ```
+And run it by typing
+```bash
 ./KookaburraShell_linux_0.6.8
 ```
 Run Kookaburra and open a .kookaburra file with
-```
+```bash
 ./KookaburraShell_linux_0.6.8 /filelocation/example.kookaburra
 ```
 #### [**Youtube Tutorial**](https://www.youtube.com/watch?v=cvjH8pmiKDk)
