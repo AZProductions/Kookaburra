@@ -59,7 +59,7 @@ class KookaburraEditor {
 
 		win.Add(
 			textView
-		); ; ;
+		);
 
 		Application.Run();
 	}
