@@ -4,7 +4,7 @@
 ###### ***16 July 2021 - Blog 5 - Kookaburra 0.7.2***
 -----
 
-For anyone wanting to share Kookaburra, you can use this template. The template uses **Markdown** or **HTML**. We use badges/widgets from 3rd Party projects or companies. The Microsoft Store Badges are **JavaScript enabled**. You can create you own using the Microsoft provided links and the **Store ID** **Happy coding!**
+For anyone wanting to share Kookaburra, you can use this template. The template uses **Markdown** or **HTML**. We use badges/widgets from 3rd Party projects or companies. The Microsoft Store Badges are **JavaScript enabled**. You can create you own using the Microsoft provided links and the **Store ID**. **Happy coding!**
 
 ----
 
