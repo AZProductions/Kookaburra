@@ -135,6 +135,16 @@ Run Kookaburra and open a .kookaburra file with
 ## [⏱ Get started](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/)
 We strongly recommend that you read the [**first tutorial**](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/) before starting. In the CLI you can type the command ```help``` to list all the possible commands with explanation. You can also [***watch the full tutorial***](https://www.youtube.com/watch?v=ou1rCcN5wEQ), but since it is outdated and not supported in the newer versions of Kookaburra we discourage it.
 
+## 🔐 Security
+When downloading Kookaburra, you can chose between getting it from the Microsoft Store or downloading it via GitHub. On Linux you can download it via GitHub using [***Curl***](https://curl.se/) or [***Wget***](http://www.gnu.org/software/wget/). On Windows open your favourite browser and head over to 'https://www.github.com/AZProductions/Kookaburra/releases' or 'https://www.github.com/AZProductions/Kookaburra/releases/latest' to download the latest stable build. Click on the little dropdown icon and download the most suitable version for your computer. 
+
+**If you don't know which version you should download, newer computers support x64. If you have an older computer or don't know if the computer is x64 based, just pick the x86 version.**
+
+Some browsers like Edge will stop you from opening the file. These pop ups are just warnings to tell the user to not download random files off the internet. The official Kookaburra files are safe to use. Feel free to use an antivirus program to check for your own piece of mind. Just select **keep** and open the file. Windows *SmartScreen* will pop up, and again, this is a false positive. Click on *Read more*, and select run. Kookaburra should start up. If you're not so keen with these pop ups, we recommend you to download it in the [**Microsoft Store**](https://www.microsoft.com/en-us/p/kookaburra/9pcq0dhdtzpm). *You can also manually build the code using **.Net**, it takes longer but then you can verify that the binaries haven't been tampered with.*
+[Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complate%20guide%20of%20Kookaburra.md)
+
+You can also get the SHA-256 from the file and compare it with the reference in the Releases tab in github. There's an [online tool](https://md5file.com/calculator) where you can upload the file and get the SHA-256.
+
 ## [👩‍💻 Syntax](https://azproductions.github.io/Kookaburra/syntax/)
 [Available on the website.](https://azproductions.github.io/Kookaburra/syntax/)
 
@@ -189,16 +199,6 @@ We strongly recommend that you read the [**first tutorial**](https://azproductio
 - [All Colors](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Colors.kookaburra)
 - [Filewriter](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Filewriter.kookaburra)
 - [Grids](https://github.com/AZProductions/Kookaburra/blob/main/snippets/Grids.Kookaburra)
-
-## 🔐 Security
-When downloading Kookaburra, you can chose between getting it from the Microsoft Store or downloading it via GitHub. On Linux you can download it via GitHub using [***Curl***](https://curl.se/) or [***Wget***](http://www.gnu.org/software/wget/). On Windows open your favourite browser and head over to 'https://www.github.com/AZProductions/Kookaburra/releases' or 'https://www.github.com/AZProductions/Kookaburra/releases/latest' to download the latest stable build. Click on the little dropdown icon and download the most suitable version for your computer. 
-
-**If you don't know which version you should download, newer computers support x64. If you have an older computer or don't know if the computer is x64 based, just pick the x86 version.**
-
-Some browsers like Edge will stop you from opening the file. These pop ups are just warnings to tell the user to not download random files off the internet. The official Kookaburra files are safe to use. Feel free to use an antivirus program to check for your own piece of mind. Just select **keep** and open the file. Windows *SmartScreen* will pop up, and again, this is a false positive. Click on *Read more*, and select run. Kookaburra should start up. If you're not so keen with these pop ups, we recommend you to download it in the [**Microsoft Store**](https://www.microsoft.com/en-us/p/kookaburra/9pcq0dhdtzpm). *You can also manually build the code using **.Net**, it takes longer but then you can verify that the binaries haven't been tampered with.*
-[Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complate%20guide%20of%20Kookaburra.md)
-
-You can also get the SHA-256 from the file and compare it with the reference in the Releases tab in github. There's an [online tool](https://md5file.com/calculator) where you can upload the file and get the SHA-256.
 
 ## Copyright and License
 
