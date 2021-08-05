@@ -1,143 +1,692 @@
-<!DOCTYPE html>
-<html lang="en" style="color: rgb(255,255,255);background: #000000;">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Kookaburra</title>
-    <link rel="icon" type="image/svg+xml" sizes="3000x3000" href="assets/img/bird.svg">
-    <link rel="icon" type="image/svg+xml" sizes="3000x3000" href="assets/img/bird.svg">
-    <link rel="icon" type="image/svg+xml" sizes="3000x3000" href="assets/img/bird.svg">
-    <link rel="icon" type="image/svg+xml" sizes="3000x3000" href="assets/img/bird.svg">
-    <link rel="icon" type="image/svg+xml" sizes="3000x3000" href="assets/img/bird.svg">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="manifest" href="manifest.json">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&amp;display=swap">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
-    <link rel="stylesheet" href="assets/css/Features-Clean.css">
-    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
-    <link rel="stylesheet" href="assets/css/Highlight-Phone.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/Testimonials.css">
-</head>
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Kookaburra is a simple programming language. With Kookaburra you can choose between the powerful CLI (command-line-interface), or start scripting with its intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely free to use, with local files and no data collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.">
+      
+      
+      
+      
+        <link rel="canonical" href="https://azproductions.github.io/Kookaburra/">
+      
+      <link rel="icon" href="assets/favicon50.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.2.1">
+    
+    
+      
+        <title>Kookaburra</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.1118c9be.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.ba0d045b.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+      
+    
+    
+    
+    
+      
 
-<body style="background: rgb(0,0,0);color: rgb(255,255,255);">
-    <section style="background: #000000;"><img class="d-xxl-flex justify-content-center align-items-center align-self-center flex-wrap align-items-xxl-center" data-aos="fade" style="text-align: center;width: 125px;height: 125px;margin-bottom: -101px;margin-left: 0;display: block;margin-left: auto;margin-right: auto;margin-top: 122px;" src="assets/img/bird.svg">
-        <h1 class="text-center" data-aos="zoom-in" data-aos-duration="500" style="color: #ffffff;margin-top: 105px;font-size: 37px;font-weight: bold;text-align: center;">Kookaburra<br></h1>
-        <h1 class="text-center" data-aos="fade" data-aos-delay="500" style="color: #ffffff;margin-top: 26px;font-size: 24px;margin-bottom: 60px;text-align: center;"><strong>Cross-platform, Object-oriented Programming language.</strong><br></h1>
-    </section><a class="btn btn-primary" role="button" data-aos="zoom-out" data-aos-duration="900" data-aos-delay="150" style="margin-left: auto;margin-right: auto;margin: 0 auto;display: block;margin-bottom: 98px;width: 193.5px;height: 48px;text-align: center;vertical-align: middle;padding: 10px 12px;" href="https://github.com/AZProductions/Kookaburra/releases/">Get Kookaburra</a><a class="btn btn-primary" role="button" data-aos="fade" data-aos-duration="350" data-aos-delay="1500" style="margin-left: auto;margin-right: auto;margin: 0 auto;display: block;margin-bottom: 37px;width: 193.5px;height: 48px;text-align: center;vertical-align: middle;padding: 10px 12px;margin-top: -90px;background: rgb(0,0,0);border-color: rgb(0,0,0);" href="https://azproductions.github.io/Kookaburra/tutorials/getting%20started/">Tutorials</a>
-    <section class="text-start features-clean" data-aos="fade" data-aos-duration="750" data-aos-delay="1000" data-aos-once="true" style="background: rgb(30,30,30);color: var(--bs-light);">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center" id="Features">Features</h2>
-            </div>
-            <div class="row features" style="border-color: rgb(255,255,255);">
-                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-bullhorn icon" data-bss-hover-animate="bounce" style="color: #ffffff;"></i>
-                    <h3 class="name"><strong>Feature rich interpreter.</strong><br></h3>
-                    <p class="description">Kookaburra's interpreter has a lot of pro level features, such as <strong>Element binding</strong>.&nbsp; Create programs in seconds.&nbsp;<a href="https://github.com/AZProductions/Kookaburra/#-features"><strong>Read more..</strong></a><br><br></p>
-                </div>
-                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-superpowers icon" data-bss-hover-animate="bounce" style="color: #ffffff;"></i>
-                    <h3 class="name">Powerful CLI.<br></h3>
-                    <p class="description" style="color: rgb(125, 130, 133);">Kookaburra's CLI has pro level features, like <strong>Advanced Download</strong> and <strong>Password Generation</strong>. <a href="https://github.com/AZProductions/Kookaburra/#-cli-commands">Read more..</a></p>
-                </div>
-                <div class="col-sm-6 col-lg-4 item"><i class="fa fa-list-alt icon" data-bss-hover-animate="bounce" style="color: #ffffff;"></i>
-                    <h3 class="name">Cross-Platform environment adaptation.<br></h3>
-                    <p class="description" style="color: #999999;">No matter your device, Kookaburra adapts to it. On Windows you can edit files using Notepad, on Linux you can use Vim or Nano.</p>
-                </div>
-                <div class="col-sm-6 col-lg-4 item" style="color: #999999;"><i class="fa fa-support icon" data-bss-hover-animate="bounce" style="color: #ffffff;"></i>
-                    <h3 class="name" style="color: #ffffff;"><strong>Support for 3rd party terminals.&nbsp;</strong><br></h3>
-                    <p class="description" style="color: #7d8285;">Kookaburra supports 3rd party terminals like Windows Terminal out of the box. No tweaking is needed, you automatically get the best results.&nbsp;</p>
-                </div>
-                <div class="col-sm-6 col-lg-4 item" style="color: #999999;"><i class="fa fa-simplybuilt icon" data-bss-hover-animate="bounce" style="color: #ffffff;"></i>
-                    <h3 class="name" style="color: #ffffff;">Easy to understand</h3>
-                    <p class="description" style="color: #7d8285;">Kookaburra is a <strong>simple </strong>programming language, designed for <strong>beginners </strong>but <br>with sufficient complexity for more <strong>advanced </strong>coders. <a href="https://github.com/AZProductions/Kookaburra/#-faq">Read more..</a><br></p>
-                </div>
-                <div class="col-sm-6 col-lg-4 item" style="color: #ffffff;"><i class="fa fa-suitcase icon" data-bss-hover-animate="bounce" style="color: #ffffff;"></i>
-                    <h3 class="name" style="color: #ffffff;">Intuitive commands.<br></h3>
-                    <p class="description" style="color: #7d8285;">Kookaburra's commands are fine-tuned to perfection. Create advanced scripts and get the performance you need.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="highlight-phone">
-        <section data-aos="fade-down" data-aos-duration="400" class="testimonials-clean" style="margin-bottom: 43px;">
-            <div class="container">
-                <div class="intro">
-                    <h2 class="text-center">Reviews</h2>
-                    <p class="text-center">Our users love Kookaburra! Read what they have to say below.</p>
-                </div>
-                <div class="row people">
-                    <div class="col-md-6 col-lg-4 item">
-                        <div class="box">
-                            <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est.</p>
-                        </div>
-                        <div class="author"><img class="rounded-circle" src="assets/img/1.jpg">
-                            <h5 class="name">Ben Johnson</h5>
-                            <p class="title">CEO of Company Inc.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item">
-                        <div class="box">
-                            <p class="description">Free and easy to use. I made my first program in a few&nbsp;minutes.</p>
-                        </div>
-                        <div class="author"><img class="rounded-circle" src="assets/img/3.jpg">
-                            <h5 class="name">Carl Kent</h5>
-                            <p class="title">Founder of Style Co.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-4 item">
-                        <div class="box">
-                            <p class="description">Aliquam varius finibus est, et interdum justo suscipit. Vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu.</p>
-                        </div>
-                        <div class="author"><img class="rounded-circle" src="assets/img/2.jpg">
-                            <h5 class="name">Emily Clark</h5>
-                            <p class="title">Owner of Creative Ltd.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8" data-aos="fade" data-aos-duration="350" data-aos-delay="250">
-                    <div data-aos="fade" data-aos-duration="350" data-aos-delay="250" class="intro"></div>
-                    <h2 data-aos="fade" data-aos-duration="350" data-aos-delay="250" id="GetKookaburra" style="margin: 15px;margin-left: 15px;margin-top: 83px;margin-bottom: -62px;">Get Kookaburra</h2>
-                    <p data-aos="fade" data-aos-duration="350" data-aos-delay="250" style="margin: 15px;margin-left: 15px;margin-top: 83px;margin-bottom: -62px;">Start by downloading Kookaburra. <a href="https://github.com/AZProductions/Kookaburra/#-security">Read more.</a></p><a class="btn btn-primary" role="button" data-aos="fade" data-aos-duration="350" data-aos-delay="250" href="https://github.com/AZProductions/Kookaburra/releases" style="margin: 15px;margin-left: 15px;margin-top: 83px;margin-bottom: -62px;">Download on github</a>
-                </div>
-                <div class="col-sm-4 col-xl-4" data-aos="fade" data-aos-duration="350" data-aos-delay="250"><img src="assets/img/Preview.png" style="padding: -28px;margin: -47px;margin-left: -298px;"></div>
-            </div>
-        </div>
-    </section>
-    <section class="newsletter-subscribe" style="background: rgb(0,0,0);">
-        <div class="container">
-            <div class="intro">
-                <h2 class="text-center" style="color: rgb(120,120,120);">Subscribe for our Newsletter</h2>
-                <p class="text-center">Get updates and tips, from the creators of Kookaburra.</p>
-            </div>
-            <form class="d-flex justify-content-center flex-wrap" method="post">
-                <div class="mb-3"><input class="form-control" type="email" name="email" placeholder="Your Email" style="background: rgb(35,35,35);color: #ffffff;"></div>
-                <div class="mb-3"><button class="btn btn-primary" type="submit" style="color: rgb(0,0,0);">Subscribe </button></div>
-            </form>
-        </div>
-        <footer class="footer-basic" style="color: var(--bs-blue);background: rgb(0,0,0);">
-            <div class="social" style="color: rgb(255,255,255);"><a style="border-color: #000000;" href="https://github.com/AZProductions/Kookaburra"><i class="icon ion-social-octocat"></i></a><a href="https://www.youtube.com/channel/UCGsb29I0qJD_iry1C92r2ww" style="border-color: #000000;"><i class="icon ion-social-youtube"></i></a><a href="https://twitter.com/AZ_Software" style="border-color: #000000;"><i class="icon ion-social-twitter"></i></a><a href="https://www.reddit.com/r/Kookaburra/" style="border-color: #000000;"><i class="icon ion-social-reddit"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="#" style="color: rgb(130,130,130);">Home</a></li>
-                <li class="list-inline-item"><a href="#Features" style="color: rgb(130,130,130);">Features</a></li>
-                <li class="list-inline-item"><a href="#GetKookaburra" style="color: rgb(130,130,130);">Get Kookaburra</a></li>
-                <li class="list-inline-item"><a href="https://github.com/AZProductions/Kookaburra/blob/main/TOS.md" style="color: rgb(130,130,130);">Terms</a></li>
-                <li class="list-inline-item"><a href="https://github.com/AZProductions/Kookaburra/blob/main/PRIVACY" style="color: rgb(130,130,130);">Privacy Policy</a></li>
-            </ul>
-            <p class="copyright">AZ Software © 2021</p>
-        </footer>
-    </section><a class="btn btn-primary" role="button" data-aos="zoom-out" data-aos-duration="900" data-aos-delay="150" style="margin-left: auto;margin-right: auto;margin: 0 auto;display: block;margin-bottom: 98px;width: 193.5px;height: 48px;text-align: center;vertical-align: middle;padding: 10px 12px;" href="https://github.com/AZProductions/Kookaburra/releases/">Get Kookaburra</a>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-</body>
 
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+      <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#kookaburra" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Kookaburra" class="md-header__button md-logo" aria-label="Kookaburra" data-md-component="logo">
+      
+  <img src="assets/favicon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Kookaburra
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Home
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="dark-blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/AZProductions/Kookaburra" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AZProductions/Kookaburra
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="." class="md-tabs__link md-tabs__link--active">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="tutorials/getting%20started/" class="md-tabs__link">
+      Getting started
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="https://github.com/AZProductions/Kookaburra/releases/" class="md-tabs__link">
+      Downloads
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="blogs/Kookaburra%27s%20new%20design%20style/" class="md-tabs__link">
+        Blogs
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="resources/error-list/" class="md-tabs__link">
+        Resources
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Kookaburra" class="md-nav__button md-logo" aria-label="Kookaburra" data-md-component="logo">
+      
+  <img src="assets/favicon.png" alt="logo">
+
+    </a>
+    Kookaburra
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/AZProductions/Kookaburra" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zM277.3 415.7c-8.4 1.5-11.5-3.7-11.5-8 0-5.4.2-33 .2-55.3 0-15.6-5.2-25.5-11.3-30.7 37-4.1 76-9.2 76-73.1 0-18.2-6.5-27.3-17.1-39 1.7-4.3 7.4-22-1.7-45-13.9-4.3-45.7 17.9-45.7 17.9-13.2-3.7-27.5-5.6-41.6-5.6-14.1 0-28.4 1.9-41.6 5.6 0 0-31.8-22.2-45.7-17.9-9.1 22.9-3.5 40.6-1.7 45-10.6 11.7-15.6 20.8-15.6 39 0 63.6 37.3 69 74.3 73.1-4.8 4.3-9.1 11.7-10.6 22.3-9.5 4.3-33.8 11.7-48.3-13.9-9.1-15.8-25.5-17.1-25.5-17.1-16.2-.2-1.1 10.2-1.1 10.2 10.8 5 18.4 24.2 18.4 24.2 9.7 29.7 56.1 19.7 56.1 19.7 0 13.9.2 36.5.2 40.6 0 4.3-3 9.5-11.5 8-66-22.1-112.2-84.9-112.2-158.3 0-91.8 70.2-161.5 162-161.5S388 165.6 388 257.4c.1 73.4-44.7 136.3-110.7 158.3zm-98.1-61.1c-1.9.4-3.7-.4-3.9-1.7-.2-1.5 1.1-2.8 3-3.2 1.9-.2 3.7.6 3.9 1.9.3 1.3-1 2.6-3 3zm-9.5-.9c0 1.3-1.5 2.4-3.5 2.4-2.2.2-3.7-.9-3.7-2.4 0-1.3 1.5-2.4 3.5-2.4 1.9-.2 3.7.9 3.7 2.4zm-13.7-1.1c-.4 1.3-2.4 1.9-4.1 1.3-1.9-.4-3.2-1.9-2.8-3.2.4-1.3 2.4-1.9 4.1-1.5 2 .6 3.3 2.1 2.8 3.4zm-12.3-5.4c-.9 1.1-2.8.9-4.3-.6-1.5-1.3-1.9-3.2-.9-4.1.9-1.1 2.8-.9 4.3.6 1.3 1.3 1.8 3.3.9 4.1zm-9.1-9.1c-.9.6-2.6 0-3.7-1.5s-1.1-3.2 0-3.9c1.1-.9 2.8-.2 3.7 1.3 1.1 1.5 1.1 3.3 0 4.1zm-6.5-9.7c-.9.9-2.4.4-3.5-.6-1.1-1.3-1.3-2.8-.4-3.5.9-.9 2.4-.4 3.5.6 1.1 1.3 1.3 2.8.4 3.5zm-6.7-7.4c-.4.9-1.7 1.1-2.8.4-1.3-.6-1.9-1.7-1.5-2.6.4-.6 1.5-.9 2.8-.4 1.3.7 1.9 1.8 1.5 2.6z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    AZProductions/Kookaburra
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Home
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cross-platform-object-oriented-programming-language" class="md-nav__link">
+    Cross-platform, Object-oriented Programming language.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-kookaburra" class="md-nav__link">
+    About Kookaburra
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="tutorials/getting%20started/" class="md-nav__link">
+        Getting started
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/AZProductions/Kookaburra/releases/" class="md-nav__link">
+        Downloads
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" data-md-state="indeterminate" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Blogs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Blogs" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Blogs
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blogs/Kookaburra%27s%20new%20design%20style/" class="md-nav__link">
+        Kookaburra's new design style
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blogs/Publishing%20Kookaburra%20into%20an%20exe%20file/" class="md-nav__link">
+        Publishing Kookaburra into an exe file
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blogs/Kookaburra%20linking%20template/" class="md-nav__link">
+        Kookaburra linking template
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blogs/Improving%20Kookaburra%27s%20performance/" class="md-nav__link">
+        Improving Kookaburra's performance
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blogs/Kookaburra%20on%20the%20Microsoft%20Store/" class="md-nav__link">
+        Kookaburra on the Microsoft Store
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="blogs/Kookaburra%20releasing%20strategy/" class="md-nav__link">
+        The new releasing strategy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" data-md-state="indeterminate" type="checkbox" id="__nav_5" checked>
+      
+      <label class="md-nav__link" for="__nav_5">
+        Resources
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Resources" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Resources
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resources/error-list/" class="md-nav__link">
+        Error list
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="resources/shortcuts/" class="md-nav__link">
+        Shortcuts
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <style>
+.md-footer__inner {
+    visibility: hidden;
+    overflow: auto;
+    background: transparent;
+    scale: revert;
+    width: 0;
+    height: 0;
+}
+
+.md-nav--primary .md-nav__link[for=__toc] ~ .md-nav {
+    display: none;
+  }
+
+ .md-grid {
+    max-width: 1440px;
+ }
+</style>
+
+<h1 id="kookaburra"><img alt="Logo" src="https://raw.githubusercontent.com/AZProductions/Kookaburra/main/.github/icons/cover_art.png" /> <strong>Kookaburra</strong></h1>
+<h6 id="cross-platform-object-oriented-programming-language"><strong><em>Cross-platform, Object-oriented Programming language.</em></strong></h6>
+<hr />
+<p><a href="https://github.com/AZProductions/Kookaburra/releases"><img alt="Latest release" src="https://img.shields.io/github/v/release/azproductions/kookaburra?include_prereleases" /></a>
+<a href="https://github.com/AZProductions/Kookaburra/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/azproductions/kookaburra" /></a>
+<a href="https://github.com/AZProductions/Kookaburra/releases"><img alt="GitHub all releases" src="https://img.shields.io/github/downloads/azproductions/kookaburra/total" /></a>
+<a href="https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml"><img alt=".NET" src="https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml/badge.svg?branch=main" /></a>
+<a href="https://www.codefactor.io/repository/github/azproductions/kookaburra"><img alt="CodeFactor" src="https://www.codefactor.io/repository/github/azproductions/kookaburra/badge" /></a>
+<img alt="12k lines of code" src="https://img.shields.io/tokei/lines/github/azproductions/kookaburra" /></p>
+<hr />
+<p><a href='tutorials/getting started'><img src='https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/button_badge2.png' alt='Github link badge' style="vertical-align:middle" center width="358" height="108" class="center"/></a>
+<a href='https://github.com/AZProductions/Kookaburra/releases/'><img src='https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/button_badge3.png' alt='Mirror link badge' style="vertical-align:middle" center width="358" height="108" class="center"/></a>
+<a href='https://github.com/AZProductions/Kookaburra/tree/main/snippets'><img src='https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/button_badge1.png' alt='MS-Store link badge' style="vertical-align:middle" center width="358" height="108" class="center"/></a></p>
+<hr />
+<h2 id="about-kookaburra"><strong>About Kookaburra</strong></h2>
+<p>Kookaburra is a simple programming language. With Kookaburra you can choose between the powerful CLI (command-line-interface), or start scripting with its intuitive syntax. The syntax is simple and efficient. Create apps/games and more that are fine-tuned to perfection. Kookaburra is completely free to use, with local files and no data collection. Our aim is to power creativity and inspire young developers. That's why we care about privacy and safety. We love hearing feedback to improve Kookaburra.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="tutorials/getting%20started/" class="md-footer__link md-footer__link--next" aria-label="Next: Getting started" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Getting started
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/AZProductions/" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+        
+        
+      
+      <a href="https://twitter.com/AZProductions" target="_blank" rel="noopener" title="twitter.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "toc.integrate", "content.tabs.link"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.53c85856.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.716f8af4.min.js"></script>
+      
+    
+  </body>
 </html>
