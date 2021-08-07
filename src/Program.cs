@@ -1,4 +1,4 @@
-using Spectre.Console;
+﻿using Spectre.Console;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -39,7 +39,7 @@ namespace KookaburraShell
             Console.WriteLine("AZ Software is not responsible for any harm to your device(s).");
             Console.Write("Use the command ");
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.Write(" 'tos' ");
+            Console.Write("'tos' ");
             //AnsiConsole.Markup("'[Link=https://github.com/AZProductions/Kookaburra/blob/main/TOS.md]tos[/]' ");
             Console.ForegroundColor = ConsoleColor.DarkRed;
             Console.WriteLine("to read the Terms of Service.");
@@ -125,11 +125,10 @@ namespace KookaburraShell
                     string Message = "Press 'enter' to leave the help dialog, and scroll to read the information";
                     Console.SetCursorPosition((Console.WindowWidth - Message.Length) / 2, Console.CursorTop);
                     Console.WriteLine(Message);
+                    Console.WriteLine(Environment.NewLine);
 
                     var rule1 = new Rule("[white bold]All CLI  Commands[/]");
                     AnsiConsole.Render(rule1);
-
-                    Console.WriteLine(Environment.NewLine);
 
                     var table = new Table().Centered();
                     table.AddColumn("Command");
@@ -153,6 +152,33 @@ namespace KookaburraShell
                     table.AddRow("tree", "[green]Renders a detailed list of all the files and folders in a directory.[/]");
                     AnsiConsole.Render(table);
                     Console.WriteLine(Environment.NewLine);
+
+
+                    var rule4 = new Rule("[white bold]CLI Shortcuts[/]");
+                    var table1 = new Table().Centered();
+                    AnsiConsole.Render(rule4);
+                    table1.AddColumn("Shortcut");
+                    table1.AddColumn(new TableColumn("Description").Centered());
+                    table1.AddRow("-c:/, it works with all drives.", "[green]Automatically gets the root of the set directory.[/]");
+                    table1.AddRow("-env", "[green]The location of the configuration directory of kookaburra.[/]");
+                    table1.AddRow("-r", "[green]Goes to the root of the current directory.[/]");
+                    table1.AddRow("-cookies", "[green]The directory that serves as a common repository for Internet cookies.[/]");
+                    table1.AddRow("-desktop or -dt", "[green]The logical Desktop rather than the physical file system location.[/]");
+                    table1.AddRow("-favorites", "[green]The directory that serves as a common repository for the user's favorite items.[/]");
+                    table1.AddRow("-fonts", "[green]A virtual folder that contains fonts.[/]");
+                    table1.AddRow("-history", "[green]The directory that serves as a common repository for Internet history items.[/]");
+                    table1.AddRow("-personal", "[green]The directory that serves as a common repository for documents. This member is equivalent to MyDocuments.[/]");
+                    table1.AddRow("-programs", "[green]The directory that contains the user's program groups.[/]");
+                    table1.AddRow("-recent", "[green]The directory that contains the user's most recently used documents.[/]");
+                    table1.AddRow("-resources", "[green]The file system directory that contains resource data.[/]");
+                    table1.AddRow("-st", "[green]The directory that contains the Start menu items.[/]");
+                    table1.AddRow("-startup", "[green]The directory that corresponds to the user's Startup program group. The system starts these programs whenever a user logs on or starts Windows.[/]");
+                    table1.AddRow("-system", "[green]The System directory.[/]");
+                    table1.AddRow("-templates", "[green]The directory that serves as a common repository for document templates.[/]");
+                    table1.AddRow("-windows", "[green]The Windows directory or SYSROOT. This corresponds to the %windir% or %SYSTEMROOT% environment variables.[/]");
+                    table1.AddRow("-c", "[green]Clears location.[/]");
+                    AnsiConsole.Render(table1);
+
                     var rule2 = new Rule("[white bold]About us[/]");
                     AnsiConsole.Render(rule2);
                     DateTime start = new DateTime(2021, 3, 14);
@@ -2117,21 +2143,15 @@ namespace KookaburraShell
                                     {
                                         var table = new Table();
                                         table.Border = TableBorder.Rounded;
-                                        table.AddColumn("Breakpoint");
-                                        table.AddRow("Status=running");
-                                        string Final = "Name=";
+                                        table.AddColumn("[white]Breakpoint[/]");
+                                        table.AddRow("[white]Status=[/][green]running[/]");
+                                        
+                                        table.AddRow("[white]-- Strings --[/]");
+                                        
                                         foreach (string Finalvalue in Stringname) 
                                         {
-                                            Final = Final + Finalvalue + ",";
+                                            table.AddRow("[blue]" + Finalvalue + "[/]=[red]" + Format(Finalvalue) + "[/]");
                                         }
-                                        table.AddRow(Final.TrimEnd(','));
-
-                                        string Final2 = "Data=";
-                                        foreach (string Finalvalue2 in Stringvalue)
-                                        {
-                                            Final2 = Final2 + Finalvalue2 + ",";
-                                        }
-                                        table.AddRow(Final2.TrimEnd(','));
                                         AnsiConsole.Render(table);
                                     }
                                     else if (s.StartsWith("new Grid("))
