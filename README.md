@@ -148,6 +148,9 @@ You can also get the SHA-256 from the file and compare it with the reference in 
 ## [👩‍💻 Syntax](https://azproductions.github.io/Kookaburra/syntax/)
 [Available on the website.](https://azproductions.github.io/Kookaburra/syntax/)
 
+## 📷 Gallery
+![Kookaburra supports 3rd party terminals like [Windows Terminal](https://github.com/microsoft/terminal).](https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/mockup1.png) ![Create files and folders with ease in a matter of seconds.](https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/mockup2.png) ![Start scripting with it's intuitive syntax.](https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/mockup3.png)
+
 ## 📒 CLI Commands
 | Command | description                      |
 | ---- | -----------|
