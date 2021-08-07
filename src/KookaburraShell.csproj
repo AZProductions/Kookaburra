@@ -10,12 +10,12 @@
     <Company>AZ Software</Company>
     <Authors>AZ Software</Authors>
     <Copyright>AZ Software 2021</Copyright>
-    <Version>0.6.8.3</Version>
+    <Version>0.7.6.1</Version>
     <PackageIcon>bitmap.png</PackageIcon>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>Cross-Platform, Object-Oriented Programming language.</Description>
-    <AssemblyVersion>0.6.8.3</AssemblyVersion>
-    <FileVersion>0.6.8.3</FileVersion>
+    <AssemblyVersion>0.7.6.1</AssemblyVersion>
+    <FileVersion>0.7.5.1</FileVersion>
     <PackageProjectUrl>https://github.com/AZProductions/Kookaburra</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AZProductions/Kookaburra</RepositoryUrl>
     <RepositoryType>Closed Source</RepositoryType>
