@@ -4,7 +4,7 @@
 ###### ***7 August 2021 - Blog 7 - Kookaburra***
 -----
 
-In celebration of 200+ downloads, we're planing new features and functions for Kookaburra. These are the new features we're planning to add in version **0.8.X**.
+In celebration of 200+ downloads, we're planing new features and functions for Kookaburra. These are the new features we're planning to add in version **0.8.X**. Kookaburra is now officially in the **Beta** stage of development!
 - New improved startup screen. [(**#80**)](https://github.com/AZProductions/Kookaburra/issues/80)
 - Advanced download. (*More info coming later*)
 - More features in the `conf.txt` file. (*Like custom welcome message*)
