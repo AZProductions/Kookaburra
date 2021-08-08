@@ -42,6 +42,8 @@
 ## 🙋 FAQ
 <details>
  <summary>What is Kookaburra?</summary>
+ <br/>
+ 
  
  **Kookaburra** is a simple programming language. With Kookaburra you can choose between the powerful **CLI**, or start **coding** with its' intuitive syntax. The syntax is simple and efficient. Kookaburra is completely **free** to use, using only local files and no data/telemetry collection.
  
@@ -49,7 +51,7 @@
 
 <details>
  <summary>Which operating systems does Kookaburra support?</summary>
-
+<br/>
  
    OS                                    | Version                 | Architectures   |
    --------------------------------------|-------------------------|-----------------|
@@ -71,6 +73,7 @@
 
 <details>
   <summary>Why would you downloads Kookaburra?</summary>
+ <br/>
  
  Kookaburra is a simple programming language, designed for beginners but with sufficient complexity for more advanced coders. Kookaburra can be run on multiple platforms all using the same structure and syntax, thereby requiring a only single learning curve.
  
@@ -79,6 +82,7 @@
 
 <details>
  <summary>Will Kookaburra ever support Mac-OS?</summary>
+ <br/>
  
  We currently see no demand in Mac-OS, unless it's worth the time in testing Kookaburra. You can always make your own build of Kookaburra that supports Mac-OS. Some features need modifications to work.
  
@@ -86,10 +90,22 @@
 
 <details>
  <summary>Does Kookaburra support custom commands?</summary>
+ <br/>
  
  **Yes**, it does. Open the Kookaburra config directory, and edit the ```custom_commands.txt``` file. Kookaburra is made in a dynamic workflow, any improvements and suggestions greatfully received. 
  
  You can add a new line with ```paint=mspaint```. When typing the command **paint**, it will open *Microsoft Paint*. [Read more..](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complete%20guide%20of%20Kookaburra.md)
+ 
+</details>
+
+<details>
+ <summary>Which 3rd party terminals does Kookaburra support?</summary>
+  <br/>
+ 
+ 
+ [![Windows Terminal - Stable](https://img.shields.io/badge/Windows_Terminal-Stable-blue?logo=windowsterminal)](https://github.com/microsoft/terminal)
+ ![Bash Terminal - Stable](https://img.shields.io/badge/Bash_Terminal-Stable-blue?logo=gnubash)
+ ![Hyper - Stable](https://img.shields.io/badge/Hyper-Stable-blue?logo=Hyper)
  
 </details>
 
