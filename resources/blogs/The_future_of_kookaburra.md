@@ -21,6 +21,8 @@ In celebration of 200+ downloads, we're planing new features and functions for K
 
 **Update 1:**
 - 0.8.1 will not include progressbars.
+- - Progressbar example:
+- - ``` new ProgressBar(100) ProgressBar.Value = 20 ProgressBar.Name = "format api"```
 
 ----
 <img src="https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/graph7.png" class="center">
