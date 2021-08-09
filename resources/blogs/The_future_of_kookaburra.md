@@ -18,6 +18,10 @@ In celebration of 200+ downloads, we're planing new features and functions for K
 - Figlet/Print alignment. (*Align text in the center of the user's screen*)
 - And more. (*User feedback is appreciated*)
 
+
+**Update 1:**
+- 0.8.1 will not include progressbars.
+
 ----
 <img src="https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/graph7.png" class="center">
 
