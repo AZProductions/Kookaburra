@@ -24,6 +24,14 @@ In celebration of 200+ downloads, we're planing new features and functions for K
 - - Progressbar example:
 - - ``` new ProgressBar(100) ProgressBar.Value = 20 ProgressBar.Name = "format api"```
 
+**Update 2:**
+- 0.8.2 will include special inputs:
+- - `dialog.yesno`
+- - `dialog.numerical`
+- - `dialog.color`
+- - `dialog.date`
+- - `dialog.custom(filter)`
+
 ----
 <img src="https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/graph7.png" class="center">
 
