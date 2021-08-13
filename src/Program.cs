@@ -1,5 +1,5 @@
-﻿using Spectre.Console;
-using System;
+﻿using System;
+using Spectre.Console;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
@@ -21,7 +21,7 @@ namespace KookaburraShell
         {
             Console.TreatControlCAsInput = false;
             Isettingsconf.Currentdir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
-            Isettingsconf.Envloc = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"\Kookaburra\";
+            Isettingsconf.Envloc = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"/Kookaburra/"; if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) { Isettingsconf.Envloc = "/home/" + Environment.UserName + "/Kookaburra/";  }
             script_var.Intcount = 0;
             Isettingsconf.Quietmode = false;
             fileoutput();
@@ -46,7 +46,7 @@ namespace KookaburraShell
             Console.WriteLine("");
             try
             {
-                string[] vs = File.ReadAllLines(Isettingsconf.Envloc + @"\conf.txt");
+                string[] vs = File.ReadAllLines(Isettingsconf.Envloc + @"/conf.txt");
                 foreach (string Lines in vs) { if (Lines == "FR=true") { Isettingsconf.FR = true; } }
             }
             catch { Isettingsconf.FR = true; /*Revert to default, shows FR.*/ }
@@ -112,24 +112,14 @@ namespace KookaburraShell
                 {
                     validcommandfound = true;
                     Console.WriteLine(Environment.NewLine);
-
                     AnsiConsole.Render(
                     new FigletText("Kookaburra")
                         .Centered()
                         .Color(Color.Green));
 
                     Console.WriteLine(Environment.NewLine);
-
-                    var rule3 = new Rule("[white bold]Quick info[/]");
-                    AnsiConsole.Render(rule3);
-                    string Message = "Press 'enter' to leave the help dialog, and scroll to read the information";
-                    Console.SetCursorPosition((Console.WindowWidth - Message.Length) / 2, Console.CursorTop);
-                    Console.WriteLine(Message);
-                    Console.WriteLine(Environment.NewLine);
-
                     var rule1 = new Rule("[white bold]All CLI  Commands[/]");
                     AnsiConsole.Render(rule1);
-
                     var table = new Table().Centered();
                     table.AddColumn("Command");
                     table.AddColumn(new TableColumn("Description").Centered());
@@ -151,9 +141,6 @@ namespace KookaburraShell
                     table.AddRow("password", "[green]Generate passwords.[/]");
                     table.AddRow("tree", "[green]Renders a detailed list of all the files and folders in a directory.[/]");
                     AnsiConsole.Render(table);
-                    Console.WriteLine(Environment.NewLine);
-
-
                     var rule4 = new Rule("[white bold]CLI Shortcuts[/]");
                     var table1 = new Table().Centered();
                     AnsiConsole.Render(rule4);
@@ -178,15 +165,18 @@ namespace KookaburraShell
                     table1.AddRow("-windows", "[green]The Windows directory or SYSROOT. This corresponds to the %windir% or %SYSTEMROOT% environment variables.[/]");
                     table1.AddRow("-c", "[green]Clears location.[/]");
                     AnsiConsole.Render(table1);
-
-                    var rule2 = new Rule("[white bold]About us[/]");
-                    AnsiConsole.Render(rule2);
-                    DateTime start = new DateTime(2021, 3, 14);
-                    DateTime end = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day);
-                    var diffMonths = (end.Month + end.Year * 12) - (start.Month + start.Year * 12);
-                    Console.WriteLine("Our mission is to Write The Future. We create simple, but yet powerfull tools and software. Security is the most important factor when creating such tools. We at AZ Software spent " + diffMonths + " months creating Kookaburra. It is a hard task keeping it up and running, we appreciate feedback. Thank you. - AZSoftware");
+                    var rule5 = new Rule("[white bold]Open-Source Libraries[/]");
+                    AnsiConsole.Render(rule5);
+                    var table2 = new Table().Centered();
+                    table2.AddColumn(new TableColumn("Name").Centered());
+                    table2.AddColumn(new TableColumn("Version").Centered());
+                    table2.AddColumn(new TableColumn("Licence").Centered());
+                    table2.AddColumn(new TableColumn("Link").Centered());
+                    table2.AddColumn(new TableColumn("Notes").Centered());
+                    table2.AddRow("[bold]Spectre.Console[/]", "0.41 [italic](Nuget)[/]", "[bold]MIT[/]", "[blue]https://spectreconsole.net/[/]", "The Spectre system is our favourite markup library, it supports a variety of features. [bold]We recommend using it![/]");
+                    table2.AddRow("[bold]Spectre.Console.ImageSharp[/]", "0.41 [italic](Nuget)[/]", "[bold]MIT[/]", "[blue]https://spectreconsole.net/widgets/canvas-image[/]", "Image Sharp is part of the Spectre.Console system, its a fork from the SixLabors.ImageSharp project.");
+                    AnsiConsole.Render(table2);
                     Console.WriteLine(Environment.NewLine);
-
                 }
 
                 if (input == "clear" || input == "cls")
@@ -1069,14 +1059,14 @@ namespace KookaburraShell
                 if (input == "whoami")
                 {
                     validcommandfound = true;
-                    Console.WriteLine(Environment.MachineName + @"\" + Environment.UserName);
+                    Console.WriteLine(Environment.MachineName + @"/" + Environment.UserName);
                 }
 
                 if (input.StartsWith("edit"))
                 {
                     validcommandfound = true;
                     string file = input.Replace("edit ", "");
-                    string loc = Isettingsconf.Envloc + @"\text_editor.txt";
+                    string loc = Isettingsconf.Envloc + @"/text_editor.txt";
                     try
                     {
                         string result = File.ReadAllText(loc);
@@ -1524,7 +1514,7 @@ namespace KookaburraShell
                 if (Directory.Exists(Isettingsconf.Envloc)) { }
                 else { try { Directory.CreateDirectory(Isettingsconf.Envloc); } catch { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Restart with admin priviliges."); } }
 
-                string path4 = Isettingsconf.Envloc + @"\conf.txt";
+                string path4 = Isettingsconf.Envloc + @"/conf.txt";
                 if (!File.Exists(path4))
                 {
                     try
@@ -1636,7 +1626,7 @@ namespace KookaburraShell
                     }
                 }
 
-                string path2 = Isettingsconf.Envloc + @"\text_editor.txt";
+                string path2 = Isettingsconf.Envloc + @"/text_editor.txt";
                 if (!File.Exists(path2))
                 {
                     try
@@ -1676,7 +1666,7 @@ namespace KookaburraShell
                 }
 
 
-                string path = Isettingsconf.Envloc + @"\custom_commands.txt";
+                string path = Isettingsconf.Envloc + @"/custom_commands.txt";
                 if (!File.Exists(path))
                 {
                     try
@@ -2059,6 +2049,14 @@ namespace KookaburraShell
                                     {
                                         Console.Beep();
                                     }
+                                    else if (s.StartsWith("new image(") && s.EndsWith(")"))
+                                    {
+                                        string result = s.Replace("new image(", "").TrimEnd(')');
+                                        string[] result2 = result.Split(", ");
+                                        var image = new CanvasImage(Format(result2[0]));
+                                        image.MaxWidth(int.Parse(Format(result2[1])));
+                                        AnsiConsole.Render(image);
+                                    }
                                     else if (s.StartsWith("sound.play = "))
                                     {
                                         string res = s.Replace("sound.play = ", "");
@@ -2139,16 +2137,16 @@ namespace KookaburraShell
                                         if (GridSelect)
                                             AnsiConsole.Render(tb);
                                     }
-                                    else if (s == "app.breakpoint()") 
+                                    else if (s == "app.breakpoint()")
                                     {
                                         var table = new Table();
                                         table.Border = TableBorder.Rounded;
                                         table.AddColumn("[white]Breakpoint[/]");
                                         table.AddRow("[white]Status=[/][green]running[/]");
-                                        
+
                                         table.AddRow("[white]-- Strings --[/]");
-                                        
-                                        foreach (string Finalvalue in Stringname) 
+
+                                        foreach (string Finalvalue in Stringname)
                                         {
                                             table.AddRow("[blue]" + Finalvalue + "[/]=[red]" + Format(Finalvalue) + "[/]");
                                         }
