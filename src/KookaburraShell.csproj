@@ -10,12 +10,12 @@
     <Company>AZ Software</Company>
     <Authors>AZ Software</Authors>
     <Copyright>AZ Software 2021</Copyright>
-    <Version>0.7.6.1</Version>
+    <Version>0.8.1.2</Version>
     <PackageIcon>bitmap.png</PackageIcon>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>Cross-Platform, Object-Oriented Programming language.</Description>
-    <AssemblyVersion>0.7.6.1</AssemblyVersion>
-    <FileVersion>0.7.5.1</FileVersion>
+    <AssemblyVersion>0.8.1.2</AssemblyVersion>
+    <FileVersion>0.8.1.2</FileVersion>
     <PackageProjectUrl>https://github.com/AZProductions/Kookaburra</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AZProductions/Kookaburra</RepositoryUrl>
     <RepositoryType>Closed Source</RepositoryType>
@@ -46,7 +46,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Spectre.Console" Version="0.39.0" />
+    <PackageReference Include="Spectre.Console" Version="0.41.0" />
+    <PackageReference Include="Spectre.Console.ImageSharp" Version="0.41.0" />
   </ItemGroup>
 
 </Project>
