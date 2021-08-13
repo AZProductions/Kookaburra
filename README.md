@@ -128,23 +128,23 @@
 ### For Linux
 Use this command to download it with [**wget**](http://www.gnu.org/software/wget/)
 ```bash
-wget  https://github.com/AZProductions/Kookaburra/releases/download/0.6.8/KookaburraShell_linux_0.6.8
+wget  https://github.com/AZProductions/Kookaburra/releases/download/0.7.6/KookaburraShell_linux_0.6.8
 ```
 Or by using [**curl**](https://curl.se/)
 ```bash
-curl https://github.com/AZProductions/Kookaburra/releases/download/0.6.8/KookaburraShell_linux_0.6.8
+curl https://github.com/AZProductions/Kookaburra/releases/download/0.7.6/KookaburraShell_linux_0.6.8
 ```
 Provide Kookaburra permissions by typing
 ```bash
-chmod 777 ./KookaburraShell_linux_0.6.8
+chmod 777 ./KookaburraShell_linux_0.7.6
 ```
 And run it by typing
 ```bash
-./KookaburraShell_linux_0.6.8
+./KookaburraShell_linux_0.7.6
 ```
 Run Kookaburra and open a .kookaburra file with
 ```bash
-./KookaburraShell_linux_0.6.8 /filelocation/example.kookaburra
+./KookaburraShell_linux_0.7.6 /filelocation/example.kookaburra
 ```
 #### [**Youtube Tutorial**](https://www.youtube.com/watch?v=cvjH8pmiKDk)
 
