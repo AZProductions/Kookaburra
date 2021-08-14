@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Spectre.Console;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -240,11 +240,9 @@ namespace KookaburraShell
                 if (input == "restart")
                 {
                     validcommandfound = true;
-                    run = false;
                     Console.Clear();
-                    Thread.Sleep(123);
-                    System.Diagnostics.Process.Start(System.Reflection.Assembly.GetExecutingAssembly().Location.Replace(".dll", ".exe"));
-                    Environment.Exit(0);
+                    string[] callMain = { }; 
+                    Main(callMain);
                 }
 
                 if (input == "restart -p")
@@ -888,18 +886,21 @@ namespace KookaburraShell
 
                 if (input == "ipconfig")
                 {
-                    validcommandfound = true;
-                    NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
-                    foreach (NetworkInterface adapter in adapters)
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
                     {
-                        IPInterfaceProperties properties = adapter.GetIPProperties();
-                        Console.WriteLine(adapter.Description);
-                        Console.WriteLine("  DNS suffix .............................. : {0}",
-                            properties.DnsSuffix);
-                        Console.WriteLine("  DNS enabled ............................. : {0}",
-                            properties.IsDnsEnabled);
-                        Console.WriteLine("  Dynamically configured DNS .............. : {0}",
-                            properties.IsDynamicDnsEnabled);
+                        validcommandfound = true;
+                        NetworkInterface[] adapters = NetworkInterface.GetAllNetworkInterfaces();
+                        foreach (NetworkInterface adapter in adapters)
+                        {
+                            IPInterfaceProperties properties = adapter.GetIPProperties();
+                            Console.WriteLine(adapter.Description);
+                            Console.WriteLine("  DNS suffix .............................. : {0}",
+                                properties.DnsSuffix);
+                            Console.WriteLine("  DNS enabled ............................. : {0}",
+                                properties.IsDnsEnabled);
+                            Console.WriteLine("  Dynamically configured DNS .............. : {0}",
+                                properties.IsDynamicDnsEnabled);
+                        }
                     }
                 }
 
@@ -1184,7 +1185,7 @@ namespace KookaburraShell
                     }
                 }
 
-                if (input == "app.beep()")
+                if (input == "sound.beep()")
                 {
                     validcommandfound = true;
                     Console.Beep();
