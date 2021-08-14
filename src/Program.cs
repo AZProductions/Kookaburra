@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Spectre.Console;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -1208,6 +1208,79 @@ namespace KookaburraShell
                     }
                 }
 
+                if (input.StartsWith("hash "))
+                {
+                    string loc = input.Replace("hash ", "");
+                    if (File.Exists(loc))
+                    {
+                        validcommandfound = true;
+                        string hashMD5 = "emtpy";
+                        using (var md5 = System.Security.Cryptography.MD5.Create())
+                        {
+                            using (var stream = File.OpenRead(loc))
+                            {
+                                hashMD5 = BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", string.Empty);
+                            }
+                        }
+                        string hash256 = "emtpy";
+                        using (var SHA256 = System.Security.Cryptography.SHA256.Create())
+                        {
+                            using (var stream = File.OpenRead(loc))
+                            {
+                                hash256 = BitConverter.ToString(SHA256.ComputeHash(stream)).Replace("-", string.Empty);
+                            }
+                        }
+                        string hash1 = "emtpy";
+                        using (var SHA1 = System.Security.Cryptography.SHA1.Create())
+                        {
+                            using (var stream = File.OpenRead(loc))
+                            {
+                                hash1 = BitConverter.ToString(SHA1.ComputeHash(stream)).Replace("-", string.Empty);
+                            }
+                        }
+
+                        FileInfo infoNode = new FileInfo(loc);
+
+                        var root = new Tree(Path.GetFileName(loc));
+
+                        // Add some nodes
+                        var treeNode = root.AddNode("[yellow]Hashes[/]");
+                        var tableNode = treeNode.AddNode(new Table()
+                            .RoundedBorder()
+                            .AddColumn("Algorithm")
+                            .AddColumn("Value")
+                            .AddRow("MD5", hashMD5)
+                            .AddRow("SHA256", hash256)
+                            .AddRow("SHA1", hash1));
+                        tableNode.AddNode("[italic gray]These hashes are calculated using the System.Security.Cryptograpy library in dotnet 5.[/]");
+
+                        var detailNote = root.AddNode("[yellow]Details[/]");
+                        var dataNode = detailNote.AddNode(new Table()
+                            .RoundedBorder()
+                            .AddColumn("Data")
+                            .AddColumn("Value")
+                            .AddRow("Name", Path.GetFileNameWithoutExtension(loc))
+                            .AddRow("Size", infoNode.Length + " Bytes")
+                            .AddRow("Date Modified", infoNode.LastAccessTime.Date.ToString()));
+
+                        // Render the tree
+                        AnsiConsole.Render(root);
+                    }
+                    else { Console.WriteLine("File not found."); }
+                }
+
+                if (input == "uname") 
+                {
+                    validcommandfound = true;
+                    AnsiConsole.MarkupLine("[bold]" + Environment.UserName + "[/]");
+                }
+
+                if (input == "mname")
+                {
+                    validcommandfound = true;
+                    AnsiConsole.MarkupLine("[bold]" + Environment.MachineName + "[/]");
+                }
+
                 if (input.StartsWith("rand"))
                 {
                     validcommandfound = true;
@@ -2321,6 +2394,33 @@ namespace KookaburraShell
                                             .Color(Console.ForegroundColor));
                                         script_var.Ifcount = 1;
                                     }
+                                    else if (s.StartsWith("figlet.center")) 
+                                    {
+                                        string result = s.Replace("figlet.center ", "");
+                                        AnsiConsole.Render(
+                                        new FigletText(Format(result))
+                                            .Centered()
+                                            .Color(Console.ForegroundColor));
+                                        script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("figlet.right"))
+                                    {
+                                        string result = s.Replace("figlet.right ", "");
+                                        AnsiConsole.Render(
+                                        new FigletText(Format(result))
+                                            .RightAligned()
+                                            .Color(Console.ForegroundColor));
+                                        script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("figlet.left"))
+                                    {
+                                        string result = s.Replace("figlet.left ", "");
+                                        AnsiConsole.Render(
+                                        new FigletText(Format(result))
+                                            .LeftAligned()
+                                            .Color(Console.ForegroundColor));
+                                        script_var.Ifcount = 1;
+                                    }
                                     else if (s.StartsWith("set "))
                                     {
                                         Set(s);
@@ -2601,6 +2701,22 @@ namespace KookaburraShell
                                             finalvalue = replace;
                                         }
 
+                                        if (finalvalue.Contains("{random.letter}"))
+                                        {
+                                            char[] chars = "abcdefghijklmnopqrstuvwxyz".ToCharArray();
+                                            Random r = new Random();
+                                            int i = r.Next(chars.Length);
+                                            string replace = finalvalue.Replace("{random.letter}", chars[i].ToString());
+                                            finalvalue = replace;
+                                        }
+
+                                        if (finalvalue.Contains("{random.number}"))
+                                        {
+                                            Random r = new Random();
+                                            string replace = finalvalue.Replace("{random.number}", r.Next(1,10).ToString());
+                                            finalvalue = replace;
+                                        }
+
                                         if (finalvalue.Contains("<string."))
                                         {
 
@@ -2676,6 +2792,49 @@ namespace KookaburraShell
                                             if (valuearray[1] == "app.read()")
                                             {
                                                 string result = Console.ReadLine().ToLower();
+                                                Stringname.Add(valuearray[0]);
+                                                Stringvalue.Add(result);
+                                            }
+                                            else if (valuearray[1].StartsWith("dialog.yesno(") && valuearray[1].EndsWith(")"))
+                                            {
+                                                string result = "True";
+                                                if (!AnsiConsole.Confirm(Format(valuearray[1].Replace("dialog.yesno(", "").Replace(")", ""))))
+                                                {
+                                                    result = "False";
+                                                }
+                                                Stringname.Add(valuearray[0]);
+                                                Stringvalue.Add(result);
+                                            }
+                                            else if (valuearray[1].StartsWith("dialog.numerical(") && valuearray[1].EndsWith(")"))
+                                            {
+                                                int intresult = AnsiConsole.Ask<int>(Format(valuearray[1].Replace("dialog.numerical(", "").Replace(")", "")));
+                                                Stringname.Add(valuearray[0]);
+                                                Stringvalue.Add(intresult.ToString());
+                                            }
+                                            else if (valuearray[1].StartsWith("dialog.color(") && valuearray[1].EndsWith(")"))
+                                            {
+                                                var result = AnsiConsole.Prompt(
+                                                new TextPrompt<string>(Format(valuearray[1].Replace("dialog.color(", "").Replace(")", "")))
+                                                    .InvalidChoiceMessage("[red]That's not a valid color.[/]")
+                                                    .AddChoice("red")
+                                                    .AddChoice("orange")
+                                                    .AddChoice("yellow")
+                                                    .AddChoice("chartreuse green")
+                                                    .AddChoice("green")
+                                                    .AddChoice("spring green")
+                                                    .AddChoice("cyan")
+                                                    .AddChoice("azure")
+                                                    .AddChoice("blue")
+                                                    .AddChoice("violet")
+                                                    .AddChoice("magenta")
+                                                    .AddChoice("rose"));
+                                                Stringname.Add(valuearray[0]);
+                                                Stringvalue.Add(result);
+                                            }
+                                            else if (valuearray[1].StartsWith("dialog.secret(") && valuearray[1].EndsWith(")")) 
+                                            {
+                                                var result = AnsiConsole.Prompt(
+                                                new TextPrompt<string>(Format(valuearray[1].Replace("dialog.secret(", "").Replace(")", ""))).Secret());
                                                 Stringname.Add(valuearray[0]);
                                                 Stringvalue.Add(result);
                                             }
