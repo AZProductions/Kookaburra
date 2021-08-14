@@ -29,8 +29,9 @@ In celebration of 200+ downloads, we're planing new features and functions for K
 - - `dialog.yesno`
 - - `dialog.numerical`
 - - `dialog.color`
-- - `dialog.date`
-- - `dialog.custom(filter)`
+- - `dialog.secret`
+- - <s>`dialog.date`</s>
+- - <s>`dialog.custom(filter)`</s>
 
 ----
 <img src="https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/graph7.png" class="center">
