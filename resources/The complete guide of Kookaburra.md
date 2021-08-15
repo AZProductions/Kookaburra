@@ -165,3 +165,8 @@ Process.Start(startInfo);
 ```
 
 You can replace **TestApp** with the name of your program. Using this method you can manipulate Kookaburra and add Icons and more. Publish the app by clicking Publish in the ***Solution Explorer***. Now you can distribute your favourite program to whoever you want.
+
+
+
+# **4. Customizing Kookaburra**
+Since version 0.7.5 you can customize Kookaburra using the **conf.txt**. Head over to the Kookaburra config directory.
