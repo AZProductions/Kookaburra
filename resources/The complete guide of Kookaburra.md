@@ -7,11 +7,12 @@
 #### [- Functions and values](#21-functions-and-values)
 #### [- Binding](#22-binding)
 #### [- Grids, Barcharts and Rules.](#23-grids-barcharts-and-rules)
-#### [ - Extended importing features.](#24-extended-importing-features)
+#### [- Dialogs and Images.](#24-dialogs-and-images)
+#### [ - Extended importing features.](#25-extended-importing-features)
 ### [**Chapter 3: Distributing Kookaburra scripts**](#3-distributing-kookaburra-scripts)
 #### [- Idea](#31-idea)
 #### [ - Coding](#32-coding)
-### [**Chapter 4: Customizing Kookaburra**]()
+### [**Chapter 4: Customizing Kookaburra**](#4-customizing-kookaburra)
 ----
 
 # **1. Getting Started**
@@ -41,7 +42,7 @@ Save the file *(ctrl+s)*, and open it with Kookaburra by dragging the HelloWorld
 ## **1.3** Customizing Kookaburra.
 You can add custom commands by editing the **'custom_commands.txt'** file, which is located in the *AppData* directory. Open the Kookaburra settings directory by pressing <kbd>win</kbd> + <kbd>R</kbd> *(Windows key + R)* and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the folder open. Double click on the **'custom_commands.txt'** file. Add a new line and copy-paste the following ```paint=mspaint```. In the CLI type **'paint'**, and Microsoft Paint will open.
 
-You can also change the default text editer with the **'text_editer.txt'** file. Simply open it up and change it to ```c:\program files\windows nt\accessories\wordpad.exe|%arg%``` if you want to edit it in Wordpad. If you want to change it back to Notepad, replace the text in the file with ```notepad.exe|%arg%```. By default on Linux it uses Nano, you can of course change it to vim or any other text/code editor. Kookaburra currently doesn't support custom start-up messages, but it will come in the upcoming release. Kookaburra's code is open-source so you can make your own 'custom version' of Kookaburra.
+You can also change the default text editer with the **'text_editer.txt'** file. Simply open it up and change it to ```c:\program files\windows nt\accessories\wordpad.exe|%arg%``` if you want to edit it in Wordpad. If you want to change it back to Notepad, replace the text in the file with ```notepad.exe|%arg%```. By default on Linux it uses Nano, you can of course change it to vim or any other text/code editor. Kookaburra currently doesn't support custom start-up messages, but it will come in the upcoming release. Kookaburra's code is open-source so you can make your own 'custom version' of Kookaburra. [**For a more indepth view, visit chapter 4.**](#4-customizing-kookaburra)
 
 ----
 
@@ -92,7 +93,7 @@ Maybe in the near future Kookaburra will support the longer list of colors from 
 You can customize Kookaburra scripts, by changing the title and window size. Changing the windows size is only supported in Windows. Unfortunately you can't change the window icon at runtime, you can create a shortcut on windows with a custom icon. Just open the propeties tab in the shortcut, the icon will also be applied in the running window. In this instance it's Kookaburra. You can start changing the title by typing ```app.title = "this is the title"```, it supports strings and of course binding.
 
 ## **2.2** Binding
-One of the most useful features in Kookaburra is binding, which allows you to display realtime/user dependent text into strings. All the functions that support the *Kookaburra Format System*, support binding. There are two types of binding, **Element binding** and **String Binding**. Element binding is used for live text, which is user/pc dependent. For example, you can print 'Hello AZ!'. AZ is the username of the computer that can vary between computers. Here's an example: 
+One of the most useful features in Kookaburra is binding, which allows you to display realtime/user dependent text into strings. All the functions that support the *Kookaburra Format System*, support binding. There are two types of binding, **Element binding** and **String Binding**. Element binding is used for live text or generated data, which is user/pc dependent. For example, you can print 'Hello AZ!'. AZ is the username of the computer that can vary between computers. Here's an example: 
 ```
 print "Hello {environment.username}!"
 # You use '{}' these brackets when doing Element binding.
@@ -105,7 +106,7 @@ print "<string.test> Michael!"
 ```
 
 ## **2.3** Grids, Barcharts and Rules.
-The newest additions to Kookaburra are Grids, Barcharts and Rules. Let's start with Rules. Rules are basically spacers to separate items in the CLI. Creating a new Rule is simple, just type: ```new Rule()```. You can add text in the rule, which supports the *Kookaburra Format System*. ```new Rule("Hello {environment.username}!")``` Barcharts are just as easy, start off by creating it with ```new Barchart("Test Message")```. Then Add Rows with ```Barchart.Add("test", 24)``` The first value is a string, and the second is the value you give it.
+One of the newest additions to Kookaburra are Grids, Barcharts and Rules. Let's start with Rules. Rules are basically spacers to separate items in the CLI. Creating a new Rule is simple, just type: ```new Rule()```. You can add text in the rule, which supports the *Kookaburra Format System*. ```new Rule("Hello {environment.username}!")``` Barcharts are just as easy, start off by creating it with ```new Barchart("Test Message")```. Then Add Rows with ```Barchart.Add("test", 24)``` The first value is a string, and the second is the value you give it.
 
 ```
 app.debug-off
@@ -135,8 +136,27 @@ Grid.Display()
 ```
 The last little feature we've added is the calendar. Type ```new Calendar(2021, 7)``` to see a little calendar. It currently doesn't have a purpose. Perhaps in the future we can add calendar items.
 
-## **2.4** Extended importing features.
-With Kookaburra you can also import libraries pre-made by **us** and **contributors**. Currently we have a short list of supported libraries. You can create files using ```import FileIO```. Type ```new filewriter(location, value)```. The import is necessary. The second library  ```import net``` is currently under development and not yet fully functional. We've only implemented local ip to [Element binding](#2-binding). Example: ```print "your local ip is: {Net.IP}!"```.
+## **2.4** Dialogs and Images.
+The newest version of Kookaburra includes Dialogs and Images, which are easy to setup. Let's start with images, with images you can render normal **.png** or **.jp**(e)**g** files into the console window. Type `new image("file.png", "12")`, the first argument is the file location and the second argument is a number which desides the maxmimum width of the image in the terminal. You can use dialogs to simplify user input. Here's an example:
+```
+string example = dialog.yesno("Is four plus four eight?")
+# prints True or False depending on the user input.
+print example
+```
+Here's a list with all dialogs:
+```
+# You can input (Y)es or (N)o
+string yesno = dialog.yesno("Do you want to update?")
+# Numbers only
+string numbers = dialog.numerical("How many apples do you want?")
+# Colors only
+string colors = dialog.color("What is your favorite color?")
+# Just like 'app.read()' but the input is hidden with * characters, just like a login form.
+string password = dialog.secret("What is the password?")
+```
+
+## **2.5** Extended importing features.
+With Kookaburra you can also import libraries pre-made by **us** and **contributors**. Currently we have a short list of supported libraries. You can create files using ```import FileIO```. Type ```new filewriter(location, value)```. The import is necessary. The second library  ```import net``` is currently under development and not yet fully functional. We've only implemented local ip to [Element binding](#22-binding). Example: ```print "your local ip is: {Net.IP}!"```.
 
 ----
 
@@ -164,9 +184,9 @@ startInfo.Arguments = path + "TestApp/TestApp.kookaburra";
 Process.Start(startInfo);
 ```
 
-You can replace **TestApp** with the name of your program. Using this method you can manipulate Kookaburra and add Icons and more. Publish the app by clicking Publish in the ***Solution Explorer***. Now you can distribute your favourite program to whoever you want.
+You can replace **TestApp** with the name of your program. Using this method you can manipulate Kookaburra and add Icons and more. Publish the app by clicking Publish in the ***Solution Explorer***. Now you can distribute your favourite program to whoever you want. There many other methods of doing this, you can experiment with different frameworks and programming languages.
 
-
+----
 
 # **4. Customizing Kookaburra**
 Since version 0.7.5 you can customize Kookaburra using the **conf.txt**. Head over to the Kookaburra config directory.
