@@ -4,29 +4,28 @@
 name: SecurityCodeScan
 on:
   push:
-    branches: [ main ]
     paths:
       - 'scr/*'
   pull_request:
-    branches: [ main ]
     paths:
       - 'src/*'
+
 jobs:
   SCS:
-    runs-on: windows-latest
-    steps:
+    runs-on: ubuntu-latest
+    steps:     
       - uses: actions/checkout@v2
-      - uses: nuget/setup-nuget@v1.0.5
-      - uses: microsoft/setup-msbuild@v1.0.2
-      - name: Set up projects for analysis
-        uses: security-code-scan/security-code-scan-add-action@main
-      - name: Restore dependencies
-        working-directory: ./src
-        run: dotnet restore
+      
+      - name: Set up projects
+        uses: security-code-scan/security-code-scan-add-action@v1.1
+
       - name: Build
-        working-directory: ./src
-        run: dotnet build --no-restore
+        run: |
+          dotnet restore
+          dotnet build
+        
       - name: Convert sarif for uploading to GitHub
-        uses: security-code-scan/security-code-scan-results-action@main
-      - name: Upload sarif
+        uses: security-code-scan/security-code-scan-results-action@v1.3
+        
+      - name: Upload sarif	
         uses: github/codeql-action/upload-sarif@v1
