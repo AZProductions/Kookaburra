@@ -21,9 +21,7 @@ jobs:
 
       - name: Build
         working-directory: ./src
-        run: |
-          dotnet restore
-          dotnet build
+        run: dotnet build
         
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@v1.3
