@@ -947,13 +947,9 @@ namespace KookaburraShell
                         validcommandfound = true;
                         try
                         {
-                            // fix
                             string loc = input.TrimStart('.');
-                            ProcessStartInfo startInfo = new ProcessStartInfo();
-                            //Console.WriteLine(Process.GetCurrentProcess().MainModule.FileName);
-                            startInfo.FileName = Process.GetCurrentProcess().MainModule.FileName;
-                            startInfo.Arguments = loc;
-                            Process.Start(startInfo);
+                            string[] vs = { loc };
+                            Main(vs);
                         }
                         catch { }
                     }
@@ -1211,8 +1207,9 @@ namespace KookaburraShell
                 if (input.StartsWith("hash "))
                 {
                     string loc = input.Replace("hash ", "");
-                    if (File.Exists(loc))
+                    if (File.Exists(loc) || File.Exists(Isettingsconf.Currentdir + loc))
                     {
+                        if (File.Exists(Isettingsconf.Currentdir + "/" + loc)) { loc = Isettingsconf.Currentdir + loc; }
                         validcommandfound = true;
                         string hashMD5 = "emtpy";
                         using (var md5 = System.Security.Cryptography.MD5.Create())
@@ -1261,7 +1258,7 @@ namespace KookaburraShell
                             .AddColumn("Value")
                             .AddRow("Name", Path.GetFileNameWithoutExtension(loc))
                             .AddRow("Size", infoNode.Length + " Bytes")
-                            .AddRow("Date Modified", infoNode.LastAccessTime.Date.ToString()));
+                            .AddRow("Date Modified", File.GetLastWriteTime(loc).ToString()));
 
                         // Render the tree
                         AnsiConsole.Render(root);
@@ -1497,7 +1494,7 @@ namespace KookaburraShell
                         }
                         else if (input == "-r")
                         {
-                            if (Directory.Exists(Directory.GetDirectoryRoot(Isettingsconf.Currentdir)))
+                            if (Directory.Exists(Directory.GetDirectoryRoot(Isettingsconf.Currentdir)) && !string.IsNullOrEmpty(Isettingsconf.Currentdir))
                                 Isettingsconf.Currentdir = Directory.GetDirectoryRoot(Isettingsconf.Currentdir);
                         }
                         else if (input == "-c") { Isettingsconf.Currentdir = ""; }
