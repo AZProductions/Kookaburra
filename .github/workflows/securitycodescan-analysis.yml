@@ -20,6 +20,7 @@ jobs:
         uses: security-code-scan/security-code-scan-add-action@v1.1
 
       - name: Build
+        working-directory: ./src
         run: |
           dotnet restore
           dotnet build
