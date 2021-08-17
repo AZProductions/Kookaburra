@@ -19,7 +19,7 @@ namespace KookaburraShell
     {
         static void Main(string[] args)
         {
-            Console.TreatControlCAsInput = false;
+            Console.TreatControlCAsInput = false; //last test commit.
             Isettingsconf.Currentdir = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             Isettingsconf.Envloc = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + @"/Kookaburra/"; if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) { Isettingsconf.Envloc = "/home/" + Environment.UserName + "/Kookaburra/";  }
             script_var.Intcount = 0;
