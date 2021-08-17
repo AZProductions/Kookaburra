@@ -5,7 +5,7 @@ using System.IO;
 using System.Threading;
 
 class KookaburraEditor {
-	static string loc;
+	static string loc; //Local file location.
 	public static void Main(string[] args)
 	{
 		Application.Init();
