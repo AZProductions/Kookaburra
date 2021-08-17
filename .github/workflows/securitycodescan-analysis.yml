@@ -6,7 +6,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'src/*'
+      - 'scr/*'
   pull_request:
     branches: [ main ]
     paths:
@@ -17,20 +17,15 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: nuget/setup-nuget@v1.0.5
-      - uses: microsoft/setup-msbuild@v1.0.2
-        with:
-          dotnet-version: 5.0.x
+      - uses: microsoft/setup-msbuild@v1.0.2      
       - name: Set up projects for analysis
-        uses: security-code-scan/security-code-scan-add-action@main
+        uses: security-code-scan/security-code-scan-add-action@main     
       - name: Restore dependencies
         working-directory: ./src
         run: dotnet restore
-      - name: Getting NuGet packages.
-        working-directory: ./src
-        run: dotnet list package
       - name: Build
         working-directory: ./src
-        run: dotnet build --verbosity normal KookaburraShell.csproj
+        run: dotnet build --no-restore
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@main
       - name: Upload sarif
