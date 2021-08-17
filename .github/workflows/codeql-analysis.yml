@@ -21,7 +21,7 @@ on:
     paths:
       - 'src/*'
   schedule:
-  - cron: '59 11 * * 2'
+  - cron: '52 11 * * 2'
     
 jobs:
   analyze:
