@@ -30,7 +30,7 @@ jobs:
         run: dotnet list package
       - name: Build
         working-directory: ./src
-        run: dotnet build
+        run: dotnet test --no-build --verbosity normal KookaburraShell.csproj
       - name: Convert sarif for uploading to GitHub
         uses: security-code-scan/security-code-scan-results-action@main
       - name: Upload sarif
