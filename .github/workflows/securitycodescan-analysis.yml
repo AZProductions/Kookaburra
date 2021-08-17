@@ -6,7 +6,7 @@ on:
   push:
     branches: [ main ]
     paths:
-      - 'scr/*'
+      - 'src/*'
   pull_request:
     branches: [ main ]
     paths:
