@@ -188,6 +188,7 @@ You can also get the SHA-256 from the file and compare it with the reference in 
 |	```password``` | Generate passwords. 	|
 |	```tree``` | Renders a detailed list of all the files and folders in a directory. 	|
 |	```winreset``` | Resets the window height and width. (Windows only) 	|
+| ```hash``` | Get's the MD5, SHA256 and SHA1 from the specified file. (`hash test.txt`)|
 
 ## ⏩ CLI Shortcuts
 | Shortcut | Description |
