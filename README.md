@@ -6,7 +6,7 @@
 [![GitHub all releases](https://img.shields.io/github/downloads/azproductions/kookaburra/total)](https://github.com/AZProductions/Kookaburra/releases)
 [![.NET Tests](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml/badge.svg?branch=main)](https://github.com/AZProductions/Kookaburra/actions/workflows/dotnet.yml)
 [![CodeQL](https://github.com/AZProductions/Kookaburra/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/AZProductions/Kookaburra/actions/workflows/codeql-analysis.yml)
-[![SecurityCodeScan](https://github.com/AZProductions/Kookaburra/actions/workflows/securitycodescan-analysis.yml/badge.svg)](https://github.com/AZProductions/Kookaburra/actions/workflows/securitycodescan-analysis.yml)
+[![SecurityCodeScan](https://github.com/AZProductions/Kookaburra/actions/workflows/scs.yml/badge.svg)](https://github.com/AZProductions/Kookaburra/actions/workflows/scs.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/azproductions/kookaburra/badge)](https://www.codefactor.io/repository/github/azproductions/kookaburra)
 ![29k lines of code](https://img.shields.io/badge/total%20lines-29K-blue)  <!---This badge can be replaced with https://img.shields.io/tokei/lines/github/azproductions/kookaburra to get the live data. Since its requesting it from an API, we decided to make it static and change it regularly.-->
 [![MS-Store reviews](https://img.shields.io/badge/MS--Store-%E2%98%86%E2%98%86%E2%98%86%E2%98%86%E2%98%86-orange)](https://www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge)<!---Currently there no reviews on the MS-Store page.-->
