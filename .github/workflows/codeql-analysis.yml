@@ -20,6 +20,8 @@ on:
     branches: [ main ]
     paths:
       - 'src/*'
+  schedule:
+    - cron: '44 23 * * 2'
 jobs:
   analyze:
     name: Analyze
