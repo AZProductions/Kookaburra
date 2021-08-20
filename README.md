@@ -26,6 +26,7 @@
 ## 📣 Announcements
 ### [Kookaburra's roadmap - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/The_future_of_kookaburra.md)
 ### [Publishing Kookaburra into an exe file - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/Publishing_Kookaburra.md)
+### [Check out the New Kookaburra.SDK! - ***Link***](https://github.com/AZProductions/KookaburraSDK)
 ### [Kookaburra linking template - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/Linking_templates.md)
 ### [0.8.1 Improvements - **Blog**](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/0.8.1_Improvements.md)
 ### [**Kookaburra is on the Windows Store!** - ***Link***](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
