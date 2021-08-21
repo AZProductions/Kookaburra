@@ -12,6 +12,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
+using SDK = Kookaburra.SDK; //Rename Kookaburra.SDK to SDK. To remove confusion between libraries.
 
 namespace KookaburraShell
 {
@@ -139,6 +140,7 @@ namespace KookaburraShell
                     table.AddRow("ipconfig", "[green]Show all internet settings from your computer.[/]");
                     table.AddRow("download", "[green]Download files from an internet server.[/]");
                     table.AddRow("password", "[green]Generate passwords.[/]");
+                    table.AddRow("hash", "[green]Gets the MD5, SHA256 and SHA1 from the specified file.[/]");
                     table.AddRow("tree", "[green]Renders a detailed list of all the files and folders in a directory.[/]");
                     AnsiConsole.Render(table);
                     var rule4 = new Rule("[white bold]CLI Shortcuts[/]");
@@ -182,7 +184,7 @@ namespace KookaburraShell
                 if (input == "clear" || input == "cls")
                 {
                     validcommandfound = true;
-                    Console.Clear();
+                    SDK.Markup.Clear();
                 }
 
                 if (input == "tos")
@@ -190,12 +192,25 @@ namespace KookaburraShell
                     validcommandfound = true;
                     if (NetworkInterface.GetIsNetworkAvailable())
                     {
-                        var psi = new ProcessStartInfo
+                        /*var psi = new ProcessStartInfo
                         {
                             FileName = "https://github.com/AZProductions/Kookaburra/blob/main/TOS.md",
                             UseShellExecute = true
                         };
-                        Process.Start(psi);
+                        Process.Start(psi);*/
+                        string[] Value = SDK.Networking.APIRequest("https://raw.githubusercontent.com/AZProductions/Kookaburra/main/TOS.md").Split(Environment.NewLine);
+                        string MainMessage = "";
+                        string TitleMessage = "";
+                        foreach (string Lines in Value) 
+                        {
+                            if (Lines.StartsWith("#")) { TitleMessage = Lines.Replace("# ", ""); TitleMessage = "[bold]" + TitleMessage + "[/]"; }
+                            else if (string.IsNullOrWhiteSpace(Lines)) { }
+                            else if (Lines == Environment.NewLine) { }
+                            else { MainMessage = MainMessage + " " + Lines; }
+                        }
+                        AnsiConsole.Markup(TitleMessage);
+                        Console.WriteLine(Environment.NewLine);
+                        AnsiConsole.Markup(MainMessage);
                     }
                     else
                     {
@@ -403,113 +418,25 @@ namespace KookaburraShell
                     }
                 }
 
-                if (input.StartsWith("scan "))
-                {
-                    string loc = input.Replace("scan ", "");
-                    List<string> Results = new List<string>();
-                    int Rating = 100;
-                    if (File.Exists(loc))
-                    {
-                        validcommandfound = true;
-                        Console.CursorVisible = false;
-                        Scanfile(loc);
-                        Logicfunc();
-                        Console.CursorVisible = true;
-                    }
-
-                    void Scanfile(string loc)
-                    {
-                        string[] Content = File.ReadAllLines(loc);
-                        int Totalline = Content.Count();
-                        int CurrentLine = 0;
-                        AnsiConsole.Progress()
-                        .Start(ctx =>
-                        {
-                            var task = ctx.AddTask("[green]Scanning code base.[/]");
-                            foreach (string lines in Content)
-                            {
-                                CurrentLine++;
-                                task.Value(100 * CurrentLine / Totalline);
-                                if (task.Value > 20) { task.Description = "[yellow]Examining code base.[/]"; }
-                                Random random = new Random();
-                                Thread.Sleep(random.Next(200, 1000));
-                                Calc(lines);
-                            }
-                        });
-                    }
-
-                    void Calc(string data)
-                    {
-                        if (data.StartsWith("new filewriter("))
-                        {
-                            string var = data.Replace("new filewriter(", "").TrimEnd(')');
-                            string[] valuearray = var.Split(", ");
-                            Results.Add("fr=" + valuearray[0] + "|" + valuearray[1]);
-                            Rating = Rating - 40;
-                            if (File.ReadLines(loc).Last() == "exit")
-                            {
-                                Results.Add("!exit");
-                                Rating = Rating - 5;
-                            }
-                        }
-                        else if (data.StartsWith("")) { }
-                    }
-
-                    void Logicfunc()
-                    {
-                        Console.WriteLine("");
-                        if (Rating <= 30 || Rating == 30) { Console.ForegroundColor = ConsoleColor.Red; }
-                        else if (Rating >= 30 && Rating <= 50) { Console.ForegroundColor = ConsoleColor.DarkYellow; }
-                        else if (Rating >= 50 && Rating <= 70) { Console.ForegroundColor = ConsoleColor.Yellow; }
-                        else if (Rating >= 70) { Console.ForegroundColor = ConsoleColor.Green; }
-                        Console.WriteLine("Rating: " + Rating + "/100");
-                        foreach (string lines in Results)
-                        {
-                            if (lines.StartsWith("fr="))
-                            {
-                                string output = lines.Replace("fr=", "");
-                                string[] valuearray = output.Split("|");
-                                Console.WriteLine("");
-                                Console.ForegroundColor = ConsoleColor.DarkYellow;
-                                Console.Write("Warning ");
-                                Console.ForegroundColor = ConsoleColor.White;
-                                Console.Write("| This code is writing the value '" + valuearray[1] + "' to the file '" + valuearray[0] + "'.");
-                            }
-                            else if (lines == "!exit")
-                            {
-                                Console.WriteLine("");
-                                Console.ForegroundColor = ConsoleColor.Blue;
-                                Console.Write("Tip ");
-                                Console.ForegroundColor = ConsoleColor.White;
-                                Console.Write("| This code should end with 'exit' to properly exit the application.");
-                            }
-                        }
-                        Console.WriteLine("");
-                        Console.WriteLine("");
-                    }
-                }
                 if (input == "kbconfig" || input == "settings")
                 {
                     validcommandfound = true;
-
-                    var Menu = AnsiConsole.Prompt(
-                    new MultiSelectionPrompt<string>()
-                        .Title("Settings | [green]Kookaburra[/]")
-                        .NotRequired()
-                        .PageSize(10)
-                        .MoreChoicesText("[grey](Move up and down to select different settings)[/]")
-                        .InstructionsText(
-                            "[grey](Press [blue]<space>[/] to toggle a setting, " +
-                            "[green]<enter>[/] to save and exit)[/]")
-                        .AddChoices(new[] {
-                                "Use Internet.", "Ask for updates.",
-                                "Use emojis",
-                        }));
-
-                    foreach (string items in Menu)
+                    string file = Isettingsconf.Envloc + @"/conf.txt";
+                    string loc = Isettingsconf.Envloc + @"/text_editor.txt";
+                    try
                     {
-                        AnsiConsole.WriteLine(items);
+                        string result = File.ReadAllText(loc);
+                        string[] valuearray = result.Split("|");
+                        string result3;
+                        string[] result2 = valuearray[1].Split("%arg%");
+                        if (valuearray[1] == "%arg%") { result3 = /*result2[0] + */file/* + result2[1]*/; }
+                        else { result3 = result2[0] + file + result2[1]; }
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.FileName = valuearray[0];
+                        startInfo.Arguments = result3.Split(new[] { '\r', '\n' }).FirstOrDefault();
+                        Process.Start(startInfo);
                     }
+                    catch { Console.WriteLine("Error."); }
                 }
 
                 if (input == "drives")
@@ -941,6 +868,17 @@ namespace KookaburraShell
                     if (input == "." || input == "./" || input.StartsWith(".."))
                     {
 
+                    }
+                    else if (input.StartsWith('.') && input.EndsWith('"')) 
+                    {
+                        validcommandfound = true;
+                        try
+                        {
+                            string loc = input.TrimStart('.').TrimEnd('"').TrimStart('"');
+                            string[] vs = { loc };
+                            Main(vs);
+                        }
+                        catch { }
                     }
                     else
                     {
@@ -1593,7 +1531,7 @@ namespace KookaburraShell
                         using (StreamWriter sw = File.CreateText(path4))
                         {
                             sw.WriteLine("# KookaburraShell - Conf.txt");
-                            sw.WriteLine("show_startup=true");
+                            sw.WriteLine("startup_message=null");
                             sw.WriteLine("startup_location=default");
                             //sw.WriteLine("startup_message=null");
                             sw.WriteLine("FR=true");
@@ -1629,17 +1567,16 @@ namespace KookaburraShell
                     foreach (string Lines in vs)
                     {
                         if (Lines.StartsWith("#")) { }
-                        else if (Lines.StartsWith("show_startup="))
+                        else if (Lines.StartsWith("startup_message="))
                         {
-                            string result = Lines.Replace("show_startup=", "");
-                            if (result == "true") {/*TODO*/ }
-                            else if (result == "false") {/*TODO*/}
+                            string result = Lines.Replace("startup_message=", "");
+                            if (result == "null") {/*None*/ }
                             else
                             {
-                                Console.WriteLine("error");
+                                AnsiConsole.MarkupLine("[bold rapidblink]" + result + "[/]" + Environment.NewLine);
                             }
                         }
-                        else if (Lines.StartsWith("force_rainbow=")) 
+                        else if (Lines.StartsWith("force_rainbow="))
                         {
                             string result = Lines.Replace("force_rainbow=", "");
                             if (result == "true") { Isettingsconf.ShowRainbow = true; }
@@ -1648,9 +1585,9 @@ namespace KookaburraShell
                         else if (Lines.StartsWith("startup_location="))
                         {
                             string result = Lines.Replace("startup_location=", "");
-                            if (File.Exists(result))
+                            if (Directory.Exists(result))
                             {
-                                Isettingsconf.Envloc = result;
+                                Isettingsconf.Currentdir = result;
                             }
                             else if (result == "default") { }
                             else
@@ -2382,6 +2319,12 @@ namespace KookaburraShell
                                         Int(s);
                                         script_var.Ifcount = 1;
                                     }
+                                    else if (s.StartsWith("new Alert(") && s.EndsWith(")"))
+                                    {
+                                        string result = s.Replace("new Alert(", "").TrimEnd(')');
+                                        string[] Valuearray = result.Split(", ");
+                                        SDK.Alert.Display(Format(Valuearray[0]) + Environment.NewLine, int.Parse(Valuearray[1]), true);
+                                    }
                                     else if (s.StartsWith("figlet "))
                                     {
                                         string result = s.Replace("figlet ", "");
@@ -2391,7 +2334,7 @@ namespace KookaburraShell
                                             .Color(Console.ForegroundColor));
                                         script_var.Ifcount = 1;
                                     }
-                                    else if (s.StartsWith("figlet.center")) 
+                                    else if (s.StartsWith("figlet.center"))
                                     {
                                         string result = s.Replace("figlet.center ", "");
                                         AnsiConsole.Render(
@@ -2417,6 +2360,13 @@ namespace KookaburraShell
                                             .LeftAligned()
                                             .Color(Console.ForegroundColor));
                                         script_var.Ifcount = 1;
+                                    }
+                                    else if (s.StartsWith("p.center")) 
+                                    {
+                                        string result = s.Replace("p.center ", string.Empty);
+                                        string Value = Format(result);
+                                        Console.SetCursorPosition((Console.WindowWidth - Value.Length) / 2, Console.CursorTop);
+                                        Console.WriteLine(Value);
                                     }
                                     else if (s.StartsWith("set "))
                                     {
@@ -2566,30 +2516,6 @@ namespace KookaburraShell
                                         string color = input.Replace("app.color = ", "");
                                         color = char.ToUpper(color[0]) + color.Substring(1);
                                         Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), color);
-                                        //Console.ForegroundColor = 
-                                        /*string color = input.Replace("app.color = ", "");
-                                        switch (color)
-                                        {
-                                            case "":
-                                                break;
-                                            case "blue":
-                                                Console.ForegroundColor = ConsoleColor.Blue;
-                                                break;
-                                            case "yellow":
-                                                Console.ForegroundColor = ConsoleColor.Yellow;
-                                                break;
-                                            case "green":
-                                                Console.ForegroundColor = ConsoleColor.Green;
-                                                break;
-                                            case "white":
-                                                Console.ForegroundColor = ConsoleColor.White;
-                                                break;
-                                            case "red":
-                                                Console.ForegroundColor = ConsoleColor.Red;
-                                                break;
-                                            default:
-                                                throw new ArgumentException("Synax error at line '" + line + "'." + " C1793");
-                                        }*/
                                     }
                                     void Print(string input)
                                     {
@@ -2714,15 +2640,15 @@ namespace KookaburraShell
                                             finalvalue = replace;
                                         }
 
-                                        if (finalvalue.Contains("<string."))
+                                        if (finalvalue.Contains("<"))
                                         {
 
-                                            int pFrom = finalvalue.IndexOf("<string.") + "<string.".Length;
+                                            int pFrom = finalvalue.IndexOf("<") + "<".Length;
                                             int pTo = finalvalue.LastIndexOf(">");
                                             String result = finalvalue.Substring(pFrom, pTo - pFrom);
-                                            result.Replace("<string.", "");
+                                            result.Replace("<", "");
                                             result.Replace(">", "");
-                                            string replace = finalvalue.Replace("<string." + result + ">", Format(result));
+                                            string replace = finalvalue.Replace("<" + result + ">", Format(result));
                                             finalvalue = replace;
                                         }
 
