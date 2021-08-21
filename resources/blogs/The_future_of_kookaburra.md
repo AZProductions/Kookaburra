@@ -33,6 +33,9 @@ In celebration of 200+ downloads, we're planing new features and functions for K
 - - <s>`dialog.date`</s>
 - - <s>`dialog.custom(filter)`</s>
 
+**Update 3:**
+- 0.8.3 will not include the Networking features.
+
 ----
 <img src="https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/graph7.png" class="center">
 
