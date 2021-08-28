@@ -12,6 +12,7 @@
 [![MS-Store reviews](https://img.shields.io/badge/MS--Store-%E2%98%86%E2%98%86%E2%98%86%E2%98%86%E2%98%86-orange)](https://www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge)<!---Currently there no reviews on the MS-Store page.-->
 ![Docs](https://img.shields.io/badge/Docs-28%25-lightgray)
 [![Kookaburra.SDK Downloads](https://img.shields.io/nuget/dt/Kookaburra.SDK?label=Kookaburra.SDK%40Latest)](https://www.nuget.org/packages/Kookaburra.SDK/)
+[![KKB Downloads](https://img.shields.io/github/v/release/azproductions/KKB?include_prereleases?label=KKB%40Latest)](https://github.com/AZProductions/KKB/releases)
 
 <a href='//www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='MS-Store link badge' style="vertical-align:middle" center width="96" height="35"/></a>
 <a href='https://github.com/AZProductions/Kookaburra/releases'><img src='https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/badge.png' alt='Github link badge' style="vertical-align:middle" center width="96" height="35"/></a>
