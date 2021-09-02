@@ -181,7 +181,7 @@ You can also get the SHA-256 from the file and compare it with the reference in 
 |	```mkfile``` | Make files. 	|
 |	```cd``` | Change to a directory or file. 	|
 |	```cd ..``` | Go back a directory. 	|
-|	```ls``` or ```dir``` | Go back a directory. 	|
+|	```ls``` or ```dir``` or ```directory``` | Displays all the files and folders in the current directory. 	|
 |	```clear``` or ```cls``` | Clears the console window. 	|
 |	```whoami``` | Shows the pc name and username. 	|
 |	```drives``` | List all drives in your computer. 	|
@@ -192,6 +192,28 @@ You can also get the SHA-256 from the file and compare it with the reference in 
 |	```tree``` | Renders a detailed list of all the files and folders in a directory. 	|
 |	```winreset``` | Resets the window height and width. (Windows only) 	|
 | ```hash``` | Get's the MD5, SHA256 and SHA1 from the specified file. (`hash test.txt`)|
+| ```tos``` | Opens the [Terms of Service](https://github.com/AZProductions/Kookaburra/blob/main/TOS.md). |
+| ```exit``` | Exits the console. |
+| ```env``` | Gets the Env data and writes it to the screen. *(For testing purposes)* |
+| ```restart``` | Restarts the console. |
+| ```restart -p``` | Restarts the console without doing [Package Check](https://github.com/AZProductions/Kookaburra/blob/855cebcf43eefe40c602f826491ec02d66e1e545/src/Program.cs#L1520-L1807). |
+| ```kbconfig``` or ```settings``` | Open the settings file in the default text editor. |
+| ```drives```| Displays all active drives with additional info. |
+| ```explorer``` or ```explore``` or ```browse``` or ```view```| Opens file explorer in the current directory. |
+| ```mv``` | Moves the selected directory or file to the specified directory or file. |
+| ```mv -o``` | Moves the selected directory or file to the specified directory or file overriding it. |
+| ```ipconfig``` | Shows the current internet drives, chipsets and local ip information. |
+| ```start``` | Starts the specified file. |
+| ```sound.play``` | Plays specified **.wav** file(s). |
+| ```download``` | Downloads specified file from an internet location. |
+| ```tip``` | Shows a random tip. |
+| ```whoami``` | Displays the MachineName + UserName. |
+| ```edit``` | Opens the specified file in the default text editor. *(text_editor.txt)* |
+| ```pwd``` | Prints the working directory. |
+| ```uname``` | Prints the username. |
+| ```mname``` | Prints the machinename. |
+| ```tree``` or ```list``` | Displays the current folder/file structure in a detailed [tree](https://spectreconsole.net/widgets/tree).
+
 
 ## ⏩ CLI Shortcuts
 | Shortcut | Description |
