@@ -153,7 +153,7 @@ Run Kookaburra and open a .kookaburra file with
 
 
 ## [⏱ Get started](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/)
-We strongly recommend that you read the [**first tutorial**](https://azproductions.github.io/Kookaburra/tutorials/creating%20your%20first%20program/) before starting. In the CLI you can type the command ```help``` to list all the possible commands with explanation. You can also [***watch the full tutorial***](https://www.youtube.com/watch?v=ou1rCcN5wEQ), but since it is outdated and not supported in the newer versions of Kookaburra we discourage it.
+We strongly recommend that you read [**The complete guide of Kookaburra**](https://github.com/AZProductions/Kookaburra/blob/main/resources/The%20complete%20guide%20of%20Kookaburra.md) before starting. In the CLI you can type the command ```help``` to list all the possible commands with explanation. You can also [***watch the full tutorial***](https://www.youtube.com/watch?v=ou1rCcN5wEQ), but since it is outdated and not supported in the newer versions of Kookaburra we discourage it.
 
 ## 🔐 Security
 When downloading Kookaburra, you can chose between getting it from the Microsoft Store or downloading it via GitHub. On Linux you can download it via GitHub using [***Curl***](https://curl.se/) or [***Wget***](http://www.gnu.org/software/wget/). On Windows open your favourite browser and head over to 'https://www.github.com/AZProductions/Kookaburra/releases' or 'https://www.github.com/AZProductions/Kookaburra/releases/latest' to download the latest stable build. Click on the little dropdown icon and download the most suitable version for your computer. 
