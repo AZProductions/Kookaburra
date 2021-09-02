@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Spectre.Console;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -12,7 +12,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
-using SDK = Kookaburra.SDK; //Rename Kookaburra.SDK to SDK. To remove confusion between libraries.
+using Kookaburra.SDK; //Rename Kookaburra.SDK to SDK. To remove confusion between libraries. //Remember to change when SDK V0.4.0 releases.
 
 namespace KookaburraShell
 {
@@ -177,6 +177,7 @@ namespace KookaburraShell
                     table2.AddColumn(new TableColumn("Notes").Centered());
                     table2.AddRow("[bold]Spectre.Console[/]", "0.41 [italic](Nuget)[/]", "[bold]MIT[/]", "[blue]https://spectreconsole.net/[/]", "The Spectre system is our favourite markup library, it supports a variety of features. [bold]We recommend using it![/]");
                     table2.AddRow("[bold]Spectre.Console.ImageSharp[/]", "0.41 [italic](Nuget)[/]", "[bold]MIT[/]", "[blue]https://spectreconsole.net/widgets/canvas-image[/]", "Image Sharp is part of the Spectre.Console system, its a fork from the SixLabors.ImageSharp project.");
+                    table2.AddRow("[bold]Kookaburra.SDK[/]", "0.3.9 [italic](Nuget)[/]", "[bold]Proprietary Licence[/]", "[blue]https://www.nuget.org/packages/Kookaburra.SDK/[/]", "SDK Toolkit for the Kookaburra Programming Language. Which includes Markup, Alerts, BatteryInformation, CPUInformation and more.");
                     AnsiConsole.Render(table2);
                     Console.WriteLine(Environment.NewLine);
                 }
@@ -184,7 +185,7 @@ namespace KookaburraShell
                 if (input == "clear" || input == "cls")
                 {
                     validcommandfound = true;
-                    SDK.Markup.Clear();
+                    Format.Clear();
                 }
 
                 if (input == "tos")
@@ -192,13 +193,7 @@ namespace KookaburraShell
                     validcommandfound = true;
                     if (NetworkInterface.GetIsNetworkAvailable())
                     {
-                        /*var psi = new ProcessStartInfo
-                        {
-                            FileName = "https://github.com/AZProductions/Kookaburra/blob/main/TOS.md",
-                            UseShellExecute = true
-                        };
-                        Process.Start(psi);*/
-                        string[] Value = SDK.Networking.APIRequest("https://raw.githubusercontent.com/AZProductions/Kookaburra/main/TOS.md").Split(Environment.NewLine);
+                        string[] Value = Networking.APIRequest("https://raw.githubusercontent.com/AZProductions/Kookaburra/main/TOS.md").Split(Environment.NewLine);
                         string MainMessage = "";
                         string TitleMessage = "";
                         foreach (string Lines in Value) 
@@ -256,7 +251,7 @@ namespace KookaburraShell
                 {
                     validcommandfound = true;
                     Console.Clear();
-                    string[] callMain = { }; 
+                    string[] callMain = { };
                     Main(callMain);
                 }
 
@@ -1018,73 +1013,26 @@ namespace KookaburraShell
                     catch { Console.WriteLine("Error."); }
                 }
 
-                //Easter egg....
-                /*if (input == "matrix")
+                //Dev Commands
+                if (input == "<wt") 
                 {
                     validcommandfound = true;
-                    Console.Clear();
-                    Console.CursorVisible = false;
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    int Color = 0;
-                    Random rand = new Random();
-                    Thread t = new Thread(SpeedTyper);
-                    t.Start();
-                    Thread t2 = new Thread(SpeedClear);
-                    t2.Start();
-                    while (true) 
-                    {
-                        switch (Color)
-                        {
-                            case 1:
-                                Console.ForegroundColor = ConsoleColor.DarkYellow;
-                                break;
-                            case 2:
-                                Console.ForegroundColor = ConsoleColor.Blue;
-                                break;
-                            default:
-                                Console.ForegroundColor = ConsoleColor.Green;
-                                break;
-                        }
-                        Console.Write(rand.Next(0, 9999)); 
-                    }
+                    string res = "wt -p " + '"' + "Kookaburra" + '"';
+                    System.Diagnostics.Process process = new System.Diagnostics.Process();
+                    System.Diagnostics.ProcessStartInfo startInfo = new System.Diagnostics.ProcessStartInfo();
+                    startInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden;
+                    startInfo.FileName = "wt.exe";
+                    startInfo.Arguments = res;
+                    process.StartInfo = startInfo;
+                    process.Start();
+                }
 
-                    void SpeedTyper() 
-                    {
-                        while (true)
-                        {
-                            int changed = Color - 1;
-                            switch (Color)
-                            {
-                                case 1:
-                                    Console.ForegroundColor = ConsoleColor.Gray;
-                                    break;
-                                case 2:
-                                    Console.ForegroundColor = ConsoleColor.Magenta;
-                                    break;
-                                default:
-                                    Console.ForegroundColor = ConsoleColor.DarkCyan;
-                                    break;
-                            }
-                            Console.Write(rand.Next(0, 9999));
-                        }
-                    }
-
-                    void SpeedClear()
-                    {
-                        while (true)
-                        {
-                            Thread.Sleep(1000);
-                            Console.Clear();
-                            Color = 2;
-                            Thread.Sleep(1000);
-                            Console.Clear();
-                            Color = 1;
-                            Thread.Sleep(1000);
-                            Console.Clear();
-                            Color = 3;
-                        }
-                    }
-                }*/
+                if (input == "<e")
+                {
+                    validcommandfound = true;
+                    Environment.Exit(0);
+                }
+                //End of Dev Commands
 
                 if (input.StartsWith("wait"))
                 {
@@ -1493,7 +1441,9 @@ namespace KookaburraShell
                                     //Reverts back to original if the location doesn't exist.
                                     string Temp = Isettingsconf.Currentdir;
                                     string ReplaceFinal = char.ToUpper(Replace[0]) + Replace.Substring(1);
-                                    Isettingsconf.Currentdir = Environment.GetFolderPath((Environment.SpecialFolder)Enum.Parse(typeof(Environment.SpecialFolder), ReplaceFinal));
+                                    Environment.SpecialFolder sf;
+                                    if (Enum.TryParse<Environment.SpecialFolder>(ReplaceFinal, true, out sf))
+                                        Isettingsconf.Currentdir = Environment.GetFolderPath(sf);
                                     //If the directory doesn't exist revert back to 'Temp'.
                                     if (!Directory.Exists(Isettingsconf.Currentdir))
                                         Isettingsconf.Currentdir = Temp;
@@ -2323,7 +2273,7 @@ namespace KookaburraShell
                                     {
                                         string result = s.Replace("new Alert(", "").TrimEnd(')');
                                         string[] Valuearray = result.Split(", ");
-                                        SDK.Alert.Display(Format(Valuearray[0]) + Environment.NewLine, int.Parse(Valuearray[1]), true);
+                                        Alert.Display(Format(Valuearray[0]) + Environment.NewLine, int.Parse(Valuearray[1]), true);
                                     }
                                     else if (s.StartsWith("figlet "))
                                     {
@@ -2554,30 +2504,6 @@ namespace KookaburraShell
                                     void Apptitle(string input)
                                     {
                                         string rawdata = input.Replace("app.title = ", "");
-                                        //Old code.
-                                        /*if (rawdata.StartsWith('"') && rawdata.EndsWith('"'))
-                                        {
-                                            string rawdata2 = rawdata.Trim('"');
-                                            Console.Title = rawdata2;
-                                        }
-                                        else
-                                        {
-                                            int num = 0;
-                                            int num2 = 0;
-                                            foreach (string lines in Stringname)
-                                            {
-                                                num++;
-                                                if (lines == rawdata)
-                                                {
-                                                    foreach (string lines2 in Stringvalue)
-                                                    {
-                                                        num2++;
-                                                        //Console.WriteLine("num=" + num + " num2=" + num2);
-                                                        if (num == num2) { Console.Title = lines2; }
-                                                    }
-                                                }
-                                            }
-                                        }*/
                                         Console.Title = Format(rawdata);
                                     }
                                     void Wait(string input)
