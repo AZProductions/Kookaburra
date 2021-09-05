@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Spectre.Console;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -124,24 +124,46 @@ namespace KookaburraShell
                     var table = new Table().Centered();
                     table.AddColumn("Command");
                     table.AddColumn(new TableColumn("Description").Centered());
-                    table.AddRow("cp", "[green]Copy files from one place to another.[/]");
-                    table.AddRow("clear [blue]or[/] cls", "[green]Clears the screen.[/]");
-                    table.AddRow("winreset", "[green]Resets the window height and width. (Windows only)[/]");
-                    table.AddRow("rm", "[green]Delete files.[/]");
-                    table.AddRow("rmdir", "[green]Delete folders.[/]");
-                    table.AddRow("mkdir", "[green]Make folders.[/]");
-                    table.AddRow("mkfile", "[green]Make files.[/]");
-                    table.AddRow("cd", "[green]Change to a directory or file.[/]");
-                    table.AddRow("cd ..", "[green]Go back a directory.[/]");
-                    table.AddRow("ls" + "[blue] or [/]" + "dir", "[green]Go back a directory.[/]");
-                    table.AddRow("whoami", "[green]Shows the pc name and username.[/]");
-                    table.AddRow("drives", "[green]List all drives in your computer.[/]");
+                    table.AddRow("cp", "[green]  Copy files from one place to another. [/]");
+                    table.AddRow("rm", "[green]  Delete files. [/]");
+                    table.AddRow("rmdir", "[green]  Delete folders. [/]");
+                    table.AddRow("mkdir", "[green]  Make folders. [/]");
+                    table.AddRow("mkfile", "[green]  Make files. [/]");
+                    table.AddRow("cd", "[green]  Change to a directory or file. [/]");
+                    table.AddRow("cd..", "[green]  Go back a directory. [/]");
+                    table.AddRow("ls[blue]or[/] dir[blue]or[/] directory", "[green]  Displays all the files and folders in the current directory. [/]");
+                    table.AddRow("clear[blue]or[/] cls", "[green]  Clears the console window. [/]");
+                    table.AddRow("whoami", "[green]  Shows the pc name and username. [/]");
+                    table.AddRow("drives", "[green]  List all drives in your computer. [/]");
+                    table.AddRow("browse[blue]or[/] explore[blue]or[/] explorer", "[green] Opens file-explorer in the current directory. [/]");
+                    table.AddRow("ipconfig", "[green]  Show all internet settings from your computer. [/]");
+                    table.AddRow("download", "[green]  Download files from an internet server. [/]");
+                    table.AddRow("password", "[green]  Generate passwords. [/]");
+                    table.AddRow("tree", "[green]  Renders a detailed list of all the files and folders in a directory. [/]");
+                    table.AddRow("winreset", "[green]  Resets the window height and width. (Windows only) [/]");
+                    table.AddRow("hash", "[green]  Get's the MD5, SHA256 and SHA1 from the specified file. (`hash test.txt`)[/]");
+                    table.AddRow("tos", "[green]Opens the Terms of Service. [/]");
+                    table.AddRow("exit", "[green]  Exits the console. [/]");
+                    table.AddRow("env", "[green]  Gets the Env data and writes it to the screen. *(For testing purposes)* [/]");
+                    table.AddRow("restart", "[green]  Restarts the console. [/]");
+                    table.AddRow("restart - p", "[green]  Restarts the console without doing Package Check.[/]");
+                    table.AddRow("kbconfig [blue]or[/] settings" ,"[green]  Open the settings file in the default text editor. [/]");
+                    table.AddRow("drives", "[green] Displays all active drives with additional info. [/]");
                     table.AddRow("browse" + "[blue] or [/]" + "explore" + "[blue] or [/]" + "explorer", "[green]Opens file-explorer in the current directory.[/]");
-                    table.AddRow("ipconfig", "[green]Show all internet settings from your computer.[/]");
-                    table.AddRow("download", "[green]Download files from an internet server.[/]");
-                    table.AddRow("password", "[green]Generate passwords.[/]");
-                    table.AddRow("hash", "[green]Gets the MD5, SHA256 and SHA1 from the specified file.[/]");
-                    table.AddRow("tree", "[green]Renders a detailed list of all the files and folders in a directory.[/]");
+                    table.AddRow("mv", "[green]  Moves the selected directory or file to the specified directory or file. [/]");
+                    table.AddRow("mv - o", "[green]  Moves the selected directory or file to the specified directory or file [bold]overriding[/] it. [/]");
+                    table.AddRow("ipconfig", "[green]  Shows the current internet drives, chipsets and local ip information. [/]");
+                    table.AddRow("start", "[green]  Starts the specified file. [/]");
+                    table.AddRow("sound.play", "[green]  Plays specified **.wav * *file(s). [/]");
+                    table.AddRow("download", "[green]  Downloads specified file from an internet location. [/]");
+                    table.AddRow("tip", "[green]  Shows a random tip. [/]");
+                    table.AddRow("whoami", "[green]  Displays the MachineName + UserName. [/]");
+                    table.AddRow("edit", "[green]  Opens the specified file in the default text editor. *(text_editor.txt) * [/]");
+                    table.AddRow("pwd", "[green]  Prints the working directory. [/]");
+                    table.AddRow("uname", "[green]  Prints the username. [/]");
+                    table.AddRow("mname", "[green]  Prints the machinename. [/]");
+                    table.AddRow("tree [blue]or[/] list", "[green]  Displays the current folder/ file structure in a detailed tree.[/]");
+
                     AnsiConsole.Render(table);
                     var rule4 = new Rule("[white bold]CLI Shortcuts[/]");
                     var table1 = new Table().Centered();
@@ -183,6 +205,12 @@ namespace KookaburraShell
                 }
 
                 if (input == "clear" || input == "cls")
+                {
+                    validcommandfound = true;
+                    Console.Clear();
+                }
+
+                if (input == "fclear" || input == "fcls" || input == "fullclear") 
                 {
                     validcommandfound = true;
                     Format.Clear();
@@ -240,6 +268,7 @@ namespace KookaburraShell
                     table.AddColumn(new TableColumn("[bold green]ENV Data[/]").Centered()).HeavyHeadBorder();
                     // Add some columns
                     table.AddRow(System.Reflection.Assembly.GetExecutingAssembly().Location);
+                    table.AddRow(Process.GetCurrentProcess().MainModule.FileName);
                     table.AddRow(System.AppContext.BaseDirectory);
                     table.AddRow(Isettingsconf.Envloc);
                     table.AddRow(Path.GetFullPath("packages/") + "*" + Isettingsconf.Envloc);
@@ -772,7 +801,7 @@ namespace KookaburraShell
                         foreach (var file in allfiles)
                         {
                             FileInfo info = new FileInfo(file);
-                            if (info.Extension == ".kookaburra" || info.Extension == ".kbproject") { Console.ForegroundColor = ConsoleColor.Magenta; }
+                            if (info.Extension == ".kookaburra") { Console.ForegroundColor = ConsoleColor.Magenta; }
                             else { Console.ForegroundColor = ConsoleColor.Cyan; }
                             Console.WriteLine(info);
                         }
@@ -950,35 +979,11 @@ namespace KookaburraShell
                     //New tips coming soon..
                     switch (rand)
                     {
+                        default:
+                            table.AddRow("[green bold]You can customize the startup location by editing the startup_loc.txt file.[/]");
+                            break;
                         case 1:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file.[/]");
-                            break;
-                        case 2:
                             table.AddRow("[green bold]Deleting KookaburraShell.exe and the folder {0} will completely delete Kookaburra.[/]", Isettingsconf.Envloc);
-                            break;
-                        case 3:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
-                            break;
-                        case 4:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
-                            break;
-                        case 5:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
-                            break;
-                        case 6:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
-                            break;
-                        case 7:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
-                            break;
-                        case 8:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
-                            break;
-                        case 9:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
-                            break;
-                        case 10:
-                            table.AddRow("[green bold]You can customzie the startup location by editing the startup_loc.txt file[/]");
                             break;
                     }
 
@@ -1097,7 +1102,7 @@ namespace KookaburraShell
                     {
                         if (File.Exists(Isettingsconf.Currentdir + "/" + loc)) { loc = Isettingsconf.Currentdir + loc; }
                         validcommandfound = true;
-                        string hashMD5 = "emtpy";
+                        string hashMD5 = "empty";
                         using (var md5 = System.Security.Cryptography.MD5.Create())
                         {
                             using (var stream = File.OpenRead(loc))
@@ -1105,7 +1110,7 @@ namespace KookaburraShell
                                 hashMD5 = BitConverter.ToString(md5.ComputeHash(stream)).Replace("-", string.Empty);
                             }
                         }
-                        string hash256 = "emtpy";
+                        string hash256 = "empty";
                         using (var SHA256 = System.Security.Cryptography.SHA256.Create())
                         {
                             using (var stream = File.OpenRead(loc))
@@ -1113,7 +1118,7 @@ namespace KookaburraShell
                                 hash256 = BitConverter.ToString(SHA256.ComputeHash(stream)).Replace("-", string.Empty);
                             }
                         }
-                        string hash1 = "emtpy";
+                        string hash1 = "empty";
                         using (var SHA1 = System.Security.Cryptography.SHA1.Create())
                         {
                             using (var stream = File.OpenRead(loc))
@@ -1376,7 +1381,7 @@ namespace KookaburraShell
                         }
                         else if (input == "-exe" && RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) 
                         {
-                            Isettingsconf.Currentdir = Path.GetDirectoryName(System.Reflection.Assembly.GetEntryAssembly().Location);
+                            Isettingsconf.Currentdir = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
                         }
                         else if (input == "-r")
                         {
@@ -1471,7 +1476,7 @@ namespace KookaburraShell
             {
                 bool Errormsg = false;
                 if (Directory.Exists(Isettingsconf.Envloc)) { }
-                else { try { Directory.CreateDirectory(Isettingsconf.Envloc); } catch { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Restart with admin priviliges."); } }
+                else { try { Directory.CreateDirectory(Isettingsconf.Envloc); } catch { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine("Restart with admin privileges."); } }
 
                 string path4 = Isettingsconf.Envloc + @"/conf.txt";
                 if (!File.Exists(path4))
@@ -1770,7 +1775,7 @@ namespace KookaburraShell
                     Table tb = new Table();
                     bool GridSelect = false;
                     string debugoff = File.ReadLines(file.ToString()).First();
-                    if (debugoff == "app.debug-off") { } else { Debuger(); }
+                    if (debugoff == "app.debug-off") { } else { Debugger(); }
                     Isettingsconf.Quietmode = true;
                     if (file.Extension == ".kookaburra")
                     {
@@ -1813,7 +1818,7 @@ namespace KookaburraShell
                                         string name = s.Replace("import ", "");
                                         if (name == "FileIO") { Packages.FileIO = true; }
                                         else if (name == "Net") { Packages.Net = true; }
-                                        else { throw new ArgumentException("Synax error at line '" + line + "'." + " C3211"); }
+                                        else { throw new ArgumentException("Syntax error at line '" + line + "'." + " C3211"); }
                                     }
                                     else if (s.StartsWith("print"))
                                     {
@@ -1902,10 +1907,10 @@ namespace KookaburraShell
                                                     else { File.AppendAllText(path, Environment.NewLine + value); }
                                                 }
                                             }
-                                            catch { throw new ArgumentException("Synax error at line '" + line + "'." + " C1793"); }
+                                            catch { throw new ArgumentException("Syntax error at line '" + line + "'." + " C1793"); }
 
                                         }
-                                        else { throw new ArgumentException("Synax error at line '" + line + "'." + " C3965"); }
+                                        else { throw new ArgumentException("Syntax error at line '" + line + "'." + " C3965"); }
                                     }
                                     else if (s.StartsWith("new filereader(") && s.EndsWith("]") && s.Contains(")["))
                                     {
@@ -1989,7 +1994,7 @@ namespace KookaburraShell
                                                 Console.WriteLine(lines + " |" + test + "|");
                                             }*/
                                         }
-                                        else { throw new ArgumentException("Synax error at line '" + line + "'." + " C3965"); }
+                                        else { throw new ArgumentException("Syntax error at line '" + line + "'." + " C3965"); }
                                     }
                                     else if (s.StartsWith("app.color = "))
                                     {
@@ -2172,7 +2177,7 @@ namespace KookaburraShell
                                             ZipFile.CreateFromDirectory(Format(valuearray[0]), Format(valuearray[1]));
                                             script_var.Ifcount = 1;
                                         }
-                                        else { throw new ArgumentException("Synax error at line '" + line + "'." + " C3965"); }
+                                        else { throw new ArgumentException("Syntax error at line '" + line + "'." + " C3965"); }
                                     }
                                     else if (s.StartsWith("unzip "))
                                     {
@@ -2183,7 +2188,110 @@ namespace KookaburraShell
                                             ZipFile.ExtractToDirectory(Format(valuearray[0]), Format(valuearray[1]));
                                             script_var.Ifcount = 1;
                                         }
-                                        else { throw new ArgumentException("Synax error at line '" + line + "'." + " C3965"); }
+                                        else { throw new ArgumentException("Syntax error at line '" + line + "'." + " C3965"); }
+                                    }
+                                    else if (s.Contains(" = input.readline()"))
+                                    {
+                                        throw new ArgumentException("input.readline is no longer supported, instead use 'input.read()'. (line '" + line + "')");
+                                    }
+                                    else if (s.StartsWith("p:")) 
+                                    {
+                                        bool newline = true;
+                                        string value = string.Empty;
+                                        string final = string.Empty;
+                                        char[] charsToTrim = { ' ' };
+                                        string[] res = s.Split(":");
+                                        foreach (string row in res)
+                                        {
+                                            if (row == "p") { }
+                                            else if (row == "bold")
+                                            {
+                                                final = final + " bold";
+                                            }
+                                            else if (row == "italic") 
+                                            {
+                                                final = final + " italic";
+                                            }
+                                            else if (row == "underline")
+                                            {
+                                                final = final + " underline";
+                                            }
+                                            else if (row == "invert")
+                                            {
+                                                final = final + " invert";
+                                            }
+                                            else if (row == "slowblink")
+                                            {
+                                                final = final + " slowblink";
+                                            }
+                                            else if (row == "rapidblink")
+                                            {
+                                                final = final + " rapidblink";
+                                            }
+                                            else if (row == "strikethrough")
+                                            {
+                                                final = final + " strikethrough";
+                                            }
+                                            else if (row.Contains(";"))
+                                            {
+                                                string[] rows = row.Split("; ");
+                                                if (row.Contains("@"))
+                                                {
+                                                    value = Format(row.Split("; @")[1]);
+                                                    newline = false;
+                                                }
+                                                else
+                                                {
+                                                    newline = true;
+                                                    value = Format(row.Split("; ")[1]);
+                                                }
+
+                                                foreach (string rows2 in rows) 
+                                                {
+                                                    if (rows2 == "p") { }
+                                                    else if (rows2 == "bold")
+                                                    {
+                                                        final = final + " bold";
+                                                    }
+                                                    else if (rows2 == "italic")
+                                                    {
+                                                        final = final + " italic";
+                                                    }
+                                                    else if (row == "underline")
+                                                    {
+                                                        final = final + " underline";
+                                                    }
+                                                    else if (row == "invert")
+                                                    {
+                                                        final = final + " invert";
+                                                    }
+                                                    else if (row == "slowblink")
+                                                    {
+                                                        final = final + " slowblink";
+                                                    }
+                                                    else if (row == "rapidblink")
+                                                    {
+                                                        final = final + " rapidblink";
+                                                    }
+                                                    else if (row == "strikethrough")
+                                                    {
+                                                        final = final + " strikethrough";
+                                                    }
+                                                }
+                                            }
+                                            else
+                                            {
+                                                throw new ArgumentException("Incorrect formatting, use 'bold' or 'italic'. (line '" + line + "')");
+                                            }
+                                        }
+
+                                        if (newline)
+                                        {   
+                                            //Kookaburra.SDK.Format.WhiteSpace();
+                                            AnsiConsole.MarkupLine("[" + final.Trim() + "]" + value + "[/]");
+                                        }
+                                        else
+                                            AnsiConsole.Markup("[" + final.Trim() + "]" + value + "[/]");
                                     }
                                     else if (s.StartsWith("if") && s.EndsWith(":"))
                                     {
@@ -2311,7 +2419,7 @@ namespace KookaburraShell
                                             .Color(Console.ForegroundColor));
                                         script_var.Ifcount = 1;
                                     }
-                                    else if (s.StartsWith("p.center")) 
+                                    else if (s.StartsWith("p.center"))
                                     {
                                         string result = s.Replace("p.center ", string.Empty);
                                         string Value = Format(result);
@@ -2340,7 +2448,7 @@ namespace KookaburraShell
                                     else if (s.StartsWith("#")) { /*ignore #*/ }
                                     else
                                     {
-                                        throw new ArgumentException("Synax error at line '" + line + "'.");
+                                        throw new ArgumentException("Syntax error at line '" + line + "'.");
                                     }
 
                                     line++;
@@ -2374,7 +2482,7 @@ namespace KookaburraShell
                                                         // set the color after warning to the color before
                                                         Console.ForegroundColor = (ConsoleColor)Enum.Parse(typeof(ConsoleColor), storedcolor);
                                                         break;
-                                                        //throw new ArgumentException("Synax error at line '" + line + "'.");
+                                                        //throw new ArgumentException("Syntax error at line '" + line + "'.");
                                                         // max int's reached
                                                 }
 
@@ -2385,11 +2493,11 @@ namespace KookaburraShell
                                                     Console.WriteLine(lines);
                                                 }*/
                                             }
-                                            catch { throw new ArgumentException("Synax error at line '" + line + "'." + " C8575"); }
+                                            catch { throw new ArgumentException("Syntax error at line '" + line + "'." + " C8575"); }
                                         }
                                         else
                                         {
-                                            throw new ArgumentException("Synax error at line '" + line + "'." + " C3108");
+                                            throw new ArgumentException("Syntax error at line '" + line + "'." + " C3108");
                                         }
                                     }
                                     void Newif(string input)
@@ -2454,7 +2562,7 @@ namespace KookaburraShell
                                         else if (script_var.Ifcount == 2)
                                         {
                                             script_var.Ifcount = 1;
-                                            //ignore becouse normal if is executed
+                                            //ignore because normal if is executed
                                         }
                                     }
                                     void Appread()
@@ -2724,11 +2832,11 @@ namespace KookaburraShell
                 else { Isettingsconf.ShowRainbow = false; }
             }
 
-            void Debuger()
+            void Debugger()
             {
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.WriteLine("===============");
-                Console.WriteLine("  Kookaburra Debuger - Sysinfo: is64x=" + check_environment.Is64x + " OSversion=" + check_environment.OSversion + " ProcessorCount=" + Environment.ProcessorCount + " CurrentManagedThreadId=" + Environment.CurrentManagedThreadId);
+                Console.WriteLine("  Kookaburra Debugger - Sysinfo: is64x=" + check_environment.Is64x + " OSversion=" + check_environment.OSversion + " ProcessorCount=" + Environment.ProcessorCount + " CurrentManagedThreadId=" + Environment.CurrentManagedThreadId);
                 Console.WriteLine("  Type 'app.debug-off' in the first line of your program to disable this message.");
                 Console.WriteLine("===============");
                 // default color
