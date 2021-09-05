@@ -53,7 +53,7 @@
  
 </details>
 
-<details>
+<details open>
  <summary>Which operating systems does Kookaburra support?</summary>
 <br/>
  
@@ -82,6 +82,15 @@
  Kookaburra is a simple programming language, designed for beginners but with sufficient complexity for more advanced coders. Kookaburra can be run on multiple platforms all using the same structure and syntax, thereby requiring a only single learning curve.
  
  It's completely free and open-source. It leaves no footprint with all data stored in a single directory. It simply creates a folder in the **AppData Roaming** folder. You can have a look in the folder by pressing <kbd>win</kbd> + <kbd>R</kbd> and typing **'%appdata%/kookaburra'**. Press *enter*, file explorer will appear with the open folder.
+</details>
+
+
+<details>
+ <summary>Does Kookaburra need internet acces?</summary>
+ <br/>
+ 
+ **No**, most featrues work offline. Features like download and update are only accessing the internet when the user specifies the command.
+ 
 </details>
 
 <details>
