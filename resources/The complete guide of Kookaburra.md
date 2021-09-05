@@ -210,7 +210,6 @@ You can speed up your workflow by mastering the CLI. Here's a cheat sheet.
 
 ## **5.1** Command list.
 | Command | description                      |
-| Command | description                      |
 | ---- | -----------|
 |	```cp``` | Copy files from one place to another.	|
 |	```rm``` | Delete files.	                        |
