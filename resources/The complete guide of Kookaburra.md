@@ -13,14 +13,18 @@
 #### [- Idea](#31-idea)
 #### [ - Coding](#32-coding)
 ### [**Chapter 4: Customizing Kookaburra**](#4-customizing-kookaburra)
+### [**Chapter 5: Mastering the CLI**](#5-mastering-the-cli)
+#### [- Command List](#51-command-list)
+#### [- Shortcut List](#52-shortcut-list)
+### [**Chapter 6: The End**](#6-the-end)
+#### [- Good Luck](#61-good-luck)
+#### [- Special Mentions](#62-special-mentions)
 ----
 
 # **1. Getting Started**
 If you've never coded before, programming can seem difficult. For that reason, we created this E-Book to help new coders. For more experienced developers, this guide may not be necessary.
 
 This book contains multiple chapters, sub-chapters and extra tips/tricks from the team who created Kookaburra. Let's code!
-
-
 
 ## **1.1** Download Kookaburra.
 When downloading Kookaburra, you can chose between getting it from the Microsoft Store or downloading it via GitHub. On Linux you can download it via GitHub using [***Curl***](https://curl.se/) or [***Wget***](http://www.gnu.org/software/wget/). In this book we exclusively use Windows examples, but you should be able to follow along as a Linux user. So open your favourite browser and head over to 'https://www.github.com/AZProductions/Kookaburra/releases' or 'https://www.github.com/AZProductions/Kookaburra/releases/latest' to download the latest stable build. Click on the little dropdown icon and download the most suitable version for your computer. 
@@ -189,4 +193,126 @@ You can replace **TestApp** with the name of your program. Using this method you
 ----
 
 # **4. Customizing Kookaburra**
-Since version 0.7.5 you can customize Kookaburra using the **conf.txt**. Head over to the Kookaburra config directory.
+Since version 0.7.5 you can customize Kookaburra using the **conf.txt**. Head over to the Kookaburra config directory. These are the default values for the conf.txt file.
+```
+# KookaburraShell - Conf.txt
+show_startup=true
+startup_location=default
+FR=false
+force_rainbow=false
+```
+All lines starting with a **#** are comments. `show_startup` determines if Kookaburra shows the startup text. `startup_location` sets the default location when starting kookaburra, this needs to be a valid path. Use `default` to open Kookaburra in the current user directory. `FR` is used to check if Kookaburra is running for the first time. `force_rainbow`, forces the input bar to be displayed in rainbow colors.
+
+----
+
+# **5. Mastering the CLI**
+You can speed up your workflow by mastering the CLI. Here's a cheat sheet.
+
+## **5.1** Command list.
+| Command | description                      |
+| Command | description                      |
+| ---- | -----------|
+|	```cp``` | Copy files from one place to another.	|
+|	```rm``` | Delete files.	                        |
+|	```rmdir``` | Delete folders. 	                  |
+|	```mkdir``` | Make folders. 	                    |
+|	```mkfile``` | Make files. 	|
+|	```cd``` | Change to a directory or file. 	|
+|	```cd ..``` | Go back a directory. 	|
+|	```ls``` or ```dir``` or ```directory``` | Displays all the files and folders in the current directory. 	|
+|	```clear``` or ```cls``` | Clears the console window. 	|
+|	```whoami``` | Shows the pc name and username. 	|
+|	```drives``` | List all drives in your computer. 	|
+|	```browse``` | Opens file-explorer in the current directory. You can also use ```explore``` or ```explorer```. 	|
+|	```ipconfig``` | Show all internet settings from your computer. 	|
+|	```download``` | Download files from an internet server. 	|
+|	```password``` | Generate passwords. 	|
+|	```tree``` | Renders a detailed list of all the files and folders in a directory. 	|
+|	```winreset``` | Resets the window height and width. (Windows only) 	|
+| ```hash``` | Get's the MD5, SHA256 and SHA1 from the specified file. (`hash test.txt`)|
+| ```tos``` | Opens the [Terms of Service](https://github.com/AZProductions/Kookaburra/blob/main/TOS.md). |
+| ```exit``` | Exits the console. |
+| ```env``` | Gets the Env data and writes it to the screen. *(For testing purposes)* |
+| ```restart``` | Restarts the console. |
+| ```restart -p``` | Restarts the console without doing [Package Check](https://github.com/AZProductions/Kookaburra/blob/855cebcf43eefe40c602f826491ec02d66e1e545/src/Program.cs#L1520-L1807). |
+| ```kbconfig``` or ```settings``` | Open the settings file in the default text editor. |
+| ```drives```| Displays all active drives with additional info. |
+| ```explorer``` or ```explore``` or ```browse``` or ```view```| Opens file explorer in the current directory. |
+| ```mv``` | Moves the selected directory or file to the specified directory or file. |
+| ```mv -o``` | Moves the selected directory or file to the specified directory or file overriding it. |
+| ```ipconfig``` | Shows the current internet drives, chipsets and local ip information. |
+| ```start``` | Starts the specified file. |
+| ```sound.play``` | Plays specified **.wav** file(s). |
+| ```download``` | Downloads specified file from an internet location. |
+| ```tip``` | Shows a random tip. |
+| ```whoami``` | Displays the MachineName + UserName. |
+| ```edit``` | Opens the specified file in the default text editor. *(text_editor.txt)* |
+| ```pwd``` | Prints the working directory. |
+| ```uname``` | Prints the username. |
+| ```mname``` | Prints the machinename. |
+| ```tree``` or ```list``` | Displays the current folder/file structure in a detailed [tree](https://spectreconsole.net/widgets/tree).
+
+## **5.2** Shortcut list.
+| Shortcut | Description |
+|--------------------	|	--------------------	|
+|    ```-c:/```, it works with all drives. | Automatically gets the root of the set directory. |
+|    ```-env``` | The location of the configuration directory of kookaburra. |
+|    ```-r```    | Goes to the root of the current directory. |
+|	```-cookies```	|	The directory that serves as a common repository for Internet cookies.	|
+|	```-desktop``` or ```-dt```	|	The logical Desktop rather than the physical file system location.	|
+|	```-favorites```	|	The directory that serves as a common repository for the user's favorite items.	|
+|	```-fonts```	|	A virtual folder that contains fonts.	|
+|	```-history```	|	The directory that serves as a common repository for Internet history items.	|
+|	```-personal```	|	The directory that serves as a common repository for documents. This member is equivalent to MyDocuments.	|
+|	```-programs```	|	The directory that contains the user's program groups.	|
+|	```-recent```	|	The directory that contains the user's most recently used documents.	|
+|	```-resources```	|	The file system directory that contains resource data.	|
+|	```-st```	|	The directory that contains the Start menu items.	|
+|	```-startup```	|	The directory that corresponds to the user's Startup program group. The system starts these programs whenever a user logs on or starts Windows.	|
+|	```-system```	|	The System directory.	|
+|	```-templates```	|	The directory that serves as a common repository for document templates.	|
+|	```-windows```	|	The Windows directory or SYSROOT. This corresponds to the %windir% or %SYSTEMROOT% environment variables.	|
+|       ```-c``` | Clears location. |
+| ```AdminTools	``` | 	The file system directory that is used to store administrative tools for an individual user. The Microsoft Management Console (MMC) will save customized consoles to this directory, and it will roam with the user.	
+| ```ApplicationData	``` | 	The directory that serves as a common repository for application-specific data for the current roaming user. A roaming user works on more than one computer on a network. A roaming user's profile is kept on a server on the network and is loaded onto a system when the user logs on.	 |
+| ```CDBurning	``` | 	The file system directory that acts as a staging area for files waiting to be written to a CD.	 |
+| ```CommonAdminTools	``` | 	The file system directory that contains administrative tools for all users of the computer.	 |
+| ```CommonApplicationData	``` | 	The directory that serves as a common repository for application-specific data that is used by all users.	 |
+| ```CommonDesktopDirectory	``` | 	The file system directory that contains files and folders that appear on the desktop for all users.	 |
+| ```CommonDocuments	``` | 	The file system directory that contains documents that are common to all users.	 |
+| ```CommonMusic	``` | 	The file system directory that serves as a repository for music files common to all users.	 |
+| ```CommonOemLinks	``` | 	This value is recognized in Windows Vista for backward compatibility, but the special folder itself is no longer used.	 |
+| ```CommonPictures	``` | 	The file system directory that serves as a repository for image files common to all users.	 |
+| ```CommonProgramFiles	``` | 	The directory for components that are shared across applications.	 |
+|```	CommonProgramFilesX86	``` | 	The Program Files folder.	 |
+| ```	CommonPrograms	``` | 	A folder for components that are shared across applications.	 |
+| ```	CommonStartMenu	``` | 	The file system directory that contains the programs and folders that appear on the Start menu for all users.	 |
+| ```	CommonStartup	``` | 	The file system directory that contains the programs that appear in the Startup folder for all users.	 |
+| ```	CommonTemplates	``` | 	The file system directory that contains the templates that are available to all users.	 |
+| ```	CommonVideos	``` | 	The file system directory that serves as a repository for video files common to all users.	 |
+| ```	DesktopDirectory	``` | 	The directory used to physically store file objects on the desktop. Do not confuse this directory with the desktop folder itself, which is a virtual folder.	 |
+| ```	InternetCache	``` | 	The directory that serves as a common repository for temporary Internet files.	 |
+| ```	LocalApplicationData	``` | 	The directory that serves as a common repository for application-specific data that is used by the current, non-roaming user.	 |
+| ```	LocalizedResources	``` | 	The file system directory that contains localized resource data.	 |
+| ```	MyComputer	``` | 	The My Computer folder. When passed to the Environment.GetFolderPath method, the MyComputer enumeration member always yields the empty string ("") because no path is defined for the My Computer folder.	 |
+| ```	MyDocuments	``` | 	The My Documents folder. This member is equivalent to Personal.|
+| ```	MyMusic	``` | 	The My Music folder.	 |
+| ```	MyPictures	``` | 	The My Pictures folder.	 |
+| ```	MyVideos	``` | 	The file system directory that serves as a repository for videos that belong to a user.	 |
+| ```	NetworkShortcuts	``` | 	A file system directory that contains the link objects that may exist in the My Network Places virtual folder.	 |
+| ```	PrinterShortcuts	``` | 	The file system directory that contains the link objects that can exist in the Printers virtual folder.	 |
+| ```	ProgramFiles	``` | 	The program files directory.	 |
+| ```	ProgramFilesX86	``` | 	The x86 Program Files folder.	 |
+| ```	SendTo	``` | 	The directory that contains the Send To menu items.	 |
+| ```	StartMenu	``` | 	The directory that contains the Start menu items.	 |
+| ```	SystemX86	``` | 	The Windows System folder.	 |
+| ```	UserProfile	``` | 	The user's profile folder. Applications should not create files or folders at this level; they should put their data under the locations referred to by ApplicationData. |
+###### ***Most of the Shortcuts in this list are from the [Microsoft docs](https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=net-5.0#fields).**
+
+# **6. The End**
+## **6.1** Good luck
+Congrats, you've reached the end of this e-book. You're officialy a ***Kookaburra Pro***! Thank you for checking it out, were open for suggestions, let us know via the Issues section in Github https://github.com/AZProductions/Kookaburra/issues/new/choose. Good luck on your coding journey! **Happy coding!**
+
+## **6.2** Special mentions
+- Special thanks to the `spectre.console` library, it speeds up the process of making Kookaburra by a ton!
+- We've enjoyed the tools supplied by the teams over at **Github** and **Microsoft**.
