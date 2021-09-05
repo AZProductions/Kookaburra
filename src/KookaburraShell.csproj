@@ -10,16 +10,17 @@
     <Company>AZ Software</Company>
     <Authors>AZ Software</Authors>
     <Copyright>AZ Software 2021</Copyright>
-    <Version>0.8.3.1</Version>
+    <Version>0.8.5.3</Version>
     <PackageIcon>bitmap.png</PackageIcon>
     <NeutralLanguage>en</NeutralLanguage>
     <Description>Cross-Platform, Object-Oriented Programming language.</Description>
-    <AssemblyVersion>0.8.3.1</AssemblyVersion>
-    <FileVersion>0.8.3.1</FileVersion>
+    <AssemblyVersion>0.8.5.3</AssemblyVersion>
+    <FileVersion>0.8.5.3</FileVersion>
     <PackageProjectUrl>https://github.com/AZProductions/Kookaburra</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AZProductions/Kookaburra</RepositoryUrl>
-    <RepositoryType>Closed Source</RepositoryType>
+    <RepositoryType>Open Source</RepositoryType>
     <PackageTags>language programming-language cli console terminal csharp cross-platform dotnet-core console-application oriented-programming-language closed-source</PackageTags>
+    <PackageLicenseFile>LICENCE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -42,6 +43,10 @@
       <Pack>True</Pack>
       <PackagePath></PackagePath>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </None>
+    <None Include="LICENCE.txt">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
     </None>
   </ItemGroup>
 
