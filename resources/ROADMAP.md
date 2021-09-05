@@ -1,4 +1,0 @@
-- 0.8.1 | Progressbars, bug fixes, add greater use to breakpoints. (DOING)
-- 0.8.2 | Networking, new ui? (TODO)
-- 0.8.3 | Finish networking, fix bugs. (TODO)
-- 0.8.4 | New data types. (TODO)
