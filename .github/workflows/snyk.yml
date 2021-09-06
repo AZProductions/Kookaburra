@@ -11,9 +11,7 @@ jobs:
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          args: --sarif-file-output=snyk.sarif
-          json: true
-      - uses: garethr/snyk-to-sarif@master
+          args: --sarif-file-output=snyk.sarif -org 4e866c95-c48d-4af2-bf39-1bb149d358d5
       - uses: actions/upload-artifact@v2
         with:
           name: SARIF
