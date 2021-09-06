@@ -12,6 +12,8 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           args: --sarif-file-output=snyk.sarif
+          json: true
+      - uses: garethr/snyk-to-sarif@master
       - uses: actions/upload-artifact@v2
         with:
           name: SARIF
