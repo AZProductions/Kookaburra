@@ -7,18 +7,22 @@ site_description: >-
 nav:
   - Home: index.md
   - Getting started: tutorials/getting started.md
+  - Docs:
+    - System:
+      - Print: reference\system\print.md
+      - Alerts: reference\system\alert.md
+      - Input Dialogs: reference\system\dialog.md
+      - Image Rendering: reference\system\image.md
   - Downloads: https://github.com/AZProductions/Kookaburra/releases/
   - Blogs:
     - Kookaburra's roadmap: blogs/Kookaburra's roadmap.md
     - Publishing Kookaburra into an exe file: blogs/Publishing Kookaburra into an exe file.md
     - Kookaburra's new design style: blogs/Kookaburra's new design style.md
+    - 0.8.1 Improvements: blogs/0.8.1 Improvements.md
     - Kookaburra linking template: blogs/Kookaburra linking template.md
     - Improving Kookaburra's performance: blogs/Improving Kookaburra's performance.md
     - Kookaburra on the Microsoft Store: blogs/Kookaburra on the Microsoft Store.md
     - The new releasing strategy: blogs/Kookaburra releasing strategy.md
-  - Resources:
-    - Error list: resources/error-list.md
-    - Shortcuts: resources/shortcuts.md
 
 
 theme:
