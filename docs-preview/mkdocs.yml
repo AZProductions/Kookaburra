@@ -13,6 +13,8 @@ nav:
       - Alerts: reference\system\alert.md
       - Input Dialogs: reference\system\dialog.md
       - Image Rendering: reference\system\image.md
+    - API:
+      - Index API: api\index.json.md
   - Downloads: https://github.com/AZProductions/Kookaburra/releases/
   - Blogs:
     - Kookaburra's roadmap: blogs/Kookaburra's roadmap.md

@@ -24,20 +24,25 @@
 ### **Linux**
 Use this command to download it with [**wget**](http://www.gnu.org/software/wget/)
 ```bash
-wget -O /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/download/0.5.0/KookaburraShell_linux_0.5.0
+wget  https://github.com/AZProductions/Kookaburra/releases/download/0.8.5/KookaburraShell_linux_0.8.5
 ```
 Or by using [**curl**](https://curl.se/)
 ```bash
-curl -o /kookaburrashell https://github.com/AZProductions/Kookaburra/releases/download/0.5.0/KookaburraShell_linux_0.5.0
+curl https://github.com/AZProductions/Kookaburra/releases/download/0.8.5/KookaburraShell_linux_0.8.5
+```
+Provide Kookaburra permissions by typing
+```bash
+chmod 777 ./KookaburraShell_linux_0.8.5
 ```
 And run it by typing
-```
-./KookaburraShell
+```bash
+./KookaburraShell_linux_0.8.5
 ```
 Run Kookaburra and open a .kookaburra file with
+```bash
+./KookaburraShell_linux_0.8.5 /filelocation/example.kookaburra
 ```
-./KookaburraShell /filelocation/example
-```
+#### [**Youtube Tutorial**](https://www.youtube.com/watch?v=cvjH8pmiKDk)
 ------
 
 # [Once your finished with installing continue to part 2.](creating your first program.md)
