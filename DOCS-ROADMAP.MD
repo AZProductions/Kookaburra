@@ -3,3 +3,4 @@
 - Finish syntax docs.
 - Complete tutorials. *(Getting Started and more..)*
 - New Blog System.
+- API Docs.
