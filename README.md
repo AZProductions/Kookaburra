@@ -13,7 +13,7 @@
 ![Docs](https://img.shields.io/badge/Docs-28%25-lightgray)
 [![Kookaburra.SDK Downloads](https://img.shields.io/nuget/dt/Kookaburra.SDK?label=Kookaburra.SDK%40Latest)](https://www.nuget.org/packages/Kookaburra.SDK/)
 
-<a href='//www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='MS-Store link badge' style="vertical-align:middle" center width="96" height="35"/></a>
+<a href='https://www.microsoft.com/store/apps/9pcq0dhdtzpm?cid=storebadge&ocid=badge'><img src='https://developer.microsoft.com/store/badges/images/English_get-it-from-MS.png' alt='MS-Store link badge' style="vertical-align:middle" center width="96" height="35"/></a>
 <a href='https://github.com/AZProductions/Kookaburra/releases'><img src='https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/badge.png' alt='Github link badge' style="vertical-align:middle" center width="96" height="35"/></a>
 <a href='https://azproductions.github.io/Kookaburra/404'><img src='https://raw.githubusercontent.com/AZProductions/Kookaburra/main/docs-img/badge2.png' alt='Mirror link badge' style="vertical-align:middle" center width="96" height="35"/></a>
 
