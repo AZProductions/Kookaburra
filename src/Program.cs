@@ -463,6 +463,93 @@ namespace KookaburraShell
                     catch { Console.WriteLine("Error."); }
                 }
 
+                if (input.StartsWith("git")) 
+                {
+                    validcommandfound = true;
+                    Process process = new Process();
+                    process.StartInfo.FileName = "git.exe"; //Assumes that it's registered in the path.
+                    process.StartInfo.Arguments = input.Replace("git", "").TrimStart();
+                    process.StartInfo.UseShellExecute = false;
+                    process.StartInfo.RedirectStandardOutput = true;
+                    process.Start();
+
+                    Console.WriteLine(process.StandardOutput.ReadToEnd());
+
+                    process.WaitForExit();
+                }
+
+                if (input == "update" || input == "upgrade") 
+                {
+                    validcommandfound = true;
+                    Console.WriteLine("This is an experimental feature, do you want to continue?");
+                    Console.ReadLine();
+                    string platform = Kookaburra.SDK.Env.GetOSType();
+                    string architecture = System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture.ToString();
+                    string html = string.Empty;
+                    string url = @"https://kookaburrashell.github.io/api/index.json";
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(url);
+                    request.AutomaticDecompression = DecompressionMethods.GZip;
+                    using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                    using (Stream stream = response.GetResponseStream())
+                    using (StreamReader reader = new StreamReader(stream))
+                    {
+                        html = reader.ReadToEnd();
+                    }
+                    var jsons = gh_update.UpdateJson.FromJson(html);
+                    foreach (gh_update.UpdateJson updateJson in jsons) 
+                    {
+                        try
+                        {
+                            if (platform.ToLower() == "windows")
+                            {
+                                if (architecture == "X64")
+                                {
+                                    /*updateJson.UrlWin64*/
+                                }
+                                else if (architecture == "X86")
+                                {
+                                    /*updateJson.UrlWin86*/
+                                }
+                                else if (architecture == "ARM64")
+                                {
+                                    /*updateJson.UrlWinarm*/
+                                }
+                                else
+                                {
+                                    throw new Exception();
+                                }
+                            }
+                            else if (platform.ToLower() == "linux") //?
+                            {
+                                if (architecture == "X64")
+                                {
+                                    /*updateJson.UrlLinux*/
+                                }
+                                else if (architecture == "X86")
+                                {
+                                    /*updateJson.UrlLinux*/
+                                }
+                                else if (architecture == "ARM64")
+                                {
+                                    /*updateJson.UrlLinuxarm*/
+                                }
+                                else
+                                {
+                                    throw new Exception();
+                                }
+                            }
+                            else
+                            {
+                                throw new Exception();
+                            }
+                        }
+                        catch
+                        {
+                            throw new Exception("Invalid OS, Kookaburra cannot detect the running OS, please report this over in the Github Repo. (kookaburrashell.github.io) {" + platform + '/' + architecture + '}');
+                        }
+                    }
+                }
+
                 if (input == "drives")
                 {
                     validcommandfound = true;
@@ -1030,6 +1117,12 @@ namespace KookaburraShell
                     startInfo.Arguments = res;
                     process.StartInfo = startInfo;
                     process.Start();
+                }
+
+                if (input == "<si") //SI stands for 'System Information'. 
+                {
+                    validcommandfound = true;
+                    Console.WriteLine(Env.GetOSType() + "/" + System.Runtime.InteropServices.RuntimeInformation.ProcessArchitecture); //X86, X64, ARM, ARM64.
                 }
 
                 if (input == "<e")
