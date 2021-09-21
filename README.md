@@ -244,40 +244,40 @@ You can also get the SHA-256 from the file and compare it with the reference in 
 |	```-templates```	|	The directory that serves as a common repository for document templates.	|
 |	```-windows```	|	The Windows directory or SYSROOT. This corresponds to the %windir% or %SYSTEMROOT% environment variables.	|
 |       ```-c``` | Clears location. |
-| ```AdminTools	``` | 	The file system directory that is used to store administrative tools for an individual user. The Microsoft Management Console (MMC) will save customized consoles to this directory, and it will roam with the user.	
-| ```ApplicationData	``` | 	The directory that serves as a common repository for application-specific data for the current roaming user. A roaming user works on more than one computer on a network. A roaming user's profile is kept on a server on the network and is loaded onto a system when the user logs on.	 |
-| ```CDBurning	``` | 	The file system directory that acts as a staging area for files waiting to be written to a CD.	 |
-| ```CommonAdminTools	``` | 	The file system directory that contains administrative tools for all users of the computer.	 |
-| ```CommonApplicationData	``` | 	The directory that serves as a common repository for application-specific data that is used by all users.	 |
-| ```CommonDesktopDirectory	``` | 	The file system directory that contains files and folders that appear on the desktop for all users.	 |
-| ```CommonDocuments	``` | 	The file system directory that contains documents that are common to all users.	 |
-| ```CommonMusic	``` | 	The file system directory that serves as a repository for music files common to all users.	 |
-| ```CommonOemLinks	``` | 	This value is recognized in Windows Vista for backward compatibility, but the special folder itself is no longer used.	 |
-| ```CommonPictures	``` | 	The file system directory that serves as a repository for image files common to all users.	 |
-| ```CommonProgramFiles	``` | 	The directory for components that are shared across applications.	 |
-|```	CommonProgramFilesX86	``` | 	The Program Files folder.	 |
-| ```	CommonPrograms	``` | 	A folder for components that are shared across applications.	 |
-| ```	CommonStartMenu	``` | 	The file system directory that contains the programs and folders that appear on the Start menu for all users.	 |
-| ```	CommonStartup	``` | 	The file system directory that contains the programs that appear in the Startup folder for all users.	 |
-| ```	CommonTemplates	``` | 	The file system directory that contains the templates that are available to all users.	 |
-| ```	CommonVideos	``` | 	The file system directory that serves as a repository for video files common to all users.	 |
-| ```	DesktopDirectory	``` | 	The directory used to physically store file objects on the desktop. Do not confuse this directory with the desktop folder itself, which is a virtual folder.	 |
-| ```	InternetCache	``` | 	The directory that serves as a common repository for temporary Internet files.	 |
-| ```	LocalApplicationData	``` | 	The directory that serves as a common repository for application-specific data that is used by the current, non-roaming user.	 |
-| ```	LocalizedResources	``` | 	The file system directory that contains localized resource data.	 |
-| ```	MyComputer	``` | 	The My Computer folder. When passed to the Environment.GetFolderPath method, the MyComputer enumeration member always yields the empty string ("") because no path is defined for the My Computer folder.	 |
-| ```	MyDocuments	``` | 	The My Documents folder. This member is equivalent to Personal.|
-| ```	MyMusic	``` | 	The My Music folder.	 |
-| ```	MyPictures	``` | 	The My Pictures folder.	 |
-| ```	MyVideos	``` | 	The file system directory that serves as a repository for videos that belong to a user.	 |
-| ```	NetworkShortcuts	``` | 	A file system directory that contains the link objects that may exist in the My Network Places virtual folder.	 |
-| ```	PrinterShortcuts	``` | 	The file system directory that contains the link objects that can exist in the Printers virtual folder.	 |
-| ```	ProgramFiles	``` | 	The program files directory.	 |
-| ```	ProgramFilesX86	``` | 	The x86 Program Files folder.	 |
-| ```	SendTo	``` | 	The directory that contains the Send To menu items.	 |
-| ```	StartMenu	``` | 	The directory that contains the Start menu items.	 |
-| ```	SystemX86	``` | 	The Windows System folder.	 |
-| ```	UserProfile	``` | 	The user's profile folder. Applications should not create files or folders at this level; they should put their data under the locations referred to by ApplicationData. |
+| ```-AdminTools	``` | 	The file system directory that is used to store administrative tools for an individual user. The Microsoft Management Console (MMC) will save customized consoles to this directory, and it will roam with the user.	
+| ```-ApplicationData	``` | 	The directory that serves as a common repository for application-specific data for the current roaming user. A roaming user works on more than one computer on a network. A roaming user's profile is kept on a server on the network and is loaded onto a system when the user logs on.	 |
+| ```-CDBurning	``` | 	The file system directory that acts as a staging area for files waiting to be written to a CD.	 |
+| ```-CommonAdminTools	``` | 	The file system directory that contains administrative tools for all users of the computer.	 |
+| ```-CommonApplicationData	``` | 	The directory that serves as a common repository for application-specific data that is used by all users.	 |
+| ```-CommonDesktopDirectory	``` | 	The file system directory that contains files and folders that appear on the desktop for all users.	 |
+| ```-CommonDocuments	``` | 	The file system directory that contains documents that are common to all users.	 |
+| ```-CommonMusic	``` | 	The file system directory that serves as a repository for music files common to all users.	 |
+| ```-CommonOemLinks	``` | 	This value is recognized in Windows Vista for backward compatibility, but the special folder itself is no longer used.	 |
+| ```-CommonPictures	``` | 	The file system directory that serves as a repository for image files common to all users.	 |
+| ```-CommonProgramFiles	``` | 	The directory for components that are shared across applications.	 |
+|```	-CommonProgramFilesX86	``` | 	The Program Files folder.	 |
+| ```-CommonPrograms	``` | 	A folder for components that are shared across applications.	 |
+| ```	-CommonStartMenu	``` | 	The file system directory that contains the programs and folders that appear on the Start menu for all users.	 |
+| ```	-CommonStartup	``` | 	The file system directory that contains the programs that appear in the Startup folder for all users.	 |
+| ```	-CommonTemplates	``` | 	The file system directory that contains the templates that are available to all users.	 |
+| ```	-CommonVideos	``` | 	The file system directory that serves as a repository for video files common to all users.	 |
+| ```	-DesktopDirectory	``` | 	The directory used to physically store file objects on the desktop. Do not confuse this directory with the desktop folder itself, which is a virtual folder.	 |
+| ```	-InternetCache	``` | 	The directory that serves as a common repository for temporary Internet files.	 |
+| ```	-LocalApplicationData	``` | 	The directory that serves as a common repository for application-specific data that is used by the current, non-roaming user.	 |
+| ```	-LocalizedResources	``` | 	The file system directory that contains localized resource data.	 |
+| ```	-MyComputer	``` | 	The My Computer folder. When passed to the Environment.GetFolderPath method, the MyComputer enumeration member always yields the empty string ("") because no path is defined for the My Computer folder.	 |
+| ```	-MyDocuments	``` | 	The My Documents folder. This member is equivalent to Personal.|
+| ```	-MyMusic	``` | 	The My Music folder.	 |
+| ```	-MyPictures	``` | 	The My Pictures folder.	 |
+| ```	-MyVideos	``` | 	The file system directory that serves as a repository for videos that belong to a user.	 |
+| ```	-NetworkShortcuts	``` | 	A file system directory that contains the link objects that may exist in the My Network Places virtual folder.	 |
+| ```	-PrinterShortcuts	``` | 	The file system directory that contains the link objects that can exist in the Printers virtual folder.	 |
+| ```	-ProgramFiles	``` | 	The program files directory.	 |
+| ```	-ProgramFilesX86	``` | 	The x86 Program Files folder.	 |
+| ```	-SendTo	``` | 	The directory that contains the Send To menu items.	 |
+| ```	-StartMenu	``` | 	The directory that contains the Start menu items.	 |
+| ```	-SystemX86	``` | 	The Windows System folder.	 |
+| ```	-UserProfile	``` | 	The user's profile folder. Applications should not create files or folders at this level; they should put their data under the locations referred to by ApplicationData. |
 ###### ***Most of the Shortcuts in this list are from the [Microsoft docs](https://docs.microsoft.com/en-us/dotnet/api/system.environment.specialfolder?view=net-5.0#fields).**
 
 
