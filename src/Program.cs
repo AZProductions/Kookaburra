@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Spectre.Console;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -463,12 +463,12 @@ namespace KookaburraShell
                     catch { Console.WriteLine("Error."); }
                 }
 
-                if (input.StartsWith("git")) 
+                if (input.StartsWith("<git")) 
                 {
                     validcommandfound = true;
                     Process process = new Process();
                     process.StartInfo.FileName = "git.exe"; //Assumes that it's registered in the path.
-                    process.StartInfo.Arguments = input.Replace("git", "").TrimStart();
+                    process.StartInfo.Arguments = input.Replace("<git", "").TrimStart();
                     process.StartInfo.UseShellExecute = false;
                     process.StartInfo.RedirectStandardOutput = true;
                     process.Start();
@@ -1556,9 +1556,34 @@ namespace KookaburraShell
                         }
                         else
                         {
-                            Console.WriteLine("");
-                            Console.WriteLine("Command '{0}' not found.", input);
-                            Console.WriteLine("");
+                            if (input.Length > 1)
+                            {
+                                try
+                                {
+                                    Process process = new Process();
+                                    process.StartInfo.FileName = input.Split(" ")[0];
+                                    process.StartInfo.Arguments = input.Replace(input.Split(" ")[0], "");
+                                    process.StartInfo.UseShellExecute = false;
+                                    process.StartInfo.RedirectStandardOutput = true;
+                                    process.Start();
+
+                                    Console.WriteLine(process.StandardOutput.ReadToEnd());
+
+                                    process.WaitForExit();
+                                }
+                                catch
+                                {
+                                    Console.WriteLine("");
+                                    Console.WriteLine("Command '{0}' not found.", input);
+                                    Console.WriteLine("");
+                                }
+                            }
+                            else 
+                            {
+                                Console.WriteLine("");
+                                Console.WriteLine("Command '{0}' not found.", input);
+                                Console.WriteLine("");
+                            }
                         }
                     }
                 }
