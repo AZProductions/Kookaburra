@@ -1,21 +1,21 @@
 ---
 created: 2021-10-05T08:43:12+02:00
-modified: 2021-10-05T21:25:35+02:00
+modified: 2021-10-05T21:30:54+02:00
 ---
 
 # AZ Software License V2
 
-In this License AZ Software is reference as (“AZ Software,” “we,” or “us”).
+In this License, AZ Software is reference as (“AZ Software,” “we,” or “us”).
 
-All code committed to this project, is under he AZ Software License V2.
+All code committed to this project, is under the AZ Software License V2.
 
 What we do not:
-- Any product(s) related to this project do not come with warranty or liability, in any way, shape or form. We do not have any responsibility in any terms. If something brakes, malfunctions or gets harms, we do not take responsibility in this action.
+- Any product(s) related to this project do not come with warranty or liability, in any way, shape or form. We do not have any responsibility in any terms. If something breaks, malfunctions or gets harms, we do not take responsibility in this action.
 - Track or sell user-data, unless full consent or acknowledgement. (With a full dialog/pop-up) If we get data from the end-user it will only be for analytical purposes, and made anonymized. We currently do not have a product with these rules.
 
 What we do:
-- Make Software for anyone no matter the use, but strongly encourage to use our tools for non-malicious purposes.
-- Keep all data on the end-users device/system, not on a server online.
+- Make Software for anyone, no matter the use, but strongly encourage to use our tools for non-malicious purposes.
+- Keep all data on the end-user's device/system, not on a server online.
 
 Our intents are:
 - To make tools to help the user to work more efficiently.
@@ -28,10 +28,10 @@ When contributing:
 - - Name
 - - Username Git(hub)
 - - Website
-- Agree to the CLA (Coming soon), and this licence.
+- Agree to the CLA (Coming soon), and this license.
 
 When forking, editing (publishing online):
-- forks/distributions are allowed, as long as you credit the original project with a sufficient link to the official website or git(hub) project url.
+- forks/distributions are allowed, as long as you credit the original project with a sufficient link to the official website or git(hub) project URL.
 - Malicious forks, which are a modified from the original project and include Spyware, PUP'S or Viruses are not allowed and should be removed immediately. (Please contact us if you see a malicious fork) These forks break the license.
 
 
@@ -43,8 +43,8 @@ When forking, editing (businesses)
 
 Our tools/products are allowed to be used by everyone, unless it's used for malicious purposes. (referenced in 'Our intents are:')
 
-We may change/improve this licence, but the overall 'view' of this licence should stay the same. Here is a list of  things which ate not allowed to be changed:
-- no waranty/liability
+We may change/improve this license, but the overall 'view' of this license should stay the same. Here is a list of  things which ate not allowed to be changed:
+- no warranty/liability
 - no tracking data
 - no public logs
 
