@@ -1,9 +1,53 @@
-﻿2020-2021 AZ Software (prior AZ Productions)
+﻿---
+created: 2021-10-05T08:43:12+02:00
+modified: 2021-10-05T21:30:54+02:00
+---
 
-This repository is part of Kookaburra(Shell or SDK).
+# AZ Software License V2
 
-Kookaburra can not be copied and/or distributed without the express permission of the owner(s) of this repository.
+In this License, AZ Software is reference as (“AZ Software,” “we,” or “us”).
 
-You can download the repository, edit and run it. But redistributing Kookaburra is only allowed with permission, from either @AZProductions or @KookaburraShell. You can simply create a blank issue in github. And request permission.
+All code committed to this project, is under the AZ Software License V2.
 
-Forking the project on Github is allowed, the code must follow this license. If you have a question, we're glad to help. -@AZProductions
+What we do not:
+- Any product(s) related to this project do not come with warranty or liability, in any way, shape or form. We do not have any responsibility in any terms. If something breaks, malfunctions or gets harms, we do not take responsibility in this action.
+- Track or sell user-data, unless full consent or acknowledgement. (With a full dialog/pop-up) If we get data from the end-user it will only be for analytical purposes, and made anonymized. We currently do not have a product with these rules.
+
+What we do:
+- Make Software for anyone, no matter the use, but strongly encourage to use our tools for non-malicious purposes.
+- Keep all data on the end-user's device/system, not on a server online.
+
+Our intents are:
+- To make tools to help the user to work more efficiently.
+- To create tools and software which didn't exist before or were proprietary.
+- To power creativity and start new interests among new users in the category of software we deliver.
+
+When contributing:
+- The contributed/changes code is under this license, and can't be changed to a different language.
+- The code is now owned by AZ Software, but credited in the actual product with the contributors:
+- - Name
+- - Username Git(hub)
+- - Website
+- Agree to the CLA (Coming soon), and this license.
+
+When forking, editing (publishing online):
+- forks/distributions are allowed, as long as you credit the original project with a sufficient link to the official website or git(hub) project URL.
+- Malicious forks, which are a modified from the original project and include Spyware, PUP'S or Viruses are not allowed and should be removed immediately. (Please contact us if you see a malicious fork) These forks break the license.
+
+
+When forking, editing (keeping online to compile or tinker):
+- Allowed to do whatever you want, in a home environment. (Not including businesses)
+
+When forking, editing (businesses)
+- When customizing our software for business purposes, contact us via our website or email, and let us know why you want to use our software and/or improve features tailored to your business needs.
+
+Our tools/products are allowed to be used by everyone, unless it's used for malicious purposes. (referenced in 'Our intents are:')
+
+We may change/improve this license, but the overall 'view' of this license should stay the same. Here is a list of  things which ate not allowed to be changed:
+- no warranty/liability
+- no tracking data
+- no public logs
+
+Last edited: 5 October 2021
+
+© AZ Software 2021 - azproductions.github.io

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Spectre.Console;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -113,14 +113,14 @@ namespace KookaburraShell
                 {
                     validcommandfound = true;
                     Console.WriteLine(Environment.NewLine);
-                    AnsiConsole.Render(
+                    AnsiConsole.Write(
                     new FigletText("Kookaburra")
                         .Centered()
                         .Color(Color.Green));
 
                     Console.WriteLine(Environment.NewLine);
                     var rule1 = new Rule("[white bold]All CLI  Commands[/]");
-                    AnsiConsole.Render(rule1);
+                    AnsiConsole.Write(rule1);
                     var table = new Table().Centered();
                     table.AddColumn("Command");
                     table.AddColumn(new TableColumn("Description").Centered());
@@ -164,10 +164,10 @@ namespace KookaburraShell
                     table.AddRow("mname", "[green]  Prints the machinename. [/]");
                     table.AddRow("tree [blue]or[/] list", "[green]  Displays the current folder/ file structure in a detailed tree.[/]");
 
-                    AnsiConsole.Render(table);
+                    AnsiConsole.Write(table);
                     var rule4 = new Rule("[white bold]CLI Shortcuts[/]");
                     var table1 = new Table().Centered();
-                    AnsiConsole.Render(rule4);
+                    AnsiConsole.Write(rule4);
                     table1.AddColumn("Shortcut");
                     table1.AddColumn(new TableColumn("Description").Centered());
                     table1.AddRow("-c:/, it works with all drives.", "[green]Automatically gets the root of the set directory.[/]");
@@ -188,9 +188,9 @@ namespace KookaburraShell
                     table1.AddRow("-templates", "[green]The directory that serves as a common repository for document templates.[/]");
                     table1.AddRow("-windows", "[green]The Windows directory or SYSROOT. This corresponds to the %windir% or %SYSTEMROOT% environment variables.[/]");
                     table1.AddRow("-c", "[green]Clears location.[/]");
-                    AnsiConsole.Render(table1);
+                    AnsiConsole.Write(table1);
                     var rule5 = new Rule("[white bold]Open-Source Libraries[/]");
-                    AnsiConsole.Render(rule5);
+                    AnsiConsole.Write(rule5);
                     var table2 = new Table().Centered();
                     table2.AddColumn(new TableColumn("Name").Centered());
                     table2.AddColumn(new TableColumn("Version").Centered());
@@ -200,7 +200,7 @@ namespace KookaburraShell
                     table2.AddRow("[bold]Spectre.Console[/]", "0.41 [italic](Nuget)[/]", "[bold]MIT[/]", "[blue]https://spectreconsole.net/[/]", "The Spectre system is our favourite markup library, it supports a variety of features. [bold]We recommend using it![/]");
                     table2.AddRow("[bold]Spectre.Console.ImageSharp[/]", "0.41 [italic](Nuget)[/]", "[bold]MIT[/]", "[blue]https://spectreconsole.net/widgets/canvas-image[/]", "Image Sharp is part of the Spectre.Console system, its a fork from the SixLabors.ImageSharp project.");
                     table2.AddRow("[bold]Kookaburra.SDK[/]", "0.3.9 [italic](Nuget)[/]", "[bold]Proprietary Licence[/]", "[blue]https://www.nuget.org/packages/Kookaburra.SDK/[/]", "SDK Toolkit for the Kookaburra Programming Language. Which includes Markup, Alerts, BatteryInformation, CPUInformation and more.");
-                    AnsiConsole.Render(table2);
+                    AnsiConsole.Write(table2);
                     Console.WriteLine(Environment.NewLine);
                 }
 
@@ -221,19 +221,24 @@ namespace KookaburraShell
                     validcommandfound = true;
                     if (NetworkInterface.GetIsNetworkAvailable())
                     {
-                        string[] Value = Networking.APIRequest("https://raw.githubusercontent.com/AZProductions/Kookaburra/main/TOS.md").Split(Environment.NewLine);
-                        string MainMessage = "";
-                        string TitleMessage = "";
-                        foreach (string Lines in Value) 
+                        string[] Value = Networking.APIRequest("https://raw.githubusercontent.com/AZProductions/Kookaburra/main/LICENCE").Split("\n");
+                        foreach (string ValueText in Value) 
                         {
-                            if (Lines.StartsWith("#")) { TitleMessage = Lines.Replace("# ", ""); TitleMessage = "[bold]" + TitleMessage + "[/]"; }
-                            else if (string.IsNullOrWhiteSpace(Lines)) { }
-                            else if (Lines == Environment.NewLine) { }
-                            else { MainMessage = MainMessage + " " + Lines; }
+                            if (ValueText.StartsWith("---")) { /*ignore*/ }
+                            else if (ValueText.StartsWith("created:")) { /*ignore*/ }
+                            else if (ValueText.StartsWith("modified:")) { /*ignore*/ }
+                            else if (ValueText.StartsWith("# "))
+                            {
+                                AnsiConsole.Write(
+                                new FigletText(ValueText.Replace("# ", String.Empty))
+                                    .LeftAligned()
+                                    .Color(Color.White));
+                            }
+                            else
+                            {
+                                Console.WriteLine(ValueText);
+                            }
                         }
-                        AnsiConsole.Markup(TitleMessage);
-                        Console.WriteLine(Environment.NewLine);
-                        AnsiConsole.Markup(MainMessage);
                     }
                     else
                     {
@@ -273,7 +278,7 @@ namespace KookaburraShell
                     table.AddRow(Isettingsconf.Envloc);
                     table.AddRow(Path.GetFullPath("packages/") + "*" + Isettingsconf.Envloc);
                     table.AddRow(System.AppContext.TargetFrameworkName);
-                    AnsiConsole.Render(table);
+                    AnsiConsole.Write(table);
                 }
 
                 if (input == "restart")
@@ -476,6 +481,20 @@ namespace KookaburraShell
                     Console.WriteLine(process.StandardOutput.ReadToEnd());
 
                     process.WaitForExit();
+                }
+
+                if (input == "store") 
+                {
+                    if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+                    {
+                        validcommandfound = true;
+                        Process p = new Process();
+                        ProcessStartInfo startInfo = new ProcessStartInfo();
+                        startInfo.FileName = "cmd.exe";
+                        startInfo.Arguments = @"/c start ms-windows-store://pdp/?ProductId=9pcq0dhdtzpm"; // cmd.exe spesific implementation
+                        p.StartInfo = startInfo;
+                        p.Start();
+                    }
                 }
 
                 if (input == "update" || input == "upgrade") 
@@ -1075,7 +1094,7 @@ namespace KookaburraShell
                     }
 
                     table.Border(TableBorder.Heavy);
-                    AnsiConsole.Render(table);
+                    AnsiConsole.Write(table);
                 }
 
                 if (input == "whoami")
@@ -1245,7 +1264,7 @@ namespace KookaburraShell
                             .AddRow("Date Modified", File.GetLastWriteTime(loc).ToString()));
 
                         // Render the tree
-                        AnsiConsole.Render(root);
+                        AnsiConsole.Write(root);
                     }
                     else { Console.WriteLine("File not found."); }
                 }
@@ -1406,7 +1425,7 @@ namespace KookaburraShell
                             }
                         }
 
-                        AnsiConsole.Render(root);
+                        AnsiConsole.Write(root);
                     }
                     catch (Exception e) { Console.ForegroundColor = ConsoleColor.Red; Console.WriteLine(e.ToString()); }
                 }
@@ -2136,7 +2155,7 @@ namespace KookaburraShell
                                         string[] result2 = result.Split(", ");
                                         var image = new CanvasImage(Format(result2[0]));
                                         image.MaxWidth(int.Parse(Format(result2[1])));
-                                        AnsiConsole.Render(image);
+                                        AnsiConsole.Write(image);
                                     }
                                     else if (s.StartsWith("sound.play = "))
                                     {
@@ -2216,7 +2235,7 @@ namespace KookaburraShell
                                     else if (s.StartsWith("Grid.Display("))
                                     {
                                         if (GridSelect)
-                                            AnsiConsole.Render(tb);
+                                            AnsiConsole.Write(tb);
                                     }
                                     else if (s == "app.breakpoint()")
                                     {
@@ -2231,7 +2250,7 @@ namespace KookaburraShell
                                         {
                                             table.AddRow("[blue]" + Finalvalue + "[/]=[red]" + Format(Finalvalue) + "[/]");
                                         }
-                                        AnsiConsole.Render(table);
+                                        AnsiConsole.Write(table);
                                     }
                                     else if (s.StartsWith("new Grid("))
                                     {
@@ -2255,12 +2274,12 @@ namespace KookaburraShell
                                         if (string.IsNullOrWhiteSpace(result))
                                         {
                                             var rule = new Rule("[" + Console.ForegroundColor + "][/]");
-                                            AnsiConsole.Render(rule);
+                                            AnsiConsole.Write(rule);
                                         }
                                         else
                                         {
                                             var rule = new Rule("[" + Console.ForegroundColor + "]" + Format(result) + "[/]");
-                                            AnsiConsole.Render(rule);
+                                            AnsiConsole.Write(rule);
                                         }
                                         script_var.Ifcount = 1;
                                     }
@@ -2271,7 +2290,7 @@ namespace KookaburraShell
                                         string[] valuearray = result.Split(", ");
                                         var calendar = new Calendar(int.Parse(valuearray[0]), int.Parse(valuearray[1]));
                                         calendar.HeaderStyle(Style.Parse(Console.ForegroundColor.ToString()));
-                                        AnsiConsole.Render(calendar);
+                                        AnsiConsole.Write(calendar);
 
                                     }
                                     else if (s.StartsWith("Barchart.Add(") && s.EndsWith(")"))
@@ -2284,7 +2303,7 @@ namespace KookaburraShell
                                     }
                                     else if (s.StartsWith("Barchart.Display(") && s.EndsWith(")"))
                                     {
-                                        AnsiConsole.Render(bc);
+                                        AnsiConsole.Write(bc);
                                     }
                                     else if (s.StartsWith("zip "))
                                     {
@@ -2504,7 +2523,7 @@ namespace KookaburraShell
                                     else if (s.StartsWith("figlet "))
                                     {
                                         string result = s.Replace("figlet ", "");
-                                        AnsiConsole.Render(
+                                        AnsiConsole.Write(
                                         new FigletText(Format(result))
                                             .LeftAligned()
                                             .Color(Console.ForegroundColor));
@@ -2513,7 +2532,7 @@ namespace KookaburraShell
                                     else if (s.StartsWith("figlet.center"))
                                     {
                                         string result = s.Replace("figlet.center ", "");
-                                        AnsiConsole.Render(
+                                        AnsiConsole.Write(
                                         new FigletText(Format(result))
                                             .Centered()
                                             .Color(Console.ForegroundColor));
@@ -2522,7 +2541,7 @@ namespace KookaburraShell
                                     else if (s.StartsWith("figlet.right"))
                                     {
                                         string result = s.Replace("figlet.right ", "");
-                                        AnsiConsole.Render(
+                                        AnsiConsole.Write(
                                         new FigletText(Format(result))
                                             .RightAligned()
                                             .Color(Console.ForegroundColor));
@@ -2531,7 +2550,7 @@ namespace KookaburraShell
                                     else if (s.StartsWith("figlet.left"))
                                     {
                                         string result = s.Replace("figlet.left ", "");
-                                        AnsiConsole.Render(
+                                        AnsiConsole.Write(
                                         new FigletText(Format(result))
                                             .LeftAligned()
                                             .Color(Console.ForegroundColor));
