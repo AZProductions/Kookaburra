@@ -51,7 +51,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Kookaburra.SDK" Version="0.0.3.9" />
+    <PackageReference Include="Kookaburra.SDK" Version="0.0.4.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Spectre.Console" Version="0.42.0" />
     <PackageReference Include="Spectre.Console.ImageSharp" Version="0.41.0" />
