@@ -24,10 +24,10 @@
 ###### **Remember, KookaburraShell is still in Beta. Features may vary in the final release.**
 
 ## 📣 Announcements
+### [The decline of development - ***Blog***](https://github.com/AZProductions/Kookaburra/issues/148)
 ### [Kookaburra 0.9.X Presentation - ***PDF***](https://github.com/AZProductions/Kookaburra/blob/main/resources/kookaburra_presentation.pdf)
 ### [Publishing Kookaburra into an exe file - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/Publishing_Kookaburra.md)
 ### [Check out the New Kookaburra.SDK! - ***Link***](https://github.com/AZProductions/KookaburraSDK)
-### [Kookaburra linking template - ***Blog***](https://github.com/AZProductions/Kookaburra/blob/main/resources/blogs/Linking_templates.md)
 ### [**Kookaburra is on the Windows Store!** - ***Link***](https://www.microsoft.com/store/apps/9pcq0dhdtzpm)
 
 ----
