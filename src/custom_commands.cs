@@ -1,6 +1,6 @@
 ﻿namespace KookaburraShell
 {
-    class custom_commands
+    class custom_commands //old code.
     {
         public static string name1 { get; set; }
         public static string loc1 { get; set; }
