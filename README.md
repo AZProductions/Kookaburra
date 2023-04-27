@@ -73,7 +73,7 @@
 
 
 <details>
-  <summary>Why would you downloads Kookaburra?</summary>
+  <summary>Why would you download Kookaburra?</summary>
  <br/>
  
  Kookaburra is a simple programming language, designed for beginners but with sufficient complexity for more advanced coders. Kookaburra can be run on multiple platforms all using the same structure and syntax, thereby requiring a only single learning curve.
