@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -54,7 +54,7 @@
     <PackageReference Include="Kookaburra.SDK" Version="0.0.4.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Spectre.Console" Version="0.45.0" />
-    <PackageReference Include="Spectre.Console.ImageSharp" Version="0.45.0" />
+    <PackageReference Include="Spectre.Console.ImageSharp" Version="0.47.0" />
   </ItemGroup>
 
 </Project>
